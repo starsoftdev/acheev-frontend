@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './../App.css';
 import Header from './header'
+import { Button } from 'reactstrap';
 
 class Home extends Component {
   render() {
@@ -13,6 +14,7 @@ class Home extends Component {
         <div className="home-banner">
           <h2 className="home-banner-header">Don't Just Dream, Do!</h2>
           <span className="home-banner-text">Hire, manage and pay people with smart contracts.</span>
+          <Button className="home-banner-button"><span className="home-banner-button-text">GET STARTED</span></Button>{' '}
         </div>
         <div className="home-explore">
           <div className="home-pill" />
