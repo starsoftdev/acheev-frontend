@@ -11,6 +11,131 @@ class Home extends Component {
     this.state = {
       discover: "all"
     }
+
+  }
+
+  stars = (rating) => {
+    if (rating === 5) {
+      return (
+        <div>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+        </div>
+      )
+    }
+    if (rating === 4) {
+      return (
+        <div>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star"></span>
+        </div>
+      )
+    }
+    if (rating === 3) {
+      return (
+        <div>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+        </div>
+      )
+    }
+    if (rating === 2) {
+      return (
+        <div>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+        </div>
+      )
+    }
+    if (rating === 1) {
+      return (
+        <div>
+          <span className="fa fa-star checked"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+        </div>
+      )
+    }
+    if (rating === 0) {
+      return (
+        <div>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+          <span className="fa fa-star"></span>
+        </div>
+      )
+    }
+  }
+
+  popular = () => {
+    return (
+      <div className="home-popular-categories-grid">
+        <div className="home-popular-categories-grid-course">
+          <img src={require('/Users/ali/Projects/acheev/src/assets/hero-image.png')} className="home-popular-categories-grid-course-img" />
+          <div className="home-popular-categories-grid-course-belowimg">
+            <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
+            <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
+            <hr className="home-popular-categories-grid-course-separator" />
+            <div className="home-popular-categories-grid-course-stats">
+              <div className="home-popular-categories-grid-course-stats-top">
+                {this.stars(4)}
+                <span className="home-popular-categories-grid-course-price">$250</span>
+              </div>
+              <div className="home-popular-categories-grid-course-stats-bottom">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="home-popular-categories-grid-course">
+          <img src={require('/Users/ali/Projects/acheev/src/assets/hero-image.png')} className="home-popular-categories-grid-course-img" />
+          <div className="home-popular-categories-grid-course-belowimg">
+            <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
+            <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
+            <hr className="home-popular-categories-grid-course-separator" />
+            <div className="home-popular-categories-grid-course-stats">
+              <div className="home-popular-categories-grid-course-stats-top">
+                {this.stars(4)}
+                <span className="home-popular-categories-grid-course-price">$250</span>
+              </div>
+              <div className="home-popular-categories-grid-course-stats-bottom">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="home-popular-categories-grid-course">
+          <img src={require('/Users/ali/Projects/acheev/src/assets/hero-image.png')} className="home-popular-categories-grid-course-img" />
+          <div className="home-popular-categories-grid-course-belowimg">
+            <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
+            <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
+            <hr className="home-popular-categories-grid-course-separator" />
+            <div className="home-popular-categories-grid-course-stats">
+              <div className="home-popular-categories-grid-course-stats-top">
+                {this.stars(4)}
+                <span className="home-popular-categories-grid-course-price">$250</span>
+              </div>
+              <div className="home-popular-categories-grid-course-stats-bottom">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
   }
 
   render() {
@@ -57,6 +182,7 @@ class Home extends Component {
             <span className="home-popular-categories-dot">&bull;</span>
             <span className={(this.state.discover === "lifestyle" ? "home-popular-categories-item active" : "home-popular-categories-item")} onClick={() => this.setState({discover: "lifestyle"})}>Lifestyle</span>
           </div>
+          {this.popular()}
         </div>
         <div className="home-tag">
           <div className="home-pill" />
