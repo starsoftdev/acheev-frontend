@@ -5,6 +5,14 @@ import Header from './header'
 import { Button } from 'reactstrap';
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      discover: "all"
+    }
+  }
+
   render() {
     return (
       <div className="home">
@@ -33,6 +41,21 @@ class Home extends Component {
               <div className="home-explore-grid-tile">Business</div>
               <div className="home-explore-grid-tile">Fun & Lifestyle</div>
             </div>
+          </div>
+        </div>
+        <div className="home-popular">
+          <div className="home-pill" />
+          <h2 className="home-popular-header">Discover Our Popular Courses</h2>
+          <div className="home-popular-categories">
+            <span className={(this.state.discover === "all" ? "home-popular-categories-item active" : "home-popular-categories-item")} onClick={() => this.setState({discover: "all"})}>All</span>
+            <span className="home-popular-categories-dot">&bull;</span>
+            <span className={(this.state.discover === "creative" ? "home-popular-categories-item active" : "home-popular-categories-item")} onClick={() => this.setState({discover: "creative"})}>Creative</span>
+            <span className="home-popular-categories-dot">&bull;</span>
+            <span className={(this.state.discover === "business" ? "home-popular-categories-item active" : "home-popular-categories-item")} onClick={() => this.setState({discover: "business"})}>Business</span>
+            <span className="home-popular-categories-dot">&bull;</span>
+            <span className={(this.state.discover === "technology" ? "home-popular-categories-item active" : "home-popular-categories-item")} onClick={() => this.setState({discover: "technology"})}>Technology</span>
+            <span className="home-popular-categories-dot">&bull;</span>
+            <span className={(this.state.discover === "lifestyle" ? "home-popular-categories-item active" : "home-popular-categories-item")} onClick={() => this.setState({discover: "lifestyle"})}>Lifestyle</span>
           </div>
         </div>
         <div className="home-tag">

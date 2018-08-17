@@ -1,6 +1,6 @@
 body{
   font-family: 'Nunito Sans', sans-serif;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 
 .home {
@@ -71,6 +71,25 @@ body{
   background-image: -ms-linear-gradient(top, #008DE0, #0071B2);
   background-image: -o-linear-gradient(top, #008DE0, #0071B2);
   background-image: linear-gradient(to bottom, #008DE0, #0071B2);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#008DE0, endColorstr=#0071B2);
+}
+
+.home-popular {
+  background-color: #ECF3FB;
+  padding-top: 6em;
+}
+
+.home-popular-categories-item {
+  color: #6E7F90;
+}
+
+.active {
+  color: #2D9BDB !important;
+}
+
+.home-popular-categories-dot {
+  color: #6E7F90;
+  padding-left: .75em;
+  padding-right: .75em;
 }
 
 .home-explore {
