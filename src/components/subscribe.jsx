@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { Input } from 'reactstrap';
 import Header from './header'
 import Footer from './footer'
 import { Button } from 'reactstrap';
@@ -51,7 +52,7 @@ class Subscribe extends Component {
                 </div>
                 <div className="subscribe-body-benefits-list-item">
                   <span className="subscribe-body-benefits-list-item-check"><i className="fa fa-check blue-check" aria-hidden="true"></i></span>
-                  <p className="subscribe-body-benefits-list-item-text">No commitments.<span className="subscribe-body-benefits-list-item-text-bold"> Cancel anytime.</span></p>
+                  <p className="subscribe-body-benefits-list-item-text">No Commitments.<span className="subscribe-body-benefits-list-item-text-bold"> Cancel Anytime    </span></p>
                 </div>
                 <div className="subscribe-body-benefits-list-item">
                   <span className="subscribe-body-benefits-list-item-check"><i className="fa fa-check blue-check" aria-hidden="true"></i></span>
@@ -60,6 +61,58 @@ class Subscribe extends Component {
               </div>
             </div>
             <div className="subscribe-body-payment">
+              <div className="subscribe-body-payment-card">
+                <div className="subscribe-body-payment-card-number">
+                  <div className="subscribe-body-payment-card-number-label">
+                    <span className="subscribe-body-payment-card-label">Card Number</span>
+                    <img src={require('/Users/ali/Projects/acheev/src/assets/credit-cards.jpg')} className="subscribe-body-payment-card-img" />
+                  </div>
+                  <div className="subscribe-body-payment-card-number-input">
+                    <input type="password" placeholder="Insert your card number here" className="subscribe-body-payment-card-number-input-input"/>
+                  </div>
+                </div>
+                <div className="subscribe-body-payment-card-number-details">
+                  <div className="subscribe-body-payment-card-number-details-label">
+                    <span className="subscribe-body-payment-card-number-details-label-expiration">Expiration</span>
+                    <span className="subscribe-body-payment-card-number-details-label-security">Security Code</span>
+                  </div>
+                  <div className="subscribe-body-payment-card-number-details-inputs">
+                    <select className="subscribe-body-payment-card-number-details-inputs-month">
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                      <option value="11">11</option>
+                      <option value="12">12</option>
+                    </select>
+                    <select className="subscribe-body-payment-card-number-details-inputs-year">
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="20">20</option>
+                      <option value="21">21</option>
+                      <option value="22">22</option>
+                      <option value="23">23</option>
+                      <option value="24">24</option>
+                      <option value="25">25</option>
+                      <option value="26">26</option>
+                      <option value="27">27</option>
+                      <option value="28">28</option>
+                      <option value="29">29</option>
+                    </select>
+                    <input placeholder="CVC" className="subscribe-body-payment-card-number-details-inputs-cvc" type="number" />
+                  </div>
+                </div>
+              </div>
+              <div className="subscribe-body-payment-promo">
+                <span className="subscribe-body-payment-promo-label">Promo Applied:</span>
+                <span className="subscribe-body-payment-promo-code">GOOGLE25 - 2 months for $0.99</span>
+              </div>
             </div>
           </div>
         </div>
