@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './../App.css';
 import Header from './header'
+import Footer from './footer'
 import { Button } from 'reactstrap';
 
 class Home extends Component {
@@ -249,43 +250,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="home-footer">
-          <div className="home-footer-grid">
-            <div className="home-footer-grid-column">
-              <span className="home-footer-grid-column-header">Acheev</span>
-              <span className="home-footer-grid-column-item">Careers</span>
-              <span className="home-footer-grid-column-item">Press</span>
-              <span className="home-footer-grid-column-item">Help</span>
-            </div>
-            <div className="home-footer-grid-column">
-              <span className="home-footer-grid-column-header">Services</span>
-              <span className="home-footer-grid-column-item">How it Works</span>
-              <span className="home-footer-grid-column-item">Terms of Use</span>
-              <span className="home-footer-grid-column-item">Privacy Policy</span>
-            </div>
-            <div className="home-footer-grid-column">
-              <span className="home-footer-grid-column-header">About</span>
-              <span className="home-footer-grid-column-item">Who We Are</span>
-              <span className="home-footer-grid-column-item">Contact Us</span>
-              <span className="home-footer-grid-column-item">FAQ</span>
-            </div>
-            <div className="home-footer-grid-column-app">
-              <span className="home-footer-grid-column-header">Get the App</span>
-              <span className="home-footer-grid-column-item">For Android</span>
-              <span className="home-footer-grid-column-item">For iOS</span>
-            </div>
-            <div className="home-footer-grid-column">
-              <span className="home-footer-grid-column-header">Find Us</span>
-              <div className="home-footer-grid-column-logo">
-                <span className="home-footer-grid-column-logo-item"></span>
-                <span className="home-footer-grid-column-logo-item"></span>
-                <span className="home-footer-grid-column-logo-item"></span>
-                <span className="home-footer-grid-column-logo-item"></span>
-                <span className="home-footer-grid-column-logo-item"></span>
-              </div>
-            </div>
-          </div>
-          <hr className="home-footer-hr"/>
-          <span className="home-footer-copyright">2018 Acheev Inc. All Rights Reserved</span>
+          <Footer />
         </div>
       </div>
     );
