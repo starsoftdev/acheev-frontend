@@ -11,9 +11,9 @@ class Subscribe extends Component {
     super(props)
 
     this.state = {
-      plan: "anually"
+      plan: "anually",
+      total: ""
     }
-
   }
 
   render() {
@@ -112,6 +112,42 @@ class Subscribe extends Component {
               <div className="subscribe-body-payment-promo">
                 <span className="subscribe-body-payment-promo-label">Promo Applied:</span>
                 <span className="subscribe-body-payment-promo-code">GOOGLE25 - 2 months for $0.99</span>
+              </div>
+              <div className="subscribe-body-payment-plan">
+                <div className="subscribe-body-payment-plan-label">
+                  <span className="subscribe-body-payment-plan-label-text">Select a Plan</span>
+                </div>
+                <div className="subscribe-body-payment-plan-tile">
+                  <div className="subscribe-body-payment-plan-tile-item">
+                    <span className="subscribe-body-payment-plan-tile-item-dollar">$</span>
+                    <span className="subscribe-body-payment-plan-tile-item-bignum">8</span>
+                    <span className="subscribe-body-payment-plan-tile-item-change">.25</span>
+                    <span className="subscribe-body-payment-plan-tile-item-month">/Mo</span>
+                    <span className="subscribe-body-payment-plan-tile-item-billed">$99 billed anually</span>
+                  </div>
+                  <div className="subscribe-body-payment-plan-tile-item">
+                    <span className="subscribe-body-payment-plan-tile-item-dollar">$</span>
+                    <span className="subscribe-body-payment-plan-tile-item-bignum">15</span>
+                    <span className="subscribe-body-payment-plan-tile-item-change">.00</span>
+                    <span className="subscribe-body-payment-plan-tile-item-month">/Mo</span>
+                    <span className="subscribe-body-payment-plan-tile-item-billed">Billed Monthly</span>
+                  </div>
+                </div>
+              </div>
+              <hr className="subscribe-body-payment-line" />
+              <div className="subscribe-body-payment-bottom">
+                <div className="subscribe-body-payment-bottom-total">
+                  <span className="subscribe-body-payment-bottom-total-text">You're Paying:</span>
+                  <span className="subscribe-body-payment-bottom-total-number">$0.99</span>
+                </div>
+                <div className="subscribe-body-payment-bottom-disclaimer">
+                  <p className="subscribe-body-payment-bottom-disclaimer-text">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Justo donec enim diam vulputate ut pharetra sit amet aliquam. Pretium aenean pharetra magna ac placerat. Id aliquet risus feugiat in ante metus dictum.
+                  </p>
+                </div>
+                <div className="subscribe-body-payment-bottom-submit">
+                  <button className="subscribe-body-payment-bottom-submit-button">Submit Payment</button>
+                </div>
               </div>
             </div>
           </div>
