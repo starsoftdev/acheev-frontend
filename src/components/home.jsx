@@ -18,55 +18,60 @@ class Home extends Component {
     if (rating === 5) {
       return (
         <div>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="star-rating">5.0</span>
         </div>
       )
     }
     if (rating === 4) {
       return (
         <div>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="star-rating">4.0</span>
         </div>
       )
     }
     if (rating === 3) {
       return (
         <div>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="star-rating">3.0</span>
         </div>
       )
     }
     if (rating === 2) {
       return (
         <div>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="star-rating">2.0</span>
         </div>
       )
     }
     if (rating === 1) {
       return (
         <div>
-          <span className="fa fa-star checked"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
+          <span className="fa fa-star checked fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="fa fa-star fa-2x"></span>
+          <span className="star-rating">1.0</span>
         </div>
       )
     }
@@ -78,6 +83,7 @@ class Home extends Component {
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
+          <span className="star-rating">0</span>
         </div>
       )
     }
