@@ -1,0 +1,108 @@
+.subscribe {
+  background-color: #F8F8FB;
+  letter-spacing: .05em;
+}
+
+.subscribe-padding {
+  padding-left: 10em;
+  padding-right: 9em;
+}
+
+.subscribe-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.subscribe-top-title {
+  margin: auto;
+  padding-top: 2em;
+  font-weight: 400;
+}
+
+.subscribe-top-subtitle {
+  margin: auto;
+  padding-top: 1em;
+  font-weight: 300;
+  color: #959FAB;
+  font-size: 1.2em;
+}
+
+.subscribe-body {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-bottom: 3em;
+  padding-top: 5em;
+}
+
+.subscribe-body-benefits {
+  width: 31em;
+  background-color: white;
+  border-bottom-left-radius: .3em;
+  border-bottom-right-radius: .3em;
+  -webkit-box-shadow: 0 0px 10px rgb(225, 225, 225);
+  -moz-box-shadow: 0 0px 10px rgb(225, 225, 225);
+       box-shadow: 0 0px 10px rgb(225, 225, 225);
+}
+
+.subscribe-body-benefits-header {
+  background-color: #009CDE;
+  border-top-left-radius: .3em;
+  border-top-right-radius: .3em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.subscribe-body-benefits-header-title {
+  color: white;
+  font-weight: 400;
+  padding-top: 1.2em;
+  margin: auto;
+  padding-bottom: .5em;
+}
+
+.subscribe-body-benefits-header-subtitle {
+  font-weight: 300;
+  color: #80CAEE;
+  margin: auto;
+  padding-bottom: 1.8em;
+}
+
+.subscribe-body-benefits-list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.subscribe-body-benefits-list-item {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-right: 2em;
+  padding-top: 1.2em;
+}
+
+.blue-check {
+  color: #009CDE;
+  padding-left: 3em;
+  padding-right: 1em;
+}
+
+.subscribe-body-benefits-list-item-text{
+  color: #637382;
+  font-weight: 300;
+}
+
+.subscribe-body-benefits-list-item-text-bold {
+  color: #637382;
+  font-weight: 500;
+}
