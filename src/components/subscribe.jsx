@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import { Input } from 'reactstrap';
 import Header from './header'
 import Footer from './footer'
-import { Button } from 'reactstrap';
 import '../styles/subscirbe.css'
 
 class Subscribe extends Component {

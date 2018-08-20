@@ -205,6 +205,26 @@
   width: 11em;
   background-color: #F8F8FB;
   border: 2px solid #DFDFE6;
+  border-radius: .3em;
+}
+
+.subscribe-body-payment-promo {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.subscribe-body-payment-promo-label {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.subscribe-body-payment-promo-code {
+  color: #788695;
+  font-weight: 300;
 }
 
 .subscribe-body-payment-plan {
@@ -224,6 +244,7 @@
 }
 
 .subscribe-body-payment-line {
+  margin-top: 4em;
   border: 1px solid #E7E8ED;
   color: #E7E8ED;
   width: 100%;
@@ -310,4 +331,21 @@
   font-size: .8em;
   font-weight: 300;
   line-height: 2.5em;
+}
+  
+.subscribe-body-payment-bottom-submit-button {
+  color: white;
+  height: 2.5em;
+  width: 30em;
+  font-weight: 400;
+  font-size: 1.2em;
+  border-radius: .3em;
+  background: rgba(0,145,230,1);
+  background: -moz-linear-gradient(left, rgba(0,145,230,1) 0%, rgba(0,145,230,1) 61%, rgba(26,128,224,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(0,145,230,1)), color-stop(61%, rgba(0,145,230,1)), color-stop(100%, rgba(26,128,224,1)));
+  background: -webkit-linear-gradient(left, rgba(0,145,230,1) 0%, rgba(0,145,230,1) 61%, rgba(26,128,224,1) 100%);
+  background: -o-linear-gradient(left, rgba(0,145,230,1) 0%, rgba(0,145,230,1) 61%, rgba(26,128,224,1) 100%);
+  background: -ms-linear-gradient(left, rgba(0,145,230,1) 0%, rgba(0,145,230,1) 61%, rgba(26,128,224,1) 100%);
+  background: linear-gradient(to right, rgba(0,145,230,1) 0%, rgba(0,145,230,1) 61%, rgba(26,128,224,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0091e6', endColorstr='#1a80e0', GradientType=1 );    
 }
