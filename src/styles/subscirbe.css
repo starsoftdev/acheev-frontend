@@ -40,6 +40,7 @@
 
 .subscribe-body-benefits {
   width: 31em;
+  height: 42em;
   background-color: white;
   border-bottom-left-radius: .3em;
   border-bottom-right-radius: .3em;
@@ -112,7 +113,9 @@
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 35em;
+  width: 33em;
+  max-height: inherit;
+  box-sizing:border-box;
 }
 
 .subscribe-body-payment-card-number {
@@ -122,13 +125,27 @@
   flex-wrap: nowrap;
 }
 
+.subscribe-body-payment-card-number-label {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .subscribe-body-payment-card-img {
   height: 1em;
   width: 6em;
 }
 
+.subscribe-body-payment-card-number-input {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
 .subscribe-body-payment-card-number-input-input {
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -140,7 +157,7 @@
 }
 
 .subscribe-body-payment-plan-label {
-  padding-bottom: 2em;
+  padding-bottom: 1em;
 }
 
 .subscribe-body-payment-plan-label-text {
