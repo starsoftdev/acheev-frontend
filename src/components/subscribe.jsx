@@ -11,7 +11,7 @@ class Subscribe extends Component {
     super(props)
 
     this.state = {
-      plan: "anually",
+      plan: "annual",
       total: ""
     }
   }
@@ -118,18 +118,20 @@ class Subscribe extends Component {
                   <span className="subscribe-body-payment-plan-label-text">Select a Plan</span>
                 </div>
                 <div className="subscribe-body-payment-plan-tile">
-                  <div className="subscribe-body-payment-plan-tile-item">
+                  <div className={(this.state.plan === "annual" ?  "subscribe-body-payment-plan-tile-item active" : "subscribe-body-payment-plan-tile-item ")} onClick={() => this.setState({plan: "annual"})} >
                     <span className="subscribe-body-payment-plan-tile-item-dollar">$</span>
                     <span className="subscribe-body-payment-plan-tile-item-bignum">8</span>
                     <span className="subscribe-body-payment-plan-tile-item-change">.25</span>
                     <span className="subscribe-body-payment-plan-tile-item-month">/Mo</span>
+                    <div className="line-break" />
                     <span className="subscribe-body-payment-plan-tile-item-billed">$99 billed anually</span>
                   </div>
-                  <div className="subscribe-body-payment-plan-tile-item">
+                  <div className={(this.state.plan === "monthly" ?  "subscribe-body-payment-plan-tile-item active" : "subscribe-body-payment-plan-tile-item ")} onClick={() => this.setState({plan: "monthly"})} >
                     <span className="subscribe-body-payment-plan-tile-item-dollar">$</span>
                     <span className="subscribe-body-payment-plan-tile-item-bignum">15</span>
                     <span className="subscribe-body-payment-plan-tile-item-change">.00</span>
                     <span className="subscribe-body-payment-plan-tile-item-month">/Mo</span>
+                    <div className="line-break" />
                     <span className="subscribe-body-payment-plan-tile-item-billed">Billed Monthly</span>
                   </div>
                 </div>

@@ -131,3 +131,108 @@
   width: 80%;
   margin: auto;
 }
+
+.subscribe-body-payment-plan {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.subscribe-body-payment-plan-label {
+  padding-bottom: 2em;
+}
+
+.subscribe-body-payment-plan-label-text {
+  font-weight: 600;
+  font-size: 1.2em;
+}
+
+.subscribe-body-payment-line {
+  border: 1px solid #E7E8ED;
+  color: #E7E8ED;
+  width: 100%;
+}
+
+.subscribe-body-payment-plan-tile {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.subscribe-body-payment-plan-tile-item {
+  background-color: white;
+  height: 12em;
+  padding-top: 2em;
+  padding-bottom: 1em;
+  width: 16em;
+  border-radius: .5em;
+  color: black !important;
+}
+
+.active {
+  border: 1px solid #44B3E5;
+}
+
+.subscribe-body-payment-plan-tile-item-dollar {
+  padding-left: .5em;
+  font-size: 1.2em;
+  vertical-align: 110%;
+}
+
+.subscribe-body-payment-plan-tile-item-bignum {
+  font-size: 4em;
+}
+
+.subscribe-body-payment-plan-tile-item-change {
+  font-size: 1.2em;
+}
+
+.subscribe-body-payment-plan-tile-item-month {
+  color: #C3C9CF;
+}
+
+.line-break {
+  width: 100%;
+}
+/* 
+.subscribe-body-payment-plan-tile-item-billed {
+  padding-left: 1em;
+} */
+
+.subscribe-body-payment-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.subscribe-body-payment-bottom-total {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.subscribe-body-payment-bottom-total-text {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.subscribe-body-payment-bottom-total-number {
+  font-weight: 600;
+  font-size: 1.5em;
+}
+
+.subscribe-body-payment-bottom-disclaimer {
+  padding-top: 2em;
+}
+
+.subscribe-body-payment-bottom-disclaimer-text{
+  color: #A2ABB5;
+  font-size: .8em;
+  font-weight: 300;
+  line-height: 2.5em;
+}
