@@ -113,7 +113,7 @@
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: nowrap;
-  width: 33em;
+  width: 35em;
   max-height: inherit;
   box-sizing:border-box;
 }
@@ -130,6 +130,12 @@
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: nowrap;
+  padding-bottom: 1em;
+}
+
+.subscribe-body-payment-card-number-label-text {
+  font-weight: 600;
+  font-size: 1.1em;
 }
 
 .subscribe-body-payment-card-img {
@@ -142,11 +148,63 @@
   justify-content: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  padding-bottom: 2em;
 }
 
 .subscribe-body-payment-card-number-input-input {
   width: 100%;
   margin: auto;
+  border: 2px solid #DFDFE6;
+  border-radius: .5em;
+  background-color: #F8F8FB;
+  height: 3em;
+}
+
+.subscribe-body-payment-card-number-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding-bottom: 2em;  
+}
+
+.subscribe-body-payment-card-number-details-label {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding-bottom: 1em;
+}
+
+.subscribe-body-payment-card-number-details-label-expiration {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.subscribe-body-payment-card-number-details-label-security {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.subscribe-body-payment-card-number-details-inputs-month {
+  border: 2px solid #DFDFE6;
+  width: 11em;
+  height: 3em;
+  margin-right: 1em;
+}
+
+.subscribe-body-payment-card-number-details-inputs-year {
+  border: 2px solid #DFDFE6;
+  width: 11em;
+  height: 3em;
+  margin-right: 1em;
+}
+
+.subscribe-body-payment-card-number-details-inputs-cvc {
+  height: 3em;
+  width: 11em;
+  background-color: #F8F8FB;
+  border: 2px solid #DFDFE6;
 }
 
 .subscribe-body-payment-plan {
@@ -162,7 +220,7 @@
 
 .subscribe-body-payment-plan-label-text {
   font-weight: 600;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 
 .subscribe-body-payment-line {

@@ -64,7 +64,7 @@ class Subscribe extends Component {
               <div className="subscribe-body-payment-card">
                 <div className="subscribe-body-payment-card-number">
                   <div className="subscribe-body-payment-card-number-label">
-                    <span className="subscribe-body-payment-card-label">Card Number</span>
+                    <span className="subscribe-body-payment-card-number-label-text">Card Number</span>
                     <img src={require('/Users/ali/Projects/acheev/src/assets/credit-cards.jpg')} className="subscribe-body-payment-card-img" />
                   </div>
                   <div className="subscribe-body-payment-card-number-input">
