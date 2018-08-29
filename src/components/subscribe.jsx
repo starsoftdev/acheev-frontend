@@ -4,6 +4,8 @@ import Header from './header'
 import Footer from './footer'
 import '../styles/subscirbe.css'
 
+
+const creditCardImg = require('../assets/credit-cards.jpg')
 class Subscribe extends Component {
   constructor(props) {
     super(props)
@@ -63,7 +65,7 @@ class Subscribe extends Component {
                 <div className="subscribe-body-payment-card-number">
                   <div className="subscribe-body-payment-card-number-label">
                     <span className="subscribe-body-payment-card-number-label-text">Card Number</span>
-                    <img src={require('/Users/ali/Projects/acheev/src/assets/credit-cards.jpg')} className="subscribe-body-payment-card-img" />
+                    <img src={creditCardImg} className="subscribe-body-payment-card-img" />
                   </div>
                   <div className="subscribe-body-payment-card-number-input">
                     <input type="password" placeholder="Insert your card number here" className="subscribe-body-payment-card-number-input-input"/>

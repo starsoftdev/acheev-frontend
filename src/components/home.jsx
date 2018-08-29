@@ -5,6 +5,10 @@ import Header from './header'
 import Footer from './footer'
 import { Button } from 'reactstrap';
 
+
+const heroImg = require('../assets/hero-image.png')
+const appStoreImg = require('../assets/app_store.svg')
+const googlePlayImg = require('../assets/google_play.svg')
 class Home extends Component {
   constructor(props) {
     super(props)
@@ -94,7 +98,7 @@ class Home extends Component {
     return (
       <div className="home-popular-categories-grid">
         <div className="home-popular-categories-grid-course">
-          <img src={require('/Users/ali/Projects/acheev/src/assets/hero-image.png')} className="home-popular-categories-grid-course-img" />
+          <img src={heroImg} className="home-popular-categories-grid-course-img" />
           <div className="home-popular-categories-grid-course-belowimg">
             <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
             <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
@@ -110,7 +114,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="home-popular-categories-grid-course">
-          <img src={require('/Users/ali/Projects/acheev/src/assets/hero-image.png')} className="home-popular-categories-grid-course-img" />
+          <img src={heroImg} className="home-popular-categories-grid-course-img" />
           <div className="home-popular-categories-grid-course-belowimg">
             <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
             <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
@@ -126,7 +130,7 @@ class Home extends Component {
           </div>
         </div>
         <div className="home-popular-categories-grid-course">
-          <img src={require('/Users/ali/Projects/acheev/src/assets/hero-image.png')} className="home-popular-categories-grid-course-img" />
+          <img src={heroImg} className="home-popular-categories-grid-course-img" />
           <div className="home-popular-categories-grid-course-belowimg">
             <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
             <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
@@ -148,7 +152,7 @@ class Home extends Component {
   render() {
     return (
       <div className="home">
-        <header className="home-header"> 
+        <header className="home-header">
           <Header />
         </header>
         <div className="home-banner">
@@ -242,8 +246,8 @@ class Home extends Component {
             <h2 className="home-app-left-header">iPhone & Android Apps are live.</h2>
             <p className="home-app-left-text">Take Acheev with you on the go. Book a freelancer, keep track of multiple jobs, work remotely & never stop learing.</p>
             <div className="home-app-left-stores">
-              <img src={require('/Users/ali/Projects/acheev/src/assets/app_store.svg')} className="home-app-store-logo"/>
-              <img src={require('/Users/ali/Projects/acheev/src/assets/google_play.svg')} className="home-app-store-logo"/>
+              <img src={appStoreImg} className="home-app-store-logo"/>
+              <img src={googlePlayImg} className="home-app-store-logo"/>
             </div>
           </div>
           <div className="home-app-right">
