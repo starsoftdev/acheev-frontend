@@ -5,12 +5,18 @@ import {
   InputGroupAddon,
   Input,
   Button,
-  Modal, 
-  ModalHeader, 
-  ModalBody, 
+  Modal,
+  ModalHeader,
+  ModalBody,
   ModalFooter
  } from 'reactstrap';
  import '../styles/header.css'
+
+ const logoImg =
+ require('../logo.svg')
+
+ const continueFacebookImg =
+ require('../assets/continue_facebook.png')
 
 class Header extends React.Component {
   constructor(props) {
@@ -45,7 +51,7 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="header-left">
-          <img src={require('/Users/ali/Projects/acheev/src/logo.svg')} className="header-logo"/>
+          <img src={logoImg} className="header-logo"/>
           <InputGroup className="header-input">
             <Input className="header-input-input" placeholder="What skill are you looking for?" />
             <InputGroupAddon addonType="prepend" className="header-input-button"><Button className="header-input-button-button"><span>&#x1F50D;</span></Button></InputGroupAddon>
@@ -58,7 +64,7 @@ class Header extends React.Component {
         <div className="modal">
           <Modal isOpen={this.state.loginModal} toggle={this.toggleLogin} className="header-modal">
             <ModalHeader toggle={this.toggle}><h4 className="header-modal-title">Login To Acheev</h4>
-              <img src={require('/Users/ali/Projects/acheev/src/assets/continue_facebook.png')} className="modal-continue"/>
+              <img src={continueFacebookImg} className="modal-continue"/>
             </ModalHeader>
             <ModalBody>
               <div className="modal-inputs">
@@ -82,7 +88,7 @@ class Header extends React.Component {
         <div className="modal">
           <Modal isOpen={this.state.signupModal} toggle={this.toggleSignup} className="header-modal">
             <ModalHeader toggle={this.toggle}><h4 className="header-modal-title">Join Acheev</h4>
-              <img src={require('/Users/ali/Projects/acheev/src/assets/continue_facebook.png')} className="modal-continue"/>
+              <img src={continueFacebookImg} className="modal-continue"/>
             </ModalHeader>
             <ModalBody>
               <div className="modal-inputs">
