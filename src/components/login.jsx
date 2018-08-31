@@ -10,17 +10,38 @@ import {
   ModalBody,
   ModalFooter
  } from 'reactstrap';
+
+import Account from '../services/account'
 import '../styles/header.css'
 
 const continueFacebookImg = require('../assets/continue_facebook.png')
 
 export default class LogIn extends React.Component {
 
-  onLoginSucess = (userData) => {
+  constructor(props){
+
+    super(props)
+
+    this.username = ''
+    this.password = ''
 
   }
 
+  onLoginSucess = (userData) => {
+    this.props.toggleLogIn()
+  }
+
   onLoginFailed = (error) => {
+      console.log(error)
+  }
+
+  logIn = () => {
+
+    Account.logIn(this.username, this.password).then(userData=>{
+      this.onLoginSucess(userData)
+    }).catch(error=>{
+      this.onLoginFailed(error)
+    })
 
   }
 
@@ -36,9 +57,9 @@ export default class LogIn extends React.Component {
           <ModalBody>
             <div className="modal-inputs">
               <InputGroup>
-                <Input type="text" placeholder="Email/Username" />
-                <Input type="password" placeholder="Password" />
-                <Button color="primary" size="lg" block className="modal-submit">Log In</Button>
+                <Input type="text" placeholder="Email/Username" onChange={(e) => this.username = e.target.value}/>
+                <Input type="password" placeholder="Password" onChange={(e) => this.password = e.target.value}/>
+                <Button color="primary" size="lg" block className="modal-submit" onClick={this.logIn} >Log In</Button>
                 <div className="modal-below-button">
                   <p>Remember Me?</p>
                   <p>Forgot Password</p>
