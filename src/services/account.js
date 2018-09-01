@@ -1,20 +1,24 @@
 
+import Config from '../config'
 
 
 export default class Account {
 
-
   static logIn = (username, password) => {
 
-    const url = 'sampleUrl'
-    const formData = new FormData();
-    formData.append('username', username);
-    formData.append('password', password);
+    const url = Config.endPoints.logIn
 
-    return Promise.resolve({'data':'1234'})
-    // return fetch(url, {
-    //     method: 'post',
-    //     body: formData,
-    // })
+    const data = {
+      logemail: username,
+      logpassword: password
+    }
+
+    return fetch(url, {
+        method: 'post',
+        headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        },
+        body: JSON.stringify(data),
+    })
   }
 }
