@@ -9,5 +9,14 @@ module.exports = {
     base: endPointsBase,
     logIn: `${endPointsBase}/login`
 
+  },
+
+  facebook:{
+    appId: 1088597931155576
+  },
+
+  google: {
+    clientId: '123456'
+
   }
 }

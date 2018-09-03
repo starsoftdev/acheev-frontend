@@ -29,8 +29,8 @@ export default class SignUp extends React.Component {
     return (
 
           <div className="modal">
-            <Modal isOpen={this.props.isOpen} toggle={this.toggleSignUp} className="header-modal">
-              <ModalHeader toggle={this.toggleSignUp}>
+            <Modal isOpen={this.props.isOpen} toggle={this.props.toggleSignUp} className="header-modal">
+              <ModalHeader toggle={this.props.toggleSignUp}>
                 <p className="header-modal-title">Join Acheev</p>
                 <img src={continueFacebookImg} className="modal-continue"/>
               </ModalHeader>
