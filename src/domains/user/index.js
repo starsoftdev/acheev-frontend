@@ -1,6 +1,4 @@
 
-
-//// TODO: use Redux to observe the data of user
 class User {
 
   constructor(userId){
