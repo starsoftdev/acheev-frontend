@@ -8,7 +8,7 @@ const UserProfile = {
   account: {
     firstName: '<string>',
     lastName: '<string>',
-    avatar: '<image_url>'
+    avatar: '<image_url>',
     joinDate: '<timestamp>',
     tagline: '<string>',
     description: '<string>'
@@ -101,7 +101,10 @@ const UserProfile = {
   reviews: [
     {
       id: '<unique_id>',
-      userId: '<review_poster_uid_which_is_user_uid>',
+      user: {
+        id: '<review_poster_uid_which_is_user_uid>',
+        avatar: '<image_url>'
+      },
       rating: {
         overAll: '<float_from_0_to_5>',
         communication: '<float_from_0_to_5>',
