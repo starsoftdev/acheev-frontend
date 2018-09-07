@@ -29,51 +29,40 @@ export const CourseHolder = styled.div`
   padding-right: 5em;
 `;
 
-export const CourseTile = styled.div`
+export const AddNewCourseTile = styled.div`
   width: 370px;
   height: 420px;
+  opacity: 0.15;
   border-radius: 10px;
-  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
-  background-color: #ffffff;
-  border: solid 1px #eaeaea;
+  border: solid 1px #353d55;
 `;
 
-export const CourseTileImg = styled.div`
-  width: 370px;
-  height: 200px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-  background-image: url('${props => props.backgroundImg}')
+export const AddNewCourseTileCircle = styled.div`
+  margin-top: 160px;
+  margin-left: 135px;
+  width: 100px;
+  height: 100px;
+  border: solid 1px #353d55;
+  border-radius: 100%;
 `;
 
-export const CourseTileBelowImg = styled.div`
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 30px;
-  display: flex;
-  flex-direction: column;
+export const AddNewCourseTilePlus = styled.div`
+  margin-left: 35px;
+  margin-top: 30px;
+  font-size: 1.75em;
 `;
 
-export const CourseTileTitle = styled.span`
-  width: 310px;
-  height: 48px;
-  font-size: 18px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #14293d;
-`;
-
-export const CourseTileAuthor = styled.span`
-  height: 20px;
-  font-size: 14px;
+export const AddNewCourseTileText = styled.span`
+  margin-left: 125px;
+  width: 80px;
+  height: 22px;
+  font-size: 15px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  line-height: 1.43;
+  line-height: 1.47;
   letter-spacing: normal;
+  text-align: center;
   color: rgba(20, 41, 61, 0.65);
 `;
 
