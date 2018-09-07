@@ -8,7 +8,7 @@ export const CourseTile = styled.div`
   box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
   background-color: #ffffff;
   border: solid 1px #eaeaea;
-  margin-right: 30px;
+  margin-right: 90px;
 `;
 
 export const CourseTileImg = styled.div`

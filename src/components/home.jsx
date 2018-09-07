@@ -4,7 +4,7 @@ import './../App.css';
 import Header from './header'
 import Footer from './footer'
 import { Button } from 'reactstrap';
-
+import { stars } from '../consts/functions'
 
 const heroImg = require('../assets/hero-image.png')
 const appStoreImg = require('../assets/app_store.svg')
@@ -19,81 +19,6 @@ class Home extends Component {
 
   }
 
-  stars = (rating) => {
-    if (rating === 5) {
-      return (
-        <div>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="star-rating">5.0</span>
-        </div>
-      )
-    }
-    if (rating === 4) {
-      return (
-        <div>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="star-rating">4.0</span>
-        </div>
-      )
-    }
-    if (rating === 3) {
-      return (
-        <div>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="star-rating">3.0</span>
-        </div>
-      )
-    }
-    if (rating === 2) {
-      return (
-        <div>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="star-rating">2.0</span>
-        </div>
-      )
-    }
-    if (rating === 1) {
-      return (
-        <div>
-          <span className="fa fa-star checked fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="fa fa-star fa-2x"></span>
-          <span className="star-rating">1.0</span>
-        </div>
-      )
-    }
-    if (rating === 0) {
-      return (
-        <div>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="fa fa-star"></span>
-          <span className="star-rating">0</span>
-        </div>
-      )
-    }
-  }
-
   popular = () => {
     return (
       <div className="home-popular-categories-grid">
@@ -105,7 +30,7 @@ class Home extends Component {
             <hr className="home-popular-categories-grid-course-separator" />
             <div className="home-popular-categories-grid-course-stats">
               <div className="home-popular-categories-grid-course-stats-top">
-                {this.stars(4)}
+                {stars(4)}
                 <span className="home-popular-categories-grid-course-price">$250</span>
               </div>
               <div className="home-popular-categories-grid-course-stats-bottom">
@@ -121,7 +46,7 @@ class Home extends Component {
             <hr className="home-popular-categories-grid-course-separator" />
             <div className="home-popular-categories-grid-course-stats">
               <div className="home-popular-categories-grid-course-stats-top">
-                {this.stars(4)}
+                {stars(4)}
                 <span className="home-popular-categories-grid-course-price">$250</span>
               </div>
               <div className="home-popular-categories-grid-course-stats-bottom">
@@ -137,7 +62,7 @@ class Home extends Component {
             <hr className="home-popular-categories-grid-course-separator" />
             <div className="home-popular-categories-grid-course-stats">
               <div className="home-popular-categories-grid-course-stats-top">
-                {this.stars(4)}
+                {stars(4)}
                 <span className="home-popular-categories-grid-course-price">$250</span>
               </div>
               <div className="home-popular-categories-grid-course-stats-bottom">

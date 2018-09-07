@@ -19,6 +19,7 @@ class MyClasses extends Component {
     super(props)
 
     this.state = {
+      tab: "all"
     }
   }
 
@@ -40,10 +41,22 @@ class MyClasses extends Component {
         <TopBanner >
           <BannerHeader>My Classes</BannerHeader>
           <TabHolder>
-            <TabItem>All Courses</TabItem>
-            <TabItem>Collections</TabItem>
-            <TabItem>Wishlist</TabItem>
-            <TabItem>Archived</TabItem>
+            <TabItem 
+              style={this.state.tab === "all" ? {borderBottom: '5px white solid'} : null}
+              onClick={() => this.setState({ tab: 'all' })}
+            >All Courses</TabItem>
+            <TabItem
+              style={this.state.tab === "collections" ? {borderBottom: '5px white solid'} : null}
+              onClick={() => this.setState({ tab: 'collections' })}
+            >Collections</TabItem>
+            <TabItem
+              style={this.state.tab === "wishlist" ? {borderBottom: '5px white solid'} : null}
+              onClick={() => this.setState({ tab: 'wishlist' })}
+            >Wishlist</TabItem>
+            <TabItem
+              style={this.state.tab === "archived" ? {borderBottom: '5px white solid'} : null}
+              onClick={() => this.setState({ tab: 'archived' })}
+            >Archived</TabItem>
           </TabHolder>
         </TopBanner>        
         <CourseHolder>

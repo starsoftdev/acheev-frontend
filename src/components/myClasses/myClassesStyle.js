@@ -15,7 +15,6 @@ export const TabHolder = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 30%;
-  margin-top: auto;
 `;
 
 export const CourseHolder = styled.div`
@@ -73,6 +72,10 @@ export const BannerHeader = styled.h1`
 
 export const TabItem = styled.span`
   color: rgba(255, 255, 255, 0.65);
-  height: 1em;
+  margin-top: 45px;
+  padding-bottom: 20px;
+  &:hover{
+    cursor: pointer;
+  }
 `;
 
