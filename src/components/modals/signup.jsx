@@ -9,9 +9,9 @@ import {
   ModalBody,
   ModalFooter
  } from 'reactstrap';
-import '../styles/header.css'
+import '../containers/header/header.css'
 
-const continueFacebookImg = require('../assets/continue_facebook.png')
+const continueFacebookImg = require('../../assets/continue_facebook.png')
 
 export default class SignUp extends React.Component {
 

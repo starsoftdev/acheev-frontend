@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Header from '../header'
-import Footer from '../footer'
+import Header from '../../containers/header/header'
+import Footer from '../../containers/footer/footer'
 import { Button } from 'reactstrap';
 
-import { CourseTileWrapper } from '../CourseTile/CourseTileWrapper'
+import { CourseTileWrapper } from '../../containers/CourseTile/CourseTileWrapper'
 
 import {
   TopBanner, BannerHeader,

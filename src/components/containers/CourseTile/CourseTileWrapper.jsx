@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { stars } from '../../consts/functions'
+import { stars } from '../../../consts/functions'
 import { Line } from 'rc-progress';
 
 import {
@@ -12,7 +12,7 @@ import {
   CourseTileRatingAndProgressContainer, CourseTileProgress,
 } from './CourseTileWrapperStyle';
 
-const heroImg = require('../../assets/hero-image.png')
+const heroImg = require('../../../assets/hero-image.png')
 
 export const CourseTileWrapper = (props) => {
   const numOfStars = props.courseStars

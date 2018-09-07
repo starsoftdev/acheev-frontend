@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import Header from './header'
-import Footer from './footer'
-import '../styles/subscirbe.css'
+import Header from '../../containers/header/header'
+import Footer from '../../containers/footer/footer'
+import './subscirbe.css'
 
 
-const creditCardImg = require('../assets/credit-cards.jpg')
+const creditCardImg = require('../../../assets/credit-cards.jpg')
 class Subscribe extends Component {
   constructor(props) {
     super(props)

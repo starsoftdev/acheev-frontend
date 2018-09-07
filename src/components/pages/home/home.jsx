@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './../App.css';
-import Header from './header'
-import Footer from './footer'
+import './App.css';
+import Header from '../../containers/header/header'
+import Footer from '../../containers/footer/footer'
 import { Button } from 'reactstrap';
-import { stars } from '../consts/functions'
+import { stars } from '../../../consts/functions'
 
-const heroImg = require('../assets/hero-image.png')
-const appStoreImg = require('../assets/app_store.svg')
-const googlePlayImg = require('../assets/google_play.svg')
+const heroImg = require('../../../assets/hero-image.png')
+const appStoreImg = require('../../../assets/app_store.svg')
+const googlePlayImg = require('../../../assets/google_play.svg')
+
 class Home extends Component {
   constructor(props) {
     super(props)

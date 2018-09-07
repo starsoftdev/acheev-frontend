@@ -10,7 +10,7 @@ import {
   ModalBody, 
   ModalFooter
  } from 'reactstrap';
- import '../styles/footer.css'
+ import './footer.css'
 
 class Footer extends React.Component {
   constructor(props) {

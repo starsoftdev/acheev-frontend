@@ -11,15 +11,15 @@ import {
   ModalFooter
  } from 'reactstrap';
 
- import LogIn from './login'
- import SignUp from './signup'
- import '../styles/header.css'
+ import LogIn from '../../modals/login'
+ import SignUp from '../../modals/signup'
+ import './header.css'
 
  const logoImg =
- require('../logo.svg')
+ require('../../../logo.svg')
 
  const continueFacebookImg =
- require('../assets/continue_facebook.png')
+ require('../../../assets/continue_facebook.png')
 
 class Header extends React.Component {
   constructor(props) {
