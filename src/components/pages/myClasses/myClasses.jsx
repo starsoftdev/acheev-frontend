@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
-import { Button } from 'reactstrap';
 
 import { CourseTileWrapper } from '../../containers/CourseTile/CourseTileWrapper'
 
