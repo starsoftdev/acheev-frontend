@@ -7,8 +7,12 @@ import { Button } from 'reactstrap';
 import {
   TopBanner, BannerHeader,
   TabHolder, TabItem,
-  CourseHolder,
+  CourseHolder, CourseTile,
+  CourseTileImg, CourseTileTitle,
+  CourseTileBelowImg, CourseTileAuthor,
 } from './myClassesStyle';
+
+const heroImg = require('../../assets/hero-image.png')
 
 class MyClasses extends Component {
   constructor(props) {
@@ -19,6 +23,17 @@ class MyClasses extends Component {
     }
   }
 
+  renderCourses = () => {
+    return (
+      <CourseTile>
+        <CourseTileImg backgroundImg={heroImg} />
+        <CourseTileBelowImg>
+          <CourseTileTitle>Learn How To Properly Optimize Your Website For Search Engines</CourseTileTitle>
+          <CourseTileAuthor>Thomas Cobb</CourseTileAuthor>
+        </CourseTileBelowImg>
+      </CourseTile>
+    )
+  }
 
   render() {
     return (
@@ -32,11 +47,10 @@ class MyClasses extends Component {
             <TabItem>Wishlist</TabItem>
             <TabItem>Archived</TabItem>
           </TabHolder>
+        </TopBanner>        
         <CourseHolder>
-          
+          {this.renderCourses()}
         </CourseHolder>
-        </TopBanner>
-
         <Footer />
       </div>
     )
