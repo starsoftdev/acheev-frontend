@@ -3,6 +3,7 @@ import React from 'react'
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
 import { UnownedCourseTileWrapper } from '../../containers/UnownedCourseTileWrapper/UnownedCourseTileWrapper'
+import { InstructorProfileTileWrapper } from '../../containers/InstructorProfileTileWrapper/InstructorProfileTileWrapper'
 
 import { starsWithNumOfReviews } from '../../../consts/functions'
 
@@ -129,16 +130,39 @@ class CourseOverview extends React.Component {
     // do the same as renderTopCourses
     return (
       <InstructorRow>
-        <InstructorTile>
-          <InstructorImg backgroundImg={heroImg} />
-          <InstructorName>
-            John Johnson
-          </InstructorName>
-          <InstructorSpecialties>
-            Specialties, From, Props
-          </InstructorSpecialties>
-          {starsWithNumOfReviews(5, 234)}
-        </InstructorTile>
+        <ScaledCourse>
+          <InstructorProfileTileWrapper
+            img={heroImg}
+            name={"John Johnson"}
+            specialties={"Specialties, From, Props"}
+            numOfStars={4}
+            numOfReviews={234}
+            numOfStudents={1000}
+            numOfCourses={5}
+          />
+        </ScaledCourse>
+        <ScaledCourse>
+          <InstructorProfileTileWrapper
+            img={heroImg}
+            name={"Alex Alexson"}
+            specialties={"Specialties, From, Props"}
+            numOfStars={1}
+            numOfReviews={2344}
+            numOfStudents={100000}
+            numOfCourses={8}
+          />
+        </ScaledCourse>
+        <ScaledCourse>
+          <InstructorProfileTileWrapper
+            img={heroImg}
+            name={"Paul Paulson"}
+            specialties={"Specialties, From, Props"}
+            numOfStars={5}
+            numOfReviews={234}
+            numOfStudents={1000}
+            numOfCourses={5}
+          />
+        </ScaledCourse>
       </InstructorRow>
     )
   }
