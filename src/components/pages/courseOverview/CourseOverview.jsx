@@ -6,8 +6,16 @@ import Footer from '../../containers/footer/footer'
 import {
   TopBanner, BannerHeader,
   CourseDiv, BodyDiv,
-  CourseTitle
+  CourseTitle, TitleAndStarRow,
+  StarContainer, Rating,
+  CourseAttributeRow, CourseAttribute,
+  CourseImg, PopularTopicsSection,
+  TitleAndViewAllContainer, TopicTitle,
+  PriceAndButtonRow, PriceContainer,
+  BoldPrice, StrikedPrice
 } from './CourseOverviewStyle';
+
+const heroImg = require('../../../assets/hero-image.png')
 
 class CourseOverview extends React.Component {
   constructor(props) {
@@ -18,22 +26,68 @@ class CourseOverview extends React.Component {
     }
   }
 
+  renderPrice = () => {
+    // if props indicate a sale on price, return crossed out regular price, bold sale price.
+    // else, return regular price in bold
+
+    return (
+      <PriceContainer>
+        <BoldPrice>
+          $PR.OPS
+        </BoldPrice>
+        <StrikedPrice>
+          $$$$$
+        </StrikedPrice>
+      </PriceContainer>
+    )
+  }
+
   render() {
     return (
       <div>
         <Header />
           <TopBanner>
             <BannerHeader>
-              Category From Props
+              CATEGORY FROM PROPS
             </BannerHeader>
             <CourseDiv>
-              <CourseTitle>
-                'Author Name' on 'Title Of Course'
-              </CourseTitle>
+              <TitleAndStarRow>
+                <CourseTitle>
+                  'Author Name' on 'Title Of Course'
+                </CourseTitle>
+                <StarContainer>
+                  <Rating>Num from props</Rating>
+                  <span className="fa fa-star checked fa-lg"></span>
+                </StarContainer>
+              </TitleAndStarRow>
+              <CourseAttributeRow>
+                <CourseAttribute>
+                  Last Updated from props
+                </CourseAttribute>
+                <CourseAttribute>
+                  Duration from props
+                </CourseAttribute>
+                <CourseAttribute>
+                  Num of Lectures from props
+                </CourseAttribute>
+                <CourseAttribute>
+                  Difficulty level from props
+                </CourseAttribute>
+              </CourseAttributeRow>
+              <CourseImg Img={heroImg} />
+              <PriceAndButtonRow>
+                {this.renderPrice()}
+              </PriceAndButtonRow>
             </CourseDiv>
           </TopBanner>
           <BodyDiv>
-
+            <PopularTopicsSection>
+              <TitleAndViewAllContainer>
+                <TopicTitle>
+                  Popular Topics
+                </TopicTitle>
+              </TitleAndViewAllContainer>
+            </PopularTopicsSection>
           </BodyDiv>
         <Footer />
       </div>
