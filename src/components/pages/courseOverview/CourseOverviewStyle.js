@@ -152,20 +152,22 @@ export const StyledButtonWrapper = styled(Button)`
 
 export const BodyDiv = styled.div`
   background-color: #f8f8fb;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 10.5em;
+  padding-right: 10.5em;
 `;
 
 export const PopularTopicsSection = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 500px;
+  padding-top: 460px;
 `;
 
 export const TitleAndViewAllContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-bottom: 2em;
+  padding-top: 3em;
 `;
 
 export const TopicTitle = styled.span`
@@ -178,4 +180,145 @@ export const TopicTitle = styled.span`
   line-height: normal;
   letter-spacing: normal;
   color: #14293d;
+`;
+
+export const TopicsViewAll = styled.a`
+  width: 53px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: right;
+  color: #14293d;
+`;
+
+export const TopicRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-botton: 1em;
+`;
+
+export const TopicTile = styled.div`
+  width: 150px;
+  height: 60px;
+  border-radius: 2px;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: none;
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(204,200,204,1);
+  -moz-box-shadow: 0px 0px 5px 1px rgba(204,200,204,1);
+  box-shadow: 0px 0px 5px 1px rgba(204,200,204,1);
+  margin-left: 2em;
+  margin-bottom: 2em;
+`;
+
+export const TopicTileText = styled.div`
+  width: 130px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #14293d;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
+
+export const CoursesTitle = styled.span`
+  width: 530px;
+  height: 32px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+`;
+
+export const CoursesViewAll = styled.a`
+  width: 53px;
+  height: 20px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: right;
+  color: #14293d;
+`;
+
+export const CoursesRow = styled.div`
+  display: flex;
+  flex-directionL row;
+  padding-left: 1em;
+`;
+
+export const ScaledCourse = styled.div`
+  zoom: 0.95;
+  -moz-transform: scale(0.5);
+  padding-right: 2em;
+`;
+
+export const InstructorRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-left: 1em;
+`;
+
+export const InstructorTile = styled.div`
+  width: 370px;
+  height: 451px;
+  border-radius: 5px;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+  display: flex;
+  flex-direction: column;
+`;
+
+export const InstructorImg = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  background-image: url('${props => props.backgroundImg}');
+  margin-left: 125px;
+  margin-top: 30px;
+`;
+
+export const InstructorName = styled.span`
+  margin-top: 20px;
+  height: 24px;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #14293d;
+`;
+
+export const InstructorSpecialties = styled.span`
+  margin-top: 15px;
+  height: 22px;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.47;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(20, 41, 61, 0.65);
 `;

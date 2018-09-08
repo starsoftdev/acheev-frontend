@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
+import { UnownedCourseTileWrapper } from '../../containers/UnownedCourseTileWrapper/UnownedCourseTileWrapper'
+
 import { Button } from 'reactstrap';
 import { stars } from '../../../consts/functions'
 
@@ -23,54 +24,27 @@ class Home extends Component {
   popular = () => {
     return (
       <div className="home-popular-categories-grid">
-        <div className="home-popular-categories-grid-course">
-          <img src={heroImg} className="home-popular-categories-grid-course-img" />
-          <div className="home-popular-categories-grid-course-belowimg">
-            <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
-            <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
-            <hr className="home-popular-categories-grid-course-separator" />
-            <div className="home-popular-categories-grid-course-stats">
-              <div className="home-popular-categories-grid-course-stats-top">
-                {stars(4)}
-                <span className="home-popular-categories-grid-course-price">$250</span>
-              </div>
-              <div className="home-popular-categories-grid-course-stats-bottom">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="home-popular-categories-grid-course">
-          <img src={heroImg} className="home-popular-categories-grid-course-img" />
-          <div className="home-popular-categories-grid-course-belowimg">
-            <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
-            <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
-            <hr className="home-popular-categories-grid-course-separator" />
-            <div className="home-popular-categories-grid-course-stats">
-              <div className="home-popular-categories-grid-course-stats-top">
-                {stars(4)}
-                <span className="home-popular-categories-grid-course-price">$250</span>
-              </div>
-              <div className="home-popular-categories-grid-course-stats-bottom">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="home-popular-categories-grid-course">
-          <img src={heroImg} className="home-popular-categories-grid-course-img" />
-          <div className="home-popular-categories-grid-course-belowimg">
-            <h5 className="home-popular-categories-grid-course-header">Learn how to properly optimize Your Website For Search Engines</h5>
-            <span className="home-popular-categories-grid-course-author">Thomas Cobb</span>
-            <hr className="home-popular-categories-grid-course-separator" />
-            <div className="home-popular-categories-grid-course-stats">
-              <div className="home-popular-categories-grid-course-stats-top">
-                {stars(4)}
-                <span className="home-popular-categories-grid-course-price">$250</span>
-              </div>
-              <div className="home-popular-categories-grid-course-stats-bottom">
-              </div>
-            </div>
-          </div>
-        </div>
+        <UnownedCourseTileWrapper
+          img={heroImg}
+          title={"Title from props"}
+          author={"Author from props"}
+          courseStars={4}
+          price={"$45.00"}
+        />
+        <UnownedCourseTileWrapper
+          img={heroImg}
+          title={"Title from props"}
+          author={"Author from props"}
+          courseStars={4}
+          price={"$45.00"}
+        />
+        <UnownedCourseTileWrapper
+          img={heroImg}
+          title={"Title from props"}
+          author={"Author from props"}
+          price={"$45.00"}
+          courseStars={4}
+        />
       </div>
     )
   }

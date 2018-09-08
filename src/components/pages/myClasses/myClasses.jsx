@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
 
-import { CourseTileWrapper } from '../../containers/CourseTile/CourseTileWrapper'
+import { MyCourseTileWrapper } from '../../containers/MyCourseTileWrapper/MyCourseTileWrapper'
 
 import {
   TopBanner, BannerHeader,
@@ -12,6 +12,8 @@ import {
   AddNewCourseTileCircle, AddNewCourseTilePlus,
   AddNewCourseTileText,
 } from './myClassesStyle';
+
+const heroImg = require('../../../assets/hero-image.png')
 
 class MyClasses extends Component {
   constructor(props) {
@@ -24,7 +26,8 @@ class MyClasses extends Component {
 
   renderCourses = () => {
     return (
-      <CourseTileWrapper
+      <MyCourseTileWrapper
+        img={heroImg}
         title={'Learn How To Properly Optimize Your Website For Search Engines'}
         author={'Thomas Cobb'}
         progressPercentage={10}

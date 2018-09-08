@@ -1,8 +1,7 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import {
   InputGroup,
-  InputGroupAddon,
   Input,
   Button,
   Modal,
@@ -19,7 +18,7 @@ import Config from '../../config'
 
 import '../containers/header/header.css'
 
-const continueFacebookImg = require('../../assets/continue_facebook.png')
+// const continueFacebookImg = require('../../assets/continue_facebook.png')
 
 //TODO:
 //1. add UI that displays error message when logIn failed

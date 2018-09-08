@@ -1,22 +1,8 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import {
-  InputGroup,
-  InputGroupAddon,
-  Input,
-  Button,
-  Modal, 
-  ModalHeader, 
-  ModalBody, 
-  ModalFooter
- } from 'reactstrap';
- import './footer.css'
+import React from 'react';
+
+import './footer.css'
 
 class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-
-  }
 
   render() {
     return (

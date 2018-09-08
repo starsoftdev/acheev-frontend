@@ -4,22 +4,18 @@ import { stars } from '../../../consts/functions'
 import { Line } from 'rc-progress';
 
 import {
-  TopBanner, BannerHeader,
-  TabHolder, TabItem,
-  CourseHolder, CourseTile,
-  CourseTileImg, CourseTileTitle,
-  CourseTileBelowImg, CourseTileAuthor,
-  CourseTileRatingAndProgressContainer, CourseTileProgress,
-} from './CourseTileWrapperStyle';
+  CourseTile, CourseTileImg,
+  CourseTileTitle, CourseTileBelowImg,
+  CourseTileAuthor, CourseTileRatingAndProgressContainer,
+  CourseTileProgress,
+} from './MyCourseTileWrapperStyle';
 
-const heroImg = require('../../../assets/hero-image.png')
-
-export const CourseTileWrapper = (props) => {
+export const MyCourseTileWrapper = (props) => {
   const numOfStars = props.courseStars
 
   return (
     <CourseTile>
-    <CourseTileImg backgroundImg={heroImg} />
+    <CourseTileImg backgroundImg={props.img} />
     <CourseTileBelowImg>
       <CourseTileTitle>{props.title}</CourseTileTitle>
       <CourseTileAuthor>{props.author}</CourseTileAuthor>

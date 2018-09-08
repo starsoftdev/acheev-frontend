@@ -1,14 +1,9 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import React from 'react';
 import {
   InputGroup,
   InputGroupAddon,
   Input,
   Button,
-  Modal,
-  ModalHeader,
-  ModalBody,
-  ModalFooter
  } from 'reactstrap';
 
  import LogIn from '../../modals/login'
@@ -18,8 +13,8 @@ import {
  const logoImg =
  require('../../../logo.svg')
 
- const continueFacebookImg =
- require('../../../assets/continue_facebook.png')
+//  const continueFacebookImg =
+//  require('../../../assets/continue_facebook.png')
 
 class Header extends React.Component {
   constructor(props) {

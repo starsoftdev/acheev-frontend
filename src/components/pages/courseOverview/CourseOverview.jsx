@@ -1,9 +1,10 @@
 import React from 'react'
 
-import { Button } from 'semantic-ui-react'
-
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
+import { UnownedCourseTileWrapper } from '../../containers/UnownedCourseTileWrapper/UnownedCourseTileWrapper'
+
+import { starsWithNumOfReviews } from '../../../consts/functions'
 
 import {
   TopBanner, BannerHeader,
@@ -15,7 +16,13 @@ import {
   TitleAndViewAllContainer, TopicTitle,
   PriceAndButtonRow, PriceContainer,
   BoldPrice, StrikedPrice,
-  StyledButtonWrapper
+  StyledButtonWrapper, TopicsViewAll,
+  TopicRow, TopicTile,
+  TopicTileText, CoursesTitle,
+  CoursesViewAll, CoursesRow,
+  ScaledCourse, InstructorRow,
+  InstructorTile, InstructorImg,
+  InstructorName, InstructorSpecialties,
 } from './CourseOverviewStyle';
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -42,6 +49,97 @@ class CourseOverview extends React.Component {
           $$$$$
         </StrikedPrice>
       </PriceContainer>
+    )
+  }
+
+  renderTopCourses = () => {
+    // create an array of 3 (0, 1, 2) course objects, map them into CourseTileWrapper
+    // when next arrow is clicked, change state to 'secondProgressDot' and reassign course objects (3, 4, 5) to array
+
+    return (
+      <CoursesRow>     
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse> 
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={3}
+            price={"$45.00"}
+          />
+        </ScaledCourse> 
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={5}
+            price={"$45.00"}
+          />
+        </ScaledCourse>       
+      </CoursesRow>      
+    )
+  }
+
+  renderTrendingCourses = () => {
+    // do the same as renderTopCourses
+
+    return (
+      <CoursesRow>     
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse> 
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse> 
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>       
+      </CoursesRow>      
+    )
+  }
+
+  renderInstructors = () => {
+    // do the same as renderTopCourses
+    return (
+      <InstructorRow>
+        <InstructorTile>
+          <InstructorImg backgroundImg={heroImg} />
+          <InstructorName>
+            John Johnson
+          </InstructorName>
+          <InstructorSpecialties>
+            Specialties, From, Props
+          </InstructorSpecialties>
+          {starsWithNumOfReviews(5, 234)}
+        </InstructorTile>
+      </InstructorRow>
     )
   }
 
@@ -92,8 +190,100 @@ class CourseOverview extends React.Component {
                 <TopicTitle>
                   Popular Topics
                 </TopicTitle>
+                <TopicsViewAll>
+                  View All
+                </TopicsViewAll>
               </TitleAndViewAllContainer>
+              <TopicRow>
+                <TopicTile>
+                  <TopicTileText>
+                    YouTube Marketing
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Business Branding
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Marketing Strategy
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Personal Branding
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Brand Management
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    PowToon
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Blogging
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Outsourcing
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Storytelling
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Fashion
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    Soical Media
+                  </TopicTileText>
+                </TopicTile>
+                <TopicTile>
+                  <TopicTileText>
+                    YouTube Marketing
+                  </TopicTileText>
+                </TopicTile>
+              </TopicRow>
             </PopularTopicsSection>
+            <TitleAndViewAllContainer>
+              <CoursesTitle>
+                Popular Courses in "Props"
+              </CoursesTitle>
+              <CoursesViewAll>
+                View All
+              </CoursesViewAll>
+            </TitleAndViewAllContainer>
+            {this.renderTopCourses()}
+            <TitleAndViewAllContainer>
+              <CoursesTitle>
+                Trending in "Props"
+              </CoursesTitle>
+              <CoursesViewAll>
+                View All
+              </CoursesViewAll>
+            </TitleAndViewAllContainer>
+            {this.renderTrendingCourses()}
+            <TitleAndViewAllContainer>
+              <CoursesTitle>
+                Most Popular Instructors in "Props"
+              </CoursesTitle>
+              <CoursesViewAll>
+                View All
+              </CoursesViewAll>
+            </TitleAndViewAllContainer>
+            {this.renderInstructors()}
           </BodyDiv>
         <Footer />
       </div>
