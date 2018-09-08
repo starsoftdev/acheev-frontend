@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Button } from 'semantic-ui-react'
 
 export const TopBanner = styled.div`
   display: flex;
@@ -138,6 +139,15 @@ export const StrikedPrice = styled.span`
   text-decoration: line-through;
   position: relative;
   top: 22px;
+`;
+
+export const StyledButtonWrapper = styled(Button)`
+  width: 140px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #2f9ed8;
+  border: none;
+  color: white;
 `;
 
 export const BodyDiv = styled.div`

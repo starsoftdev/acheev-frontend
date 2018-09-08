@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { Button } from 'semantic-ui-react'
+
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
 
@@ -12,7 +14,8 @@ import {
   CourseImg, PopularTopicsSection,
   TitleAndViewAllContainer, TopicTitle,
   PriceAndButtonRow, PriceContainer,
-  BoldPrice, StrikedPrice
+  BoldPrice, StrikedPrice,
+  StyledButtonWrapper
 } from './CourseOverviewStyle';
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -77,6 +80,9 @@ class CourseOverview extends React.Component {
               <CourseImg Img={heroImg} />
               <PriceAndButtonRow>
                 {this.renderPrice()}
+                <StyledButtonWrapper>
+                  Explore Course
+                </StyledButtonWrapper>
               </PriceAndButtonRow>
             </CourseDiv>
           </TopBanner>
