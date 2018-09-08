@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import './App.css';
-import Home from './components/home'
-import Subscribe from './components/subscribe'
+import Home from './components/pages/home/home'
+import Subscribe from './components/pages/subscribe/subscribe'
+import MyClasses from './components/pages/myClasses/myClasses'
 
 class App extends Component {
   render() {
@@ -11,6 +11,7 @@ class App extends Component {
         <div>
           <Route exact path="/" component={Home} />
           <Route exact path="/subscribe" component={Subscribe} />
+          <Route exact path="/my-classes" component={MyClasses} />
         </div>
       </Router>
     );

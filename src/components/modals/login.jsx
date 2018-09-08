@@ -12,14 +12,14 @@ import {
  } from 'reactstrap';
 
 import PropTypes from 'prop-types';
-import Account from '../services/account'
+import Account from '../../services/account'
 import FacebookLogin from 'react-facebook-login'
 import GoogleLogin from 'react-google-login'
-import Config from '../config'
+import Config from '../../config'
 
-import '../styles/header.css'
+import '../containers/header/header.css'
 
-const continueFacebookImg = require('../assets/continue_facebook.png')
+const continueFacebookImg = require('../../assets/continue_facebook.png')
 
 //TODO:
 //1. add UI that displays error message when logIn failed

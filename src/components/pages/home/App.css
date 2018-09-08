@@ -8,7 +8,7 @@ body{
 }
 
 .home-banner {
-  background-image: url("./assets/hero-image.png");
+  background-image: url("../../../assets/hero-image.png");
   height: 38em; 
   background-position: center;
   background-repeat: no-repeat; 
@@ -62,19 +62,11 @@ body{
 }
 
 .home-pill {
-  height: 1em !important;
-  width: 4.5em;
-
-  border:0px solid #006aa8; -webkit-border-radius: 5px; -moz-border-radius: 5px;border-radius: 5px;font-size:12px;font-family:arial, helvetica, sans-serif; padding: 10px 10px 10px 10px; text-decoration:none; display:inline-block;text-shadow: -1px -1px 0 rgba(0,0,0,0.3);font-weight:bold; color: #FFFFFF;
-  background-color: #008DE0; background-image: -webkit-gradient(linear, left top, left bottom, from(#008DE0), to(#0071B2));
-  background-image: -webkit-linear-gradient(top, #008DE0, #0071B2);
-  background-image: -moz-linear-gradient(top, #008DE0, #0071B2);
-  background-image: -ms-linear-gradient(top, #008DE0, #0071B2);
-  background-image: -o-linear-gradient(top, #008DE0, #0071B2);
-  background-image: linear-gradient(to bottom, #008DE0, #0071B2);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#008DE0, endColorstr=#0071B2);
-  -moz-box-shadow: 0 0 25px rgb(137, 193, 245) !important;
-  -webkit-box-shadow: 0 0 25px rgb(137, 193, 245) !important;
-  box-shadow: 0 0 25px rgb(137, 193, 245) !important;
+  width: 50px;
+  height: 8px;
+  border-radius: 4px;
+  background-image: linear-gradient(94deg, #2da2f2, #006494);
+  box-shadow: 0 5px 20px 0 rgba(45, 162, 242, 0.5);
 }
 
 .home-popular {
