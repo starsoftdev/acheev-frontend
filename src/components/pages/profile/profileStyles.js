@@ -1,37 +1,35 @@
 import { React } from 'react';
 import styled from 'styled-components';
 
-
-
-export const ProfileContentsContainer= styled.div`
+export const ProfilePanelContainer= styled.div`
   display: grid;
   grid-template-columns: auto auto;
   grid-template-rows: auto;
   column-gap: 50px;
   grid-row-gap: 50px;
+  padding: 50px;
   background-color: #eaeaea;
-  justify-content: center;
   justify-items: center;
-  align-items: center;
+  align-items: start;
   grid-template-areas:
-    "brief detail"
-    "summary detail"
+    "topLeft main"
+    "bottomLeft main"
 `
 
-export const ProfileContentsBriefContainer = styled.div`
+export const ProfileTopLeftPanel = styled.div`
   border-style: solid;
   border-color: rgb(201, 76, 76);
-  grid-area: brief;
+  grid-area: topLeft;
 `
 
-export const ProfileContentsSummaryContainer = styled.div`
+export const ProfileBottomLeftPanel = styled.div`
   border-style: solid;
   border-color: rgb(201, 76, 76);
-  grid-area: summary;
+  grid-area: bottomLeft;
 `
 
-export const ProfileContentsDetailContainer = styled.div`
+export const ProfileMainPanel = styled.div`
     border-style: solid;
     border-color: rgb(201, 76, 76);
-    grid-area: detail;
+    grid-area: main;
 `
