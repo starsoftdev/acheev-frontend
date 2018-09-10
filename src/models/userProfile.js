@@ -30,7 +30,8 @@ const UserProfile = {
     overAll: '<float_from_0_to_5>',
     communication: '<float_from_0_to_5>',
     serviceIntegrity: '<float_from_0_to_5>'
-    wouldRecommand: '<float_from_0_to_5>'
+    wouldRecommand: '<float_from_0_to_5>',
+    quantity: '<uint>'
   },
 
   skills: [
