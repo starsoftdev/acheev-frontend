@@ -72,7 +72,6 @@ export default class User {
   }
 
   get languages() {
-
     return [{name:'english', level: 'basic'}, {name: 'spanish',level:'native'}]
   }
 
@@ -109,7 +108,6 @@ export default class User {
   get reviews() {
 
     return {
-
       overAll: 4.0,
       quantity: 234
     }

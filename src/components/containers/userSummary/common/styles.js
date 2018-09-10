@@ -2,7 +2,8 @@
 import styled from 'styled-components';
 
 
-const Title = styled.h4`
+export const Title = styled.h4`
+  border: solid 1px red;
   font-family: NunitoSans;
   font-size: 18px;
   font-weight: bold;
@@ -12,7 +13,8 @@ const Title = styled.h4`
   letter-spacing: normal;
 `
 
-const Text = styled.p`
+export const Text = styled.span`
+  border: solid 1px red;
   font-family: NunitoSans;
   font-size: 14px;
   font-weight: normal;
@@ -20,5 +22,17 @@ const Text = styled.p`
   font-stretch: normal;
   line-height: 1.43;
   letter-spacing: normal;
-  color: rgba(20, 41, 61, 0.65);
+  color: ${props=> props.light ? "rgba(20, 41, 61, 0.65)": "default"};
+`
+
+export const ContentContainer = styled.div`
+
+  border: solid 1px red;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  ;
+
 `
