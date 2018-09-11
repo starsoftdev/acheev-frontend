@@ -8,7 +8,10 @@ import {
   Banner, StudentsWatching,
   Title, AttributesRow,
   Attribute, CoursePlayerAndPlaylist,
-  CoursePlayer, Body
+  CoursePlayer, Body,
+  TabsBelowVideo, ProjectTabs,
+  ProjectTabItem, CourseModifierTabContainer,
+  CourseModifierTabs
 } from './DetailedCourseStyle';
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -18,7 +21,7 @@ class DetailedCourse extends React.Component {
     super(props)
 
     this.state = {
-
+      activeTab: 'about'
     }
   }
 
@@ -51,8 +54,48 @@ class DetailedCourse extends React.Component {
           <Body>
             <CoursePlayerAndPlaylist>
               <CoursePlayer img={heroImg} />
-              
+
             </CoursePlayerAndPlaylist>
+            <TabsBelowVideo>
+              <ProjectTabs>
+                <ProjectTabItem
+                  style={this.state.activeTab === "about" ? {borderBottom: "5px solid #2da2f2"} : null}
+                  onClick={() => this.setState({ activeTab: 'about' })}
+                >
+                  About
+                </ProjectTabItem>
+                <ProjectTabItem
+                  style={this.state.activeTab === "community" ? {borderBottom: "5px solid #2da2f2"} : null}
+                  onClick={() => this.setState({ activeTab: 'community' })}
+                >
+                  Community
+                </ProjectTabItem>
+                <ProjectTabItem
+                  style={this.state.activeTab === "class" ? {borderBottom: "5px solid #2da2f2"} : null}
+                  onClick={() => this.setState({ activeTab: 'class' })}
+                >
+                  Class Project
+                </ProjectTabItem>
+                <ProjectTabItem
+                  style={this.state.activeTab === "all" ? {borderBottom: "5px solid #2da2f2"} : null}
+                  onClick={() => this.setState({ activeTab: 'all' })}
+                >
+                  All Project
+                </ProjectTabItem>
+              </ProjectTabs>
+              <div style={{ display: "flex" }}>
+                <CourseModifierTabContainer>
+                  <CourseModifierTabs>
+                    Save
+                  </CourseModifierTabs>
+                </CourseModifierTabContainer>
+                <CourseModifierTabContainer>
+                  <CourseModifierTabs>
+                    Add to Calendar
+                  </CourseModifierTabs>
+                </CourseModifierTabContainer>
+              </div>
+            </TabsBelowVideo>
           </Body>
         <Footer />
       </div>

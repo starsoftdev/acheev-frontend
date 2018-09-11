@@ -81,8 +81,54 @@ export const CoursePlayer = styled.div`
   background-image: url('${props => props.img}')
 `;
 
-export const Playlist = styled.div`
+export const TabsBelowVideo = styled.div`
   display: flex;
-  flex-direction: column;
-  
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 25px;
+  width 80%;
+`;
+
+export const ProjectTabs = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+export const ProjectTabItem = styled.span`
+  height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: center;
+  color: #14293d;
+  margin-right: 40px;
+  padding-bottom: 40px;
+`;
+
+export const CourseModifierTabContainer = styled.div`
+  border-radius: 1px;
+  background-color: rgba(248, 248, 251, 0.25);
+  border: solid 1px rgba(53, 61, 85, 0.15);
+  margin-right: 24px;
+  padding: 3px 8px 3px 8px;
+  position: relative;
+  top: -10px;
+  height: 35px;
+`;
+
+export const CourseModifierTabs = styled.span`
+  width: 103px;
+  height: 20px;
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: right;
+  color: #14293d;
 `;
