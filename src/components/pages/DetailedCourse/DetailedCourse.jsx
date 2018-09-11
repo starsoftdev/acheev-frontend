@@ -2,7 +2,9 @@ import React from 'react'
 
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
+import { UnownedCourseTileWrapper } from '../../containers/UnownedCourseTileWrapper/UnownedCourseTileWrapper';
 import { InstructorProfileTileWrapper } from '../../containers/InstructorProfileTileWrapper/InstructorProfileTileWrapper'
+import { ReviewRowContainer } from '../../containers/ReviewRowContainer/ReviewRowContainer'
 
 import {
   Banner, StudentsWatching,
@@ -14,7 +16,13 @@ import {
   CourseModifierTabs, CourseDetails,
   SectionTitle, SectionBody,
   CourseDetailsIntroHowItWorks, ReviewHeader,
-  StudentReviews
+  StudentReviews, AboutInstructor,
+  Separator, InstructorName,
+  InstructorDetails, SkillsContainer,
+  SkillTile, SkillTileText,
+  RelatedClassesContainer, RelatedClassesHeader,
+  RelatedClassesTitle, ViewAll,
+  CourseHolder
 } from './DetailedCourseStyle';
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -26,6 +34,45 @@ class DetailedCourse extends React.Component {
     this.state = {
       activeTab: 'about'
     }
+  }
+
+  renderSkillTiles = () => {
+    const exampleArray = [{id: 0, skill: 'Marketing'}, {id: 1, skill: 'Business'}, {id: 2, skill: 'Social Media'}, {id: 3, skill: 'Branding'}, {id: 4, skill: 'Social'}, {id: 5, skill: 'Management'}]
+
+    return exampleArray.map((item, key) => {
+      return <SkillTile key={key}><SkillTileText>{item.skill}</SkillTileText></SkillTile>
+    })
+  }
+
+  renderCourseTiles = () => {
+    // create an array of 3 (0, 1, 2) course objects, map them into CourseTileWrapper
+    // when next arrow is clicked, change state to 'secondProgressDot' and reassign course objects (3, 4, 5) to array
+
+    return (
+      <CourseHolder>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+      </CourseHolder>
+    )
   }
 
   render() {
@@ -89,7 +136,7 @@ class DetailedCourse extends React.Component {
               <div style={{ display: "flex" }}>
                 <CourseModifierTabContainer>
                   <CourseModifierTabs>
-                    Save
+                    <span className="fa fa-bookmark fa-lg"></span><span style={{ paddingLeft: "8px" }}>Save</span>
                   </CourseModifierTabs>
                 </CourseModifierTabContainer>
                 <CourseModifierTabContainer>
@@ -118,8 +165,55 @@ class DetailedCourse extends React.Component {
                     Props of Props students recommend
                   </StudentReviews>
                 </ReviewHeader>
+                <ReviewRowContainer
+                  bool={'positive'}
+                  body={'instantly doable, authentic and filled with information i happened to overlook before.'}
+                  author={'Chad Weber'}
+                />
+                <ReviewRowContainer
+                  bool={'negative'}
+                  body={'It’s not usefull :('}
+                  author={'Bettie Dean'}
+                />
               </CourseDetailsIntroHowItWorks>
+              <AboutInstructor>
+                <InstructorProfileTileWrapper 
+                  img={heroImg}
+                  name={"John Johnson"}
+                  specialties={"Specialties, From, Props"}
+                  numOfStars={4}
+                  numOfReviews={234}
+                  numOfStudents={1000}
+                  numOfCourses={5}
+                  border={'none'}
+                />
+                <Separator />
+                <InstructorName>
+                  From Props
+                </InstructorName>
+                <InstructorDetails>
+                  At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.
+                </InstructorDetails>
+                <Separator />
+                <InstructorName>
+                  Skills in This Class
+                </InstructorName>
+                <SkillsContainer>
+                  {this.renderSkillTiles()}
+                </SkillsContainer>
+              </AboutInstructor>
             </CourseDetails>
+            <RelatedClassesContainer>
+              <RelatedClassesHeader>
+                <RelatedClassesTitle>
+                  Related Classes
+                </RelatedClassesTitle>
+                <ViewAll>
+                  View All
+                </ViewAll>
+              </RelatedClassesHeader>
+              {this.renderCourseTiles()}
+            </RelatedClassesContainer>
           </Body>
         <Footer />
       </div>

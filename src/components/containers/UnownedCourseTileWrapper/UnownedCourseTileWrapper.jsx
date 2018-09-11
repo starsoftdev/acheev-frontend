@@ -10,7 +10,6 @@ export const UnownedCourseTileWrapper = (props) => {
   const numOfStars = props.courseStars
 
   return (
-    <div className="home-popular-categories-grid">
       <div className="home-popular-categories-grid-course">
         <img src={props.img} className="home-popular-categories-grid-course-img" />
         <div className="home-popular-categories-grid-course-belowimg">
@@ -29,6 +28,5 @@ export const UnownedCourseTileWrapper = (props) => {
           </div>
         </div>
       </div>
-    </div>
   )
 }

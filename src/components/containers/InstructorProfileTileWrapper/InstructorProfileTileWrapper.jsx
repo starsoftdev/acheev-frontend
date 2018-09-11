@@ -14,7 +14,7 @@ export const InstructorProfileTileWrapper = (props) => {
   const numOfStars = props.numOfStars
 
   return (
-    <InstructorTile>
+    <InstructorTile style={props.border === 'none' ? {border: 'none', boxShadow: 'none'} : null}>
       <InstructorImg backgroundImg={props.img} />
       <InstructorName>
         {props.name}

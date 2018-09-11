@@ -138,6 +138,7 @@ export const CourseDetails = styled.div`
   display: flex;
   flex-direction: row;
   width: 100%
+  padding-bottom: 100px;
 `;
 
 export const CourseDetailsIntroHowItWorks = styled.div`
@@ -175,6 +176,7 @@ export const ReviewHeader = styled.div`
   justify-content: space-between;
   width: 100%;
   margin-top: 100px;
+  margin-bottom: 30px;
 `;
 
 export const StudentReviews = styled.span`
@@ -187,3 +189,115 @@ export const StudentReviews = styled.span`
   letter-spacing: normal;
   color: #14293d;
 `;
+
+export const AboutInstructor = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+`;
+
+export const Separator = styled.div`
+  width: 300px;
+  height: 0.1px;
+  opacity: 0.15;
+  border: solid 1px #353d55;
+  margin-left: 35px;
+`;
+
+export const InstructorName = styled.span`
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+  margin-top: 30px;
+  margin-left: 35px;
+`;
+
+export const InstructorDetails = styled.div`
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.07;
+  letter-spacing: normal;
+  color: rgba(20, 41, 61, 0.65);
+  margin-top: 20px;
+  margin-left: 35px;
+  margin-bottom: 30px;
+`;
+
+export const SkillsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-left: 35px;
+  margin-top: 25px;
+`;
+
+export const SkillTile = styled.div`
+  border-radius: 1px;
+  background-color: rgba(248, 248, 251, 0.25);
+  border: solid 1px rgba(53, 61, 85, 0.15);
+  padding: 3px 8px 3px 8px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+`;
+
+export const SkillTileText = styled.span`
+  opacity: 0.5;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: #14293d;
+`;
+
+export const RelatedClassesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  padding-left: 155px;
+  padding-right: 155px;
+`;
+
+export const RelatedClassesHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const RelatedClassesTitle = styled.span`
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+`;
+
+export const ViewAll = styled.span`
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: right;
+  color: #14293d;
+`;
+
+export const CourseHolder = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 100px;
+`
