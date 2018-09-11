@@ -83,13 +83,68 @@ export default class User {
 
   get organizations() {
 
+    return [{ id: "1" , name: "1" },{ id: "2" , name: "2" }]
+
+
   }
 
-  get socialMediaProfiles() {
+  get socialMedias() {
+
+    return [
+      {
+        id:'1',
+        url: '<url>',
+        type: 'facebook'
+      },
+      {
+        id:'2',
+        url: '<url>',
+        type: 'twitter'
+      },
+      {
+        id:'3',
+        url: '<url>',
+        type: 'instagram'
+      },
+      {
+        id:'4',
+        url: '<url>',
+        type: 'linkedin'
+      }
+
+    ]
 
   }
 
-  get certifications() {
+  get certificates() {
+
+    return [
+
+      {
+        title: 'Digital Marketing',
+        date: '2014',
+        institute: 'IESA Institude, Venezuela'
+      },
+
+      {
+        title: 'Interface Design With Sketch',
+        date: '2017',
+        institute: 'Domestika'
+      },
+
+      {
+        title: 'Introduction To Web Responsive, HTML And CSS',
+        date: '2017',
+        institute: 'Domestika'
+      },
+
+      {
+        title: 'Techniques Of Web Development. HTML5 & CSS',
+        date: '2017',
+        institute: 'Domestika'
+      },
+
+    ]
 
   }
 
@@ -101,7 +156,20 @@ export default class User {
 
   }
 
-  get notableProjects() {
+  get projects() {
+
+    return [
+      {
+        id:'<unique_id>',
+        client: 'Nissan',
+        role: 'Programmatic (Non-Freelance)'
+      },
+      {
+        id:'<unique_id>',
+        client: 'Culligan',
+        role: 'Website/UX (Non-Freelance)'
+      }
+    ]
 
   }
 

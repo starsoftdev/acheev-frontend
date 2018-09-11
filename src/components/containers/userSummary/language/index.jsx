@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { ContentContainer, Title, Text } from '../common/styles'
 
 
-class LanguageItem extends Component {
+class Language extends Component {
 
   render() {
 
@@ -20,14 +20,14 @@ class LanguageItem extends Component {
 
 
 
-export default class Languages extends Component {
+export default class LanguageView extends Component {
 
   render(){
 
     return (
       <ContentContainer>
         <Title>Languages</Title>
-        {this.props.languages.map(lan=>(<LanguageItem name={lan.name} level={lan.level}/>))}
+        {this.props.items.map(lan=>(<Language name={lan.name} level={lan.level}/>))}
       </ContentContainer>
     )
   }

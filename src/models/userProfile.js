@@ -44,7 +44,7 @@ const UserProfile = {
   organizations: [
     {
       id:'<unique_id>',
-      name: '<string>'
+      name: '<string>',
     }
   ],
 

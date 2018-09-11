@@ -8,7 +8,7 @@ export default class UserDescription extends Component {
     return (
       <ContentContainer>
         <Title>Description</Title>
-        <Text light>{this.props.description}</Text>
+        <Text light>{this.props.item}</Text>
       </ContentContainer>
     )
   }

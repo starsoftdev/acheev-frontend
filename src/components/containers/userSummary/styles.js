@@ -10,6 +10,6 @@ export const UserSummaryContentsContainer = styled.div`
   border: solid 1px #eaeaea;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-around;
   align-items: flex-start;
 `
