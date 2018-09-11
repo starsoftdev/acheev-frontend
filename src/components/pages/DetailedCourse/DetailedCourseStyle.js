@@ -56,8 +56,6 @@ export const Body = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-left: 2em;
-  padding-right: 2em;
   background-color: #f8f8fb;
 `;
 
@@ -130,5 +128,62 @@ export const CourseModifierTabs = styled.span`
   line-height: 1.43;
   letter-spacing: normal;
   text-align: right;
+  color: #14293d;
+`;
+
+export const CourseDetails = styled.div`
+  background-color: white;
+  padding-left: 135px;
+  padding-right: 135px;
+  display: flex;
+  flex-direction: row;
+  width: 100%
+`;
+
+export const CourseDetailsIntroHowItWorks = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const SectionTitle = styled.div`
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+  margin-left: 20px;
+  margin-top: 50px;
+`;
+
+export const SectionBody = styled.div`
+  width: 770px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.07;
+  letter-spacing: normal;
+  color: rgba(20, 41, 61, 0.65);
+  margin-top: 20px;
+`;
+
+export const ReviewHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 100px;
+`;
+
+export const StudentReviews = styled.span`
+  margin-left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
   color: #14293d;
 `;
