@@ -22,8 +22,6 @@ import {
   TopicTileText, CoursesTitle,
   CoursesViewAll, CoursesRow,
   ScaledCourse, InstructorRow,
-  InstructorTile, InstructorImg,
-  InstructorName, InstructorSpecialties,
 } from './CourseOverviewStyle';
 
 const heroImg = require('../../../assets/hero-image.png')
