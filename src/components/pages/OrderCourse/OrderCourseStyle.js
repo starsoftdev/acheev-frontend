@@ -531,3 +531,57 @@ export const AccordionPadding = styled.div`
   margin-left: 30px;
   margin-right: 30px;
 `;
+
+export const ReviewHeaderContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: 40px;
+  margin-top: 100px;
+`;
+
+export const ReviewTitle = styled.div`
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+  position: relative;
+  bottom: 5px;
+`;
+
+export const LowerBody = styled.div`
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f8fb;
+  padding-bottom: 140px;
+`;
+
+export const CourseTileTitle = styled.span`
+  margin-top: 100px;
+  margin-left: 135px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+`;
+
+export const CourseContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-left: 135px;
+  padding-right: 135px;
+  padding-top: 30px;
+  justify-content: space-between;
+`;
+
+export const ScaledCourse = styled.div`
+  zoom: 1.15;
+  -moz-transform: scale(0.5);
+  padding-right: 2em;
+`;

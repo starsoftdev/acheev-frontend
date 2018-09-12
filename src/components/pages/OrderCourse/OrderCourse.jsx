@@ -4,9 +4,9 @@ import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
 import { UnownedCourseTileWrapper } from '../../containers/UnownedCourseTileWrapper/UnownedCourseTileWrapper';
 
-import { Accordion, Icon } from 'semantic-ui-react'
+import { Accordion, Icon, Dropdown } from 'semantic-ui-react'
 
-import { starsWithNumOfReviews } from '../../../consts/functions'
+import { stars, starsWithNumOfReviews } from '../../../consts/functions'
 
 import {
   OrderCourseContainer, ProfileColumn,
@@ -34,7 +34,10 @@ import {
   SubscriptionTileDurationAndDelivery, SubscriptionTileButtonBlue,
   SubscriptionTileButtonClear, AboutTitle,
   AboutDescriptionContainer, AboutBriefDescription,
-  AboutFullDescription, AccordionPadding
+  AboutFullDescription, AccordionPadding,
+  ReviewHeaderContainer, ReviewTitle,
+  CourseTileTitle, CourseContainer,
+  LowerBody, ScaledCourse
 } from './OrderCourseStyle'
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -54,6 +57,74 @@ class OrderCourse extends React.Component {
     const newIndex = activeIndex === index ? -1 : index
 
     this.setState({ activeIndex: newIndex })
+  }
+
+  renderCreatorsOtherGigs = () => {
+    return (
+      <CourseContainer>
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>
+      </CourseContainer>
+    )
+  }
+
+  renderRecommended = () => {
+    return (
+      <CourseContainer>
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>
+        <ScaledCourse>
+          <UnownedCourseTileWrapper
+            img={heroImg}
+            title={"Title from props"}
+            author={"Author from props"}
+            courseStars={4}
+            price={"$45.00"}
+          />
+        </ScaledCourse>
+      </CourseContainer>
+    )
   }
 
   render() {
@@ -365,9 +436,31 @@ class OrderCourse extends React.Component {
                   </Accordion.Content>
                 </Accordion>
               </AccordionPadding>
-              
+              <ReviewHeaderContainer>
+                <ReviewTitle>
+                  Reviews
+                </ReviewTitle>
+                <div style={{ display: 'inline-flex'}}>
+                  {stars(4)}
+                  <Dropdown text='Most Recent' style={{ marginLeft: '15px', marginRight: '40px' }}>
+                    <Dropdown.Menu>
+                      <Dropdown.Item text='Most Helpful' />
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </div>
+              </ReviewHeaderContainer>
             </CourseColumn>
           </OrderCourseContainer>
+          <LowerBody>
+            <CourseTileTitle>
+              Other Gigs By Props.Author
+            </CourseTileTitle>
+            {this.renderCreatorsOtherGigs()}
+            <CourseTileTitle>
+              Recommended For You In Props.Category
+            </CourseTileTitle>
+            {this.renderRecommended()}
+          </LowerBody>
         <Footer />
       </div>
     )
