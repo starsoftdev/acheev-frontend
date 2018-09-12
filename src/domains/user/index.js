@@ -1,6 +1,7 @@
 
 
 import picture from '../../assets/member-default.jpg'
+import servicePicture from '../../assets/service-sample.jpeg'
 
 export default class User {
 
@@ -9,6 +10,7 @@ export default class User {
     this._userId = userId
 
   }
+
 
   get profilePictureUrl(){
 
@@ -26,6 +28,10 @@ export default class User {
 
     return 'Bothe'
 
+  }
+
+  get name(){
+    return this.firstName + ' ' + this.lastName
   }
 
   get summary(){
@@ -148,7 +154,33 @@ export default class User {
 
   }
 
-  get userServices() {
+  get services() {
+
+    return [
+
+      {
+        id: '1',
+        title: 'Hire me to create your logo and brand identity package',
+        image: servicePicture,
+        rating: '4.0',
+        startingPrice: '1000',
+        currency: '$',
+        page:'1'
+      },
+
+      {
+        id: '2',
+        title: 'I will design a hand lettering signature logo',
+        image: servicePicture,
+        rating: '4.0',
+        startingPrice: '360',
+        currency: '$',
+        page:'1'
+
+      }
+
+    ]
+
 
   }
 

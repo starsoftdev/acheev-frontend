@@ -9,6 +9,7 @@ export const UserDetailContentsContainer = styled.div`
   border: solid 1px #eaeaea;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  padding: 30px;
 `
