@@ -7,7 +7,8 @@ import {
   ServiceDetailContainer,
   ServiceStatsContainer,
   ServiceRatingContainer,
-  ServiceStartPriceContainer
+  ServiceStartPriceContainer,
+  ServiceImage,
  } from './styles'
 
 import {
@@ -29,7 +30,10 @@ const Service = (props) => {
 
 
   return (
-    <ServiceContentContainer backgroundImage={image}>
+    <ServiceContentContainer>
+      <div>
+        <ServiceImage src={image}/>
+      </div>
       <ServiceDetailContainer>
         <Title>{title}</Title>
         <div><Text>{name}</Text></div>

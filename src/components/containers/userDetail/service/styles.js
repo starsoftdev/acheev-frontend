@@ -5,13 +5,18 @@ import { VerticalContentContainer, HorizontalContentContainer} from '../../commo
 export const ServiceContentContainer = styled(VerticalContentContainer)`
   width: 330px;
   height: 390px;
-  justify-content: flex-end;
-  background-image: ${props=>props.backgroundImage? props.backgroundImage: 'none'};
+  justify-content: flex-start;
+  background-image: url(${props=>props.backgroundImage? props.backgroundImage: 'none'});
+`
+export const ServiceImage = styled.img`
+  width: 100%;
+  flex:1;
+  src:${props=>props.backgroundImage? props.backgroundImage: 'none'}
 `
 
 export const ServiceDetailContainer = styled(VerticalContentContainer)`
   padding: 10px;
-  height: 190px;
+  flex:1;
   justify-content: space-around;
 `
 
