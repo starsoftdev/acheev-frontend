@@ -5,7 +5,7 @@ import Subscribe from './components/pages/subscribe/subscribe'
 import MyClasses from './components/pages/myClasses/myClasses'
 import CourseOverview from './components/pages/courseOverview/CourseOverview'
 import DetailedCourse from './components/pages/DetailedCourse/DetailedCourse'
-
+import OrderCourse from './components/pages/OrderCourse/OrderCourse';
 
 class App extends Component {
   render() {
@@ -16,6 +16,7 @@ class App extends Component {
           <Route exact path="/subscribe" component={Subscribe} />
           <Route exact path="/course/:id" component={CourseOverview} />
           <Route exact path="/course/:id/full" component={DetailedCourse} />
+          <Route exact path="/course/:id/order" component={OrderCourse} />
           <Route exact path="/profile/:id/my-classes" component={MyClasses} />
         </div>
       </Router>
