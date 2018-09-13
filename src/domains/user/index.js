@@ -184,7 +184,54 @@ export default class User {
 
   }
 
-  get portfolio() {
+  get portfolios() {
+
+    return [
+
+        {
+          id: '1',
+          logo: servicePicture,
+          title: 'Playstation Logo Concept',
+          page: 1,
+        },
+
+        {
+          id: '2',
+          logo: servicePicture,
+          title: 'Shield Logo Concept',
+          page: 1,
+        },
+
+        {
+          id: '3',
+          logo: servicePicture,
+          title: 'Flower Logo Concept',
+          page: 1,
+        },
+
+        {
+          id: '4',
+          logo: servicePicture,
+          title: 'Playstation Logo Concept',
+          page: 1,
+        },
+
+        {
+          id: '5',
+          logo: servicePicture,
+          title: 'Shield Logo Concept',
+          page: 1,
+        },
+
+        {
+          id: '6',
+          logo: servicePicture,
+          title: 'Flower Logo Concept',
+          page: 1,
+        },
+
+    ]
+
 
   }
 
@@ -192,12 +239,12 @@ export default class User {
 
     return [
       {
-        id:'<unique_id>',
+        id:'1',
         client: 'Nissan',
         role: 'Programmatic (Non-Freelance)'
       },
       {
-        id:'<unique_id>',
+        id:'2',
         client: 'Culligan',
         role: 'Website/UX (Non-Freelance)'
       }

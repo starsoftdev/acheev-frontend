@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const UserSummaryContentsContainer = styled.div`
-  width: 370px;
   height: 1465px;
   border-radius: 5px;
   padding: 20px;
@@ -12,4 +11,6 @@ export const UserSummaryContentsContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
+
+  
 `

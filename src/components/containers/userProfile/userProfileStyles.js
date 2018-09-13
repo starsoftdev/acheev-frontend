@@ -2,7 +2,6 @@ import { React } from 'react';
 import styled from 'styled-components';
 
 export const UserProfileContainer = styled.div`
-  width: 370px;
   height: 621px;
   padding: 20px;
   background-color: #ffffff;

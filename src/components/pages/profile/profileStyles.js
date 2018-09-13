@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const ProfilePanelContainer= styled.div`
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 4fr 8fr
   grid-template-rows: auto;
   column-gap: 50px;
   grid-row-gap: 50px;

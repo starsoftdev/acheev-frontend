@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const UserDetailContentsContainer = styled.div`
-  width: 770px;
   height: 1845px;
   border-radius: 5px;
   box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
@@ -12,4 +11,8 @@ export const UserDetailContentsContainer = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 30px;
+
+  > div:not(:last-child) {
+    margin-bottom: 3em;
+  };
 `
