@@ -31,9 +31,9 @@ const Service = (props) => {
 
   return (
     <ServiceContentContainer>
-      <div>
-        <ServiceImage src={image}/>
-      </div>
+
+      <ServiceImage src={image}/>
+
       <ServiceDetailContainer>
         <Title>{title}</Title>
         <div><Text>{name}</Text></div>

@@ -48,9 +48,12 @@ export default class User {
 
   }
 
-  get joinDate() {
+  get stats() {
 
-    return '2018'
+    return {
+
+      
+    }
 
   }
 

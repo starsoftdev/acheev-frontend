@@ -5,7 +5,12 @@ const sizes = {
   extraLarge: 1200,
   large: 992,
   medium: 768,
-  small: 0,
+  small: 576,
+  extraSmall:0,
+}
+
+export const column = (span) => {
+  return span / 12 * 100 + "%"
 }
 
 export const media = Object.keys(sizes).reduce((acc, label) => {
@@ -16,6 +21,7 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
   `
   return acc
 }, {})
+
 
 export const Title = styled.h4`
   border: solid 1px red;
@@ -32,16 +38,11 @@ export const VerticalContentContainer = styled.div`
   border: solid 1px red;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: flex-start;
-
-  > div:not(:last-child) {
-    margin-bottom: 1em;
-  };
+  align-items: flex-start;;
+  box-sizing: border-box
 `
-
 
 export const HorizontalContentContainer = styled.div`
   border: solid 1px red;
@@ -51,16 +52,7 @@ export const HorizontalContentContainer = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: flex-start;
-  margin-left: -1em;
-  margin-top: -1em;
-
-  > div {
-    margin-left: 1em;
-    margin-top: 1em;
-  };
-
-
-
+  box-sizing: border-box;
 `
 
 export const SeparationLine = styled.div`
@@ -68,6 +60,7 @@ export const SeparationLine = styled.div`
   height: 2px;
   opacity: 0.15;
   border: solid 1px #14293d;
+  box-sizing: border-box;
 `
 
 export const Text = styled.span`
@@ -80,14 +73,14 @@ export const Text = styled.span`
   letter-spacing: normal;
   text-align:left;
   color: ${props=> props.light ? "rgba(20, 41, 61, 0.65)": "default"};
+  box-sizing: border-box;
 `
 
 export const GridItemContainer = styled.div`
 
   display: grid;
-  width: 100%;
-  grid-template-columns: repeat(${props=>props.columns? props.columns: 12}, "1fr"});
-  grid-template-rows: none;
+  grid-template-columns: repeat(12, "1fr"});
+  grid-template-rows: auto;
   grid-auto-rows: auto;
   grid-auto-flow: row;
   grid-gap: 1.5em;
@@ -95,6 +88,5 @@ export const GridItemContainer = styled.div`
   align-items: center;
 
   padding: 10px;
-  border-style: solid;
-  border-color: rgb(201, 76, 76);
+  border: 1px solid blue;
 `

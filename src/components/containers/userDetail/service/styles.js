@@ -1,11 +1,22 @@
 
 import styled from 'styled-components';
-import { VerticalContentContainer, HorizontalContentContainer} from '../../common/styles.js'
+import { VerticalContentContainer, HorizontalContentContainer, media} from '../../common/styles.js'
 
 export const ServiceContentContainer = styled(VerticalContentContainer)`
-  width: 20em;
   justify-content: flex-start;
-  border-radius: 1em;
+  border-radius: 2em;
+  max-width: 22em;
+  ${media.small`
+    width: 100%;
+  `}
+
+  ${media.medium`
+    width: 100%;
+  `}
+
+  ${media.large`
+    width: 45%;
+  `}
 `
 export const ServiceImage = styled.img`
   width: 100%;

@@ -9,9 +9,19 @@ export const ProfilePanelContainer= styled.div`
   align-items: start;
   grid-template-rows: auto;
 
+
+  ${media.extraSmall`
+    grid-template-columns: 1fr;
+    grid-row-gap: 2em;
+    grid-template-areas:
+      "topLeft"
+      "bottomLeft"
+      "main";
+  `};
+
   ${media.small`
     grid-template-columns: 1fr;
-    grid-row-gap: 1em;
+    grid-row-gap: 2em;
     grid-template-areas:
       "topLeft"
       "bottomLeft"
@@ -20,9 +30,9 @@ export const ProfilePanelContainer= styled.div`
 
   ${media.medium`
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 1.5em;
-    grid-row-gap: 1.5em;
-    padding: 3em;
+    grid-column-gap: 2em;
+    grid-row-gap: 2em;
+    padding: 2em;
     grid-template-areas:
       "topLeft main"
       "bottomLeft main";
@@ -31,9 +41,9 @@ export const ProfilePanelContainer= styled.div`
 
   ${media.large`
     grid-template-columns: 1fr 2fr;
-    grid-column-gap: 2em;
-    grid-row-gap: 2em;
-    padding: 4em;
+    grid-column-gap: 3em;
+    grid-row-gap: 3em;
+    padding: 3em;
     grid-template-areas:
       "topLeft main main"
       "bottomLeft main main";

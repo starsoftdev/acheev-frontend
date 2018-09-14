@@ -1,26 +1,42 @@
 
 import styled from 'styled-components';
-import { GridItemContainer, VerticalContentContainer, Title} from '../../common/styles.js'
+import { HorizontalContentContainer, VerticalContentContainer, Text, media, column} from '../../common/styles.js'
 
-export const PortfolioItemContainer = styled(GridItemContainer)`
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
+export const PortfolioItemContainer = styled(HorizontalContentContainer)`
+  width: 100%;
+  justify-content: flex-start;
+  justify-items: center;
+  align-items: start;
+
 `
-
 export const PortfolioItem =  styled(VerticalContentContainer)`
+
   align-items: center;
-  grid-column-start: auto
-  grid-column-end: auto
-  grid-row-start:  auto
-  grid-row-end: auto
+  padding: 1em;
+
+  ${media.extraSmall`
+    width: ${column(6)};
+  `}
+
+  ${media.small`
+    width: ${column(6)};
+  `}
+
+  ${media.medium`
+    width: ${column(6)};
+  `}
+
+  ${media.extraLarge`
+    width: ${column(3)};
+  `}
+
+
 `
 export const PortfolioImage = styled.img`
-  width: 100%
-  height: 150px;
-  border-radius: 1em;
+  width: 100%;
   src:${props=>props.src? props.src: 'none'}
 `
 
-export const PortfolioTitle = styled(Title)`
+export const PortfolioTitle = styled(Text)`
   text-align: center;
 `
