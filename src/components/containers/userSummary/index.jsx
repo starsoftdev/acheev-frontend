@@ -39,7 +39,6 @@ export default class UserSummary extends Component {
         <ProjectView items={projects}/>
         <SeparationLine/>
         <CertificateView items={certificates}/>
-
       </UserSummaryContentsContainer>
 
 

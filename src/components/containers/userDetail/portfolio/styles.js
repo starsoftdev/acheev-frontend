@@ -17,6 +17,7 @@ export const PortfolioItem =  styled(VerticalContentContainer)`
 export const PortfolioImage = styled.img`
   width: 100%
   height: 150px;
+  border-radius: 1em;
   src:${props=>props.src? props.src: 'none'}
 `
 

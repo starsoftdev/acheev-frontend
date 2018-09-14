@@ -2,16 +2,17 @@ import { React } from 'react';
 import styled from 'styled-components';
 
 export const UserProfileContainer = styled.div`
-  height: 621px;
-  padding: 20px;
-  background-color: #ffffff;
-  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
-  border: solid 1px #eaeaea;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-around;
-  flex-direction: column;
-  align-items: center;
+    width: 100%;
+    height: 621px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+    border: solid 1px #eaeaea;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 
 `
 export const UserProfilePicture = styled.img`

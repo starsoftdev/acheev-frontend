@@ -11,6 +11,4 @@ export const UserSummaryContentsContainer = styled.div`
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-
-  
 `

@@ -1,10 +1,26 @@
 
-import styled from 'styled-components';
+import styled, { css }from 'styled-components';
+
+const sizes = {
+  extraLarge: 1200,
+  large: 992,
+  medium: 768,
+  small: 0,
+}
+
+export const media = Object.keys(sizes).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+    @media (min-width: ${sizes[label] / 16}em) {
+      ${css(...args)}
+    }
+  `
+  return acc
+}, {})
 
 export const Title = styled.h4`
   border: solid 1px red;
   font-family: NunitoSans;
-  font-size: ${props=> props.fontSize? props.fontSize : '18px'};
+  font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
@@ -34,15 +50,15 @@ export const HorizontalContentContainer = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
+  margin-left: -1em;
+  margin-top: -1em;
 
   > div {
-    margin-bottom: 10px;
+    margin-left: 1em;
+    margin-top: 1em;
   };
 
-  > div:not(:last-child) {
-    margin-right: 10px;
-  };
 
 
 `
@@ -57,7 +73,7 @@ export const SeparationLine = styled.div`
 export const Text = styled.span`
   border: solid 1px red;
   font-family: NunitoSans;
-  font-size: 14px;
+  font-size: 1em;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
