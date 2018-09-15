@@ -25,6 +25,7 @@ export const Page = styled.div`
   flex-direction: column;
   align-items: center
   background-color: #f8f8fb;
+  padding-bottom: 50px;
 `;
 
 export const TitleHolder = styled.div`
@@ -109,4 +110,31 @@ export const EditorScale = styled.div`
   zoom: .55;
   -moz-transform: scale(0.55);
   padding-top: 30px;
+`;
+
+export const ButtonRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 150px;
+`;
+
+export const SubmitButton = styled(Button)`
+  width: 90px;
+  height: 50px;
+  border-radius: 5px;
+  background-image: linear-gradient(105deg, #2da2f2, #006494) !important;
+  color: white !important;
+  margin-right: 20px !important;
+`;
+
+export const OtherButton = styled(Button)`
+  width: 90px;
+  height: 50px;
+  background-color: #F8F8FB !important;
+  color: #1E80BA !important;
+  border-radius: 5px !important;
+  border: solid 1px rgba(20, 41, 61, 0.43) !important;
+  margin-right: 20px !important;
 `;

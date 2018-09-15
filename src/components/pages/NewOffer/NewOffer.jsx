@@ -9,8 +9,13 @@ import {
   Title, FirstBox,
   FirstBoxHalf, BoxTitle,
   JobNameInput, SecondRowContainer,
-  SecondRowBox, EditorScale
-} from './NewCourseStyle'
+  SecondRowBox, ButtonRow,
+  SubmitButton, OtherButton
+} from './NewOfferStyle'
+
+import ImageUploader from 'react-images-upload';
+
+import { Form, TextArea } from 'semantic-ui-react'
 
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
@@ -22,7 +27,10 @@ class NewCourse extends React.Component {
 
     this.state = {
       editorState: EditorState.createEmpty(),
+      pictures: []
     };
+
+    this.onDrop = this.onDrop.bind(this);
   }
 
   onEditorStateChange = (editorState) => {
@@ -30,6 +38,12 @@ class NewCourse extends React.Component {
       editorState,
     });
   };
+
+  onDrop = (picture) => {
+    this.setState({
+        pictures: this.state.pictures.concat(picture),
+    });
+  }
 
   render() {
     const { editorState } = this.state;
@@ -108,6 +122,27 @@ class NewCourse extends React.Component {
                 Gallery
               </Title>
             </TitleHolder>
+            <ImageUploader
+                withIcon={true}
+                buttonText='Choose images'
+                onChange={this.onDrop}
+                imgExtension={['.jpg', '.gif', '.png', '.gif']}
+                maxFileSize={5242880}
+                style={{ width: "770px" }}
+            />
+            <TitleHolder>
+              <Title>
+                Opening Message
+              </Title>
+            </TitleHolder>
+            <Form>
+              <TextArea rows={10} placeholder="Type message here" style={{ width: "770px", marginTop: "30px" }}/>
+            </Form>
+            <ButtonRow>
+              <SubmitButton>Submit</SubmitButton>
+              <OtherButton>Discard</OtherButton>
+              <OtherButton>Preview</OtherButton>
+            </ButtonRow>
           </Page>
         <Footer />
       </div>
