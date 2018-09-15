@@ -6,17 +6,17 @@ import Footer from '../../containers/footer/footer'
 import {
   TopBanner, Heading,
   Page, TitleHolder,
-  Title, FirstBox,
-  FirstBoxHalf, BoxTitle,
-  JobNameInput, SecondRowContainer,
-  SecondRowBox, ButtonRow,
-  SubmitButton, OtherButton,
-  FirstBoxWithOneEntry, JobNameInputFullWidth
+  Title, BoxTitle,
+  SecondRowContainer, SecondRowBox,
+  ButtonRow, SubmitButton,
+  OtherButton, FirstBoxWithOneEntry,
+  JobNameInputFullWidth, DropzoneText,
+  FinalMessage
 } from '../NewOffer/NewOfferStyle'
 
-import ImageUploader from 'react-images-upload';
+import Dropzone from 'react-dropzone'
 
-import { Form, TextArea } from 'semantic-ui-react'
+import { Icon } from 'semantic-ui-react'
 
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
@@ -27,27 +27,35 @@ class NewCourse extends React.Component {
     super(props)
 
     this.state = {
-      editorState: EditorState.createEmpty(),
-      pictures: []
+      descriptionEditorState: EditorState.createEmpty(),
+      projectEditorState: EditorState.createEmpty(),
+      pictures: [],
+      files: []
     };
 
     this.onDrop = this.onDrop.bind(this);
   }
 
-  onEditorStateChange = (editorState) => {
+  onDescriptionEditorStateChange = (descriptionEditorState) => {
     this.setState({
-      editorState,
+      descriptionEditorState,
     });
   };
 
-  onDrop = (picture) => {
+  onProjectEditorStateChange = (projectEditorState) => {
     this.setState({
-        pictures: this.state.pictures.concat(picture),
+      projectEditorState,
+    });
+  };
+
+  onDrop(files) {
+    this.setState({
+      files
     });
   }
 
   render() {
-    const { editorState } = this.state;
+    const { descriptionEditorState, projectEditorState } = this.state;
     return (
       <div>
         <Header />
@@ -66,32 +74,98 @@ class NewCourse extends React.Component {
               <BoxTitle>
                 Course Title
               </BoxTitle>
-              <JobNameInputFullWidth />
+              <JobNameInputFullWidth placeholder="Type course title here" />
             </FirstBoxWithOneEntry>
             <SecondRowContainer>
               <SecondRowBox>
                 <BoxTitle>
-                  Price (USD)
+                  Category
                 </BoxTitle>
-                <JobNameInput placeholder="Enter Your Price Here" />
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
+                  <option value="">Select A Category</option>
+                  <option value="Tech">Tech</option>
+                  <option value="Social">Social</option>
+                </select>
               </SecondRowBox>
               <SecondRowBox>
                 <BoxTitle>
-                  Time of Delivery
+                  Sub-Category
                 </BoxTitle>
-                <JobNameInput placeholder="Enter Your Time Of Delivery Here In Days" style={{ width: "85%" }}/>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
+                  <option value="">Select A Sub-Category</option>
+                  <option value="Tech">Tech</option>
+                  <option value="Social">Social</option>
+                </select>
+              </SecondRowBox>
+            </SecondRowContainer>
+            <SecondRowContainer>
+              <SecondRowBox>
+                <BoxTitle>
+                  Course Type
+                </BoxTitle>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
+                  <option value="">Select A Type</option>
+                  <option value="Tech">Tech</option>
+                  <option value="Social">Social</option>
+                </select>
+              </SecondRowBox>
+              <SecondRowBox>
+                <BoxTitle>
+                  Level
+                </BoxTitle>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
+                  <option value="">Select A Level</option>
+                  <option value="Tech">Tech</option>
+                  <option value="Social">Social</option>
+                </select>
+              </SecondRowBox>
+            </SecondRowContainer>
+            <SecondRowContainer>
+              <SecondRowBox>
+                <BoxTitle>
+                  Course Skills
+                </BoxTitle>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
+                  <option value="">Select Options</option>
+                  <option value="Tech">Tech</option>
+                  <option value="Social">Social</option>
+                </select>
               </SecondRowBox>
             </SecondRowContainer>
             <TitleHolder>
               <Title>
-                Description
+                Course Description
               </Title>
             </TitleHolder>
               <Editor
-                editorState={editorState}
+                editorState={descriptionEditorState}
                 wrapperClassName="demo-wrapper"
                 editorClassName="demo-editor"
-                onEditorStateChange={this.onEditorStateChange}
+                onEditorStateChange={this.onDescriptionEditorStateChange}
+                toolbarStyle={{
+                  width: "770px",
+                  boxShadow: "7px 3px 17px 0 rgba(0, 0, 0, 0.04)",
+                  marginBottom: "0",
+                  marginTop: "30px"
+                }}
+                editorStyle={{
+                  width: "780px",
+                  height: "400px",
+                  backgroundColor: "white",
+                  marginLeft: "2px",
+                  boxShadow: "7px 3px 17px 0 rgba(0, 0, 0, 0.04)",
+                }}
+              />
+            <TitleHolder>
+              <Title>
+                Course Project
+              </Title>
+            </TitleHolder>
+              <Editor
+                editorState={projectEditorState}
+                wrapperClassName="demo-wrapper"
+                editorClassName="demo-editor"
+                onEditorStateChange={this.onProjectEditorStateChange}
                 toolbarStyle={{
                   width: "770px",
                   boxShadow: "7px 3px 17px 0 rgba(0, 0, 0, 0.04)",
@@ -111,22 +185,15 @@ class NewCourse extends React.Component {
                 Gallery
               </Title>
             </TitleHolder>
-            <ImageUploader
-                withIcon={true}
-                buttonText='Choose images'
-                onChange={this.onDrop}
-                imgExtension={['.jpg', '.gif', '.png', '.gif']}
-                maxFileSize={5242880}
-                style={{ width: "770px" }}
-            />
-            <TitleHolder>
-              <Title>
-                Opening Message
-              </Title>
-            </TitleHolder>
-            <Form>
-              <TextArea rows={10} placeholder="Type message here" style={{ width: "770px", marginTop: "30px" }}/>
-            </Form>
+            <Dropzone onDrop={this.onDrop} style={{ marginTop: "30px", width: "770px", boxShadow: "7px 3px 17px 0 rgba(0, 0, 0, 0.04)", height: "300px", border: "0", backgroundColor: "white", display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <Icon name="video camera" style={{ textAlign: "center", fontSize: "30px", margin: "auto", marginBottom: "0" }}/>
+                <DropzoneText>Drag your videos or pictures here.</DropzoneText>
+            </Dropzone>
+            <FinalMessage>
+            Acheev course average 20-60 minutes total running time, divided into short video lessons of 2-5 minutes each. <br/>
+            To publish your course, the combined length of all your videos must total at least 10 minutes. <br/>
+            Teachers may upload a maximum of 1 class per week.
+            </FinalMessage>
             <ButtonRow>
               <SubmitButton>Submit</SubmitButton>
               <OtherButton>Discard</OtherButton>

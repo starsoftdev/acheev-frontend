@@ -57,7 +57,7 @@ export const FirstBox = styled.div`
 
 export const FirstBoxWithOneEntry = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   height: 140px;
   background-color: white;
   width: 770px;
@@ -72,7 +72,7 @@ export const JobNameInputFullWidth = styled.input`
   height: 35px;
   border: none;
   border-bottom: solid 1px #14293d;
-  width: 60%;
+  width: 90%;
   margin-top: 20px;
   text-align: left !important;
   &:focus {
@@ -162,4 +162,29 @@ export const OtherButton = styled(Button)`
   border-radius: 5px !important;
   border: solid 1px rgba(20, 41, 61, 0.43) !important;
   margin-right: 20px !important;
+`;
+
+export const DropzoneText = styled.span`
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.07;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(20, 41, 61, 0.65);
+  margin-bottom: 125px;
+`;
+
+export const FinalMessage = styled.span`
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.07;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(20, 41, 61, 0.65);
 `;
