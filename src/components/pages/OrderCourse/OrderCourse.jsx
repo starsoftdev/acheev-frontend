@@ -6,7 +6,10 @@ import { UnownedCourseTileWrapper } from '../../containers/UnownedCourseTileWrap
 
 import { Accordion, Icon, Dropdown } from 'semantic-ui-react'
 
-import { stars, starsWithNumOfReviews } from '../../../consts/functions'
+import {
+  stars, starsWithNumOfReviews,
+  starsWithNoNumber
+} from '../../../consts/functions'
 
 import {
   OrderCourseContainer, ProfileColumn,
@@ -37,7 +40,14 @@ import {
   AboutFullDescription, AccordionPadding,
   ReviewHeaderContainer, ReviewTitle,
   CourseTileTitle, CourseContainer,
-  LowerBody, ScaledCourse
+  LowerBody, ScaledCourse,
+  ThreeReviewContainer, LeftReviewBlock,
+  MiddleReviewBlock, RightReviewBlock,
+  ReviewBlockTitle, DetailedReviewRow,
+  ReviewPersonPic, ReviewText,
+  DetailedReviewTitle, ReviewDescription,
+  ShrinkStars, TimeSinceReview,
+  ReviewTopContainer, ReviewDivider
 } from './OrderCourseStyle'
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -449,6 +459,80 @@ class OrderCourse extends React.Component {
                   </Dropdown>
                 </div>
               </ReviewHeaderContainer>
+              <ThreeReviewContainer>
+                <LeftReviewBlock>
+                  {starsWithNoNumber(4)}
+                  <ReviewBlockTitle>
+                    Seller Communication
+                  </ReviewBlockTitle>
+                </LeftReviewBlock>
+                <MiddleReviewBlock>
+                  {starsWithNoNumber(4)}
+                  <ReviewBlockTitle>
+                    Service As Described
+                  </ReviewBlockTitle>
+                </MiddleReviewBlock>
+                <RightReviewBlock>
+                  {starsWithNoNumber(4)}
+                  <ReviewBlockTitle>
+                    Would Recommend
+                  </ReviewBlockTitle>
+                </RightReviewBlock>
+              </ThreeReviewContainer>
+              <DetailedReviewRow>
+                <ReviewPersonPic img={heroImg} />
+                <ReviewText>
+                  <ReviewTopContainer>
+                    <div style={{ display: "inherit" }}>
+                    <DetailedReviewTitle>
+                      Title from props
+                    </DetailedReviewTitle>
+                    <ShrinkStars>{stars(4)}</ShrinkStars>
+                    </div>
+                    <TimeSinceReview>Props days ago</TimeSinceReview>
+                  </ReviewTopContainer>
+                  <ReviewDescription>
+                    Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props.
+                  </ReviewDescription>
+                </ReviewText>
+              </DetailedReviewRow>
+              <ReviewDivider />
+              <DetailedReviewRow>
+                <ReviewPersonPic img={heroImg} />
+                <ReviewText>
+                  <ReviewTopContainer>
+                    <div style={{ display: "inherit" }}>
+                    <DetailedReviewTitle>
+                      Title from props
+                    </DetailedReviewTitle>
+                    <ShrinkStars>{stars(4)}</ShrinkStars>
+                    </div>
+                    <TimeSinceReview>Props days ago</TimeSinceReview>
+                  </ReviewTopContainer>
+                  <ReviewDescription>
+                    Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props.
+                  </ReviewDescription>
+                </ReviewText>
+              </DetailedReviewRow>
+              <ReviewDivider />
+              <DetailedReviewRow>
+                <ReviewPersonPic img={heroImg} />
+                <ReviewText>
+                  <ReviewTopContainer>
+                    <div style={{ display: "inherit" }}>
+                    <DetailedReviewTitle>
+                      Title from props
+                    </DetailedReviewTitle>
+                    <ShrinkStars>{stars(4)}</ShrinkStars>
+                    </div>
+                    <TimeSinceReview>Props days ago</TimeSinceReview>
+                  </ReviewTopContainer>
+                  <ReviewDescription>
+                    Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props. Description from props.
+                  </ReviewDescription>
+                </ReviewText>
+              </DetailedReviewRow>
+              <ReviewDivider />
             </CourseColumn>
           </OrderCourseContainer>
           <LowerBody>

@@ -260,7 +260,7 @@ export const SkillTileText = styled.span`
 export const RelatedClassesContainer = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 100%;
   background-color: #ffffff;
   padding-left: 155px;
@@ -297,7 +297,7 @@ export const ViewAll = styled.span`
 export const CourseHolder = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 30px;
   margin-bottom: 100px;
 `

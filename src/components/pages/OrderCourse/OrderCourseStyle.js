@@ -255,6 +255,7 @@ export const CourseColumn = styled.div`
   border: solid 1px #eaeaea;
   display: flex;
   flex-direction: column;
+  padding-bottom: 30px;
 `;
 
 export const CourseHeader = styled.div`
@@ -538,6 +539,7 @@ export const ReviewHeaderContainer = styled.div`
   justify-content: space-between;
   margin-left: 40px;
   margin-top: 100px;
+  margin-bottom: 30px;
 `;
 
 export const ReviewTitle = styled.div`
@@ -584,4 +586,134 @@ export const ScaledCourse = styled.div`
   zoom: 1.15;
   -moz-transform: scale(0.5);
   padding-right: 2em;
+`;
+
+export const ThreeReviewContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+  margin-bottom: 30px;
+`;
+
+export const LeftReviewBlock = styled.div`
+  width: 230px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(248, 248, 251, 0.25);
+  border: solid 1px rgba(53, 61, 85, 0.15);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+`;
+
+export const MiddleReviewBlock = styled.div`
+  width: 230px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(248, 248, 251, 0.25);
+  border: solid 1px rgba(53, 61, 85, 0.15);
+`;
+
+export const RightReviewBlock = styled.div`
+  width: 230px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(248, 248, 251, 0.25);
+  border: solid 1px rgba(53, 61, 85, 0.15);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+`;
+
+export const ReviewBlockTitle = styled.span`
+  opacity: .5;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(20, 41, 61, 0.79);
+  margin-top: 12.5px
+`;
+
+export const DetailedReviewRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-left: 40px;
+  width: 100%;
+`;
+
+export const ReviewPersonPic = styled.div`
+  height: 70px;
+  width: 70px;
+  border-radius: 100px;
+  background-image: url('${props => props.img}');
+  margin-right: 30px;
+`;
+
+export const ReviewText = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const ReviewTopContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const DetailedReviewTitle = styled.span`
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+  padding-bottom: 10px;
+  display: inherit;
+`;
+
+export const ShrinkStars = styled.div`
+  zoom: 0.75;
+  -moz-transform: scale(0.5);
+  padding-left: 2em;
+  position: relative;
+  top: 5px;
+`;
+
+export const TimeSinceReview = styled.span`
+  opacity: 0.25;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #14293d;
+`;
+
+export const ReviewDescription = styled.span`
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: rgba(20, 41, 61, 0.65);
+  width: 580px;
+`;
+
+export const ReviewDivider = styled.div`
+  width: 690px;
+  height: 2px;
+  opacity: 0.15;
+  border: solid 1px #353d55;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 40px;
 `;

@@ -200,6 +200,7 @@ export const TopicRow = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   padding-botton: 1em;
+  justify-content: space-evenly;
 `;
 
 export const TopicTile = styled.div`
@@ -263,6 +264,7 @@ export const CoursesRow = styled.div`
   display: flex;
   flex-directionL row;
   padding-left: 1em;
+  justify-content: space-evenly;
 `;
 
 export const ScaledCourse = styled.div`
@@ -276,4 +278,5 @@ export const InstructorRow = styled.div`
   flex-direction: row;
   padding-left: 1em;
   padding-bottom: 8em;
+  justify-content: space-evenly;
 `;

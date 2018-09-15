@@ -40,7 +40,7 @@
 
 .subscribe-body-benefits {
   width: 31em;
-  height: 42em;
+  height: 35em;
   background-color: white;
   border-bottom-left-radius: .3em;
   border-bottom-right-radius: .3em;
@@ -261,7 +261,7 @@
 .subscribe-body-payment-plan-tile-item {
   background-color: white;
   height: 12em;
-  padding-top: 2em;
+  padding-top: 3.5em;
   padding-bottom: 1em;
   width: 16em;
   border-radius: .5em;
@@ -269,7 +269,7 @@
 }
 
 .active {
-  border: 1px solid #44B3E5;
+  border: 1px solid #44B3E5 !important;
 }
 
 .subscribe-body-payment-plan-tile-item-dollar {
@@ -306,6 +306,7 @@
 }
 
 .subscribe-body-payment-bottom-total {
+  padding-top: 2em;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
@@ -331,6 +332,7 @@
   font-size: .8em;
   font-weight: 300;
   line-height: 2.5em;
+  padding-bottom: 3em;
 }
   
 .subscribe-body-payment-bottom-submit-button {

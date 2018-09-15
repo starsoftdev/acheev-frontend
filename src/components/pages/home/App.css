@@ -31,10 +31,10 @@ body{
 }
 
 .home-banner-button {
+  margin: auto;
   background-color: white !important;
   width: 10em;
   height: 3em;
-  margin-left: 40em;
   margin-top: 4em;
   font-weight: 700 !important;
   border-style: none !important;
@@ -61,6 +61,7 @@ body{
 }
 
 .home-pill {
+  margin: auto;
   width: 50px;
   height: 8px;
   border-radius: 4px;
@@ -86,6 +87,7 @@ body{
 
 .active {
   color: #2D9BDB !important;
+  border: none !important;
 }
 
 .home-popular-categories-dot {
@@ -193,7 +195,7 @@ body{
 
 .home-tag-grid{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-direction: row;
   flex-wrap: wrap;
 }
