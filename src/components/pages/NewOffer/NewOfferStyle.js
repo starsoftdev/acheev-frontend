@@ -55,6 +55,31 @@ export const FirstBox = styled.div`
   box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
 `;
 
+export const FirstBoxWithOneEntry = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 140px;
+  background-color: white;
+  width: 770px;
+  margin-top: 30px;
+  border-radius: 5px;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  padding-left: 40px;
+  padding-top: 30px;
+`;
+
+export const JobNameInputFullWidth = styled.input`
+  height: 35px;
+  border: none;
+  border-bottom: solid 1px #14293d;
+  width: 60%;
+  margin-top: 20px;
+  text-align: left !important;
+  &:focus {
+    outline:none;
+  }
+`;
+
 export const FirstBoxHalf = styled.div`
   width: 385px;
   padding-left: 40px;

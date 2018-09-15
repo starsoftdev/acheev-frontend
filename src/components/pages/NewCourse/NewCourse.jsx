@@ -10,8 +10,9 @@ import {
   FirstBoxHalf, BoxTitle,
   JobNameInput, SecondRowContainer,
   SecondRowBox, ButtonRow,
-  SubmitButton, OtherButton
-} from './NewOfferStyle'
+  SubmitButton, OtherButton,
+  FirstBoxWithOneEntry, JobNameInputFullWidth
+} from '../NewOffer/NewOfferStyle'
 
 import ImageUploader from 'react-images-upload';
 
@@ -21,7 +22,7 @@ import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
-class NewOffer extends React.Component {
+class NewCourse extends React.Component {
   constructor(props) {
     super(props)
 
@@ -52,7 +53,7 @@ class NewOffer extends React.Component {
         <Header />
         <TopBanner>
           <Heading>
-            Post Offer
+            Course Creation
           </Heading>
         </TopBanner>
           <Page>
@@ -61,24 +62,12 @@ class NewOffer extends React.Component {
                 Basic Information
               </Title>
             </TitleHolder>
-            <FirstBox>
-              <FirstBoxHalf>
-                <BoxTitle>
-                  Job Name
-                </BoxTitle>
-                <JobNameInput placeholder="Type Job Name Here" />
-              </FirstBoxHalf>
-              <FirstBoxHalf>
-                <BoxTitle>
-                  Category
-                </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select A Category</option>
-                  <option value="Tech">Tech</option>
-                  <option value="Social">Social</option>
-                </select>
-              </FirstBoxHalf>
-            </FirstBox>
+            <FirstBoxWithOneEntry>
+              <BoxTitle>
+                Course Title
+              </BoxTitle>
+              <JobNameInputFullWidth />
+            </FirstBoxWithOneEntry>
             <SecondRowContainer>
               <SecondRowBox>
                 <BoxTitle>
@@ -150,4 +139,4 @@ class NewOffer extends React.Component {
   }
 }
 
-export default NewOffer
+export default NewCourse
