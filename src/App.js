@@ -9,6 +9,7 @@ import OrderCourse from './components/pages/OrderCourse/OrderCourse';
 import NewOffer from './components/pages/NewOffer/NewOffer';
 import NewCourse from './components/pages/NewCourse/NewCourse';
 import Dashboard from './components/pages/Dashboard/Dashboard';
+import Explore from './components/pages/Explore/Explore';
 
 class App extends Component {
   render() {
@@ -18,6 +19,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/subscribe" component={Subscribe} />
           <Route exact path="/offer/new" component={NewOffer} />
+          <Route exact path="/course/explore" component={Explore} />
           <Route exact path="/course/new" component={NewCourse} />
           <Route exact path="/course/:id" component={CourseOverview} />
           <Route exact path="/course/:id/full" component={DetailedCourse} />

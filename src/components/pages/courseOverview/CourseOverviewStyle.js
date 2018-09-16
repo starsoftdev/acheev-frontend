@@ -97,7 +97,7 @@ export const CourseImg = styled.div`
   margin-top: 10px;
   width: 100%;
   height: 300px;
-  background-image: url('${props => props.Img}')
+  background-image: url('${props => props.Img}');
 `;
 
 export const PriceAndButtonRow = styled.div`
