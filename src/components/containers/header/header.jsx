@@ -10,8 +10,15 @@ import {
  import SignUp from '../../modals/signup'
  import './header.css'
 
+ import {
+    HeaderHolder, HeaderLeft,
+    Logo, SearchBar,
+    HeaderRight, SignupButton,
+    LoginButton
+ } from './headerStyle'
+
  const logoImg =
- require('../../../logo.svg')
+ require('../../../assets/logo.svg')
 
 //  const continueFacebookImg =
 //  require('../../../assets/continue_facebook.png')
@@ -27,14 +34,12 @@ class Header extends React.Component {
   }
 
   toggleLogIn = () => {
-
     this.setState({
       loginModal: !this.state.loginModal
     })
   }
 
   toggleSignUp = () => {
-
     this.setState({
       signupModal: !this.state.signupModal
     })
@@ -50,21 +55,18 @@ class Header extends React.Component {
 
   render() {
     return (
-      <div className="header">
-        <div className="header-left">
-          <img src={logoImg} className="header-logo"/>
-          <InputGroup className="header-input">
-            <Input className="header-input-input" placeholder="What skill are you looking for?" />
-            <InputGroupAddon addonType="prepend" className="header-input-button"><Button className="header-input-button-button"><span>&#x1F50D;</span></Button></InputGroupAddon>
-          </InputGroup>
-        </div>
-        <div className="header-buttons">
-          <Button className="header-login" onClick={this.toggleLogIn}>Login</Button>
-          <Button className="header-signup" onClick={this.toggleSignUp}>Sign Up</Button>
-        </div>
+      <HeaderHolder>
+        <HeaderLeft>
+          <Logo img={logoImg} />
+          <SearchBar placeholder="What skill are you looking for?" />
+        </HeaderLeft>
         <LogIn isOpen={this.state.loginModal} toggleLogIn={this.toggleLogIn} switchModal={this.switchModal}/>
         <SignUp isOpen={this.state.signupModal} toggleSignUp={this.toggleSignUp} switchModal={this.switchModal}/>
-      </div>
+        <HeaderRight>
+          <LoginButton onClick={this.toggleLogIn}>Login</LoginButton>
+          <SignupButton onClick={this.toggleSignUp}>Signup</SignupButton>
+        </HeaderRight>
+      </HeaderHolder>
     )
   }
 }

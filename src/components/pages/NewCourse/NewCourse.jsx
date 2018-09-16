@@ -81,8 +81,8 @@ class NewCourse extends React.Component {
                 <BoxTitle>
                   Category
                 </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select A Category</option>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none", WebkitAppearance: "none", WebkitBorderRadius: "0px" }}>
+                  <option value="">Select A Category <Icon name="arrow down"/></option>
                   <option value="Tech">Tech</option>
                   <option value="Social">Social</option>
                 </select>
@@ -91,8 +91,8 @@ class NewCourse extends React.Component {
                 <BoxTitle>
                   Sub-Category
                 </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select A Sub-Category</option>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none", WebkitAppearance: "none", WebkitBorderRadius: "0px" }}>
+                  <option value="">Select A Sub-Category <Icon name="arrow down"/></option>
                   <option value="Tech">Tech</option>
                   <option value="Social">Social</option>
                 </select>
@@ -103,8 +103,8 @@ class NewCourse extends React.Component {
                 <BoxTitle>
                   Course Type
                 </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select A Type</option>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none", WebkitAppearance: "none", WebkitBorderRadius: "0px" }}>
+                  <option value="">Select A Type <Icon name="arrow down"/></option>
                   <option value="Tech">Tech</option>
                   <option value="Social">Social</option>
                 </select>
@@ -113,8 +113,8 @@ class NewCourse extends React.Component {
                 <BoxTitle>
                   Level
                 </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select A Level</option>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none", WebkitAppearance: "none", WebkitBorderRadius: "0px" }}>
+                  <option value="">Select A Level <Icon name="arrow down"/></option>
                   <option value="Tech">Tech</option>
                   <option value="Social">Social</option>
                 </select>
@@ -125,8 +125,8 @@ class NewCourse extends React.Component {
                 <BoxTitle>
                   Course Skills
                 </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select Options</option>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none", WebkitAppearance: "none", WebkitBorderRadius: "0px" }}>
+                  <option value="">Select Options <Icon name="arrow down"/></option>
                   <option value="Tech">Tech</option>
                   <option value="Social">Social</option>
                 </select>

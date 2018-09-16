@@ -15,7 +15,7 @@ import {
 
 import ImageUploader from 'react-images-upload';
 
-import { Form, TextArea } from 'semantic-ui-react'
+import { Form, TextArea, Icon } from 'semantic-ui-react'
 
 import { EditorState } from 'draft-js';
 import { Editor } from 'react-draft-wysiwyg';
@@ -72,8 +72,8 @@ class NewOffer extends React.Component {
                 <BoxTitle>
                   Category
                 </BoxTitle>
-                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none" }}>
-                  <option value="">Select A Category</option>
+                <select className="ui dropdown" style={{ marginTop: "17px", width: "70%", backgroundColor: "white", border: "none", borderBottom: "solid 1px #14293d", borderRadius: "none", WebkitAppearance: "none", WebkitBorderRadius: "0px" }}>
+                  <option value="">Select A Category <Icon name="arrow down"/></option>
                   <option value="Tech">Tech</option>
                   <option value="Social">Social</option>
                 </select>
