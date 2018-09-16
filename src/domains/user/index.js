@@ -51,8 +51,11 @@ export default class User {
   get stats() {
 
     return {
-
-      
+      overAll: 4.0,
+      communication: 4.0,
+      serviceIntegrity: 4.0,
+      wouldRecommand: 4.0,
+      quantity: 234
     }
 
   }
@@ -255,12 +258,51 @@ export default class User {
 
   }
 
-  get reviews() {
+  get rating() {
 
     return {
       overAll: 4.0,
       quantity: 234
     }
+  }
+
+  get reviews(){
+
+    return [
+      {
+      id: '1',
+      user: {
+        id: '1',
+        avatar: servicePicture
+      },
+      rating: {
+        overAll: 4.0,
+        communication: 4.0,
+        serviceIntegrity: 4.0,
+        wouldRecommand: 4.0
+      },
+      contents: 'sample 1',
+      postDate: servicePicture,
+      page: '1'
+    },
+
+    {
+    id: '2',
+    user: {
+      id: '2',
+      avatar: servicePicture
+    },
+    rating: {
+      overAll: 4.0,
+      communication: 4.0,
+      serviceIntegrity: 4.0,
+      wouldRecommand: 4.0,
+    },
+    contents: 'sample 2',
+    postDate: '<timestamp>',
+    page: '1'
+  }
+  ]
 
   }
 

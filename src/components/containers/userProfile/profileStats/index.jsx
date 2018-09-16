@@ -6,12 +6,12 @@ import {
     ProfileStatsIcon,
     ProfileStatsText,
     ProfileStatsValue
-} from './profileStatsStyles'
+} from './styles'
 
-import LocationIcon from '../../../assets/location-icon.svg'
-import ProfileIcon from '../../../assets/profile-icon.svg'
-import TimeIcon from '../../../assets/time-icon.svg'
-import DeliveryIcon from '../../../assets/delivery-icon.svg'
+import LocationIcon from '../../../../assets/location-icon.svg'
+import ProfileIcon from '../../../../assets/profile-icon.svg'
+import TimeIcon from '../../../../assets/time-icon.svg'
+import DeliveryIcon from '../../../../assets/delivery-icon.svg'
 
 
 class ProfileStatsLine extends Component {

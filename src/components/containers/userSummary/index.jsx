@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 
 import { UserSummaryContentsContainer } from './styles'
-import { SeparationLine } from '../../utils'
+import { SeparationLine } from '../common/styles'
 import Description from './description/index.jsx'
 import LanguageView from './language/index.jsx'
 import SkillView from './skill/index.jsx'

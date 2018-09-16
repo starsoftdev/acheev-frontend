@@ -52,34 +52,33 @@ export const ProfilePanelContainer= styled.div`
 
 `
 
-export const ProfileTopLeftPanel = styled.div`
+const Panel = styled.div`
+  border: solid 1px #eaeaea;
+  border-radius: 0.3em;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+`
+export const ProfileTopLeftPanel = styled(Panel)`
   width: 100%;
   max-width: 30em;
-  box-sizing: border-box;
-  border: 1px solid blue;
   grid-area: topLeft;
   ${media.large`
     justify-self: end;
   `};
 `
 
-export const ProfileBottomLeftPanel = styled.div`
+export const ProfileBottomLeftPanel = styled(Panel)`
   width: 100%;
   max-width: 30em;
-  border-style: solid;
-  border: 1px solid blue;
   grid-area: bottomLeft;
   ${media.large`
     justify-self: end;
   `};
 `
 
-export const ProfileMainPanel = styled.div`
+export const ProfileMainPanel = styled(Panel)`
     width: 100%;
-    border-style: solid;
-    border: 1px solid blue;
     grid-area: main;
-
     ${media.small`
       max-width: 30em;
     `};

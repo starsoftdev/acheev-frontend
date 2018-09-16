@@ -24,7 +24,6 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
 
 export const Title = styled.h4`
-  border: solid 1px red;
   font-family: NunitoSans;
   font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
   font-weight: bold;
@@ -35,17 +34,35 @@ export const Title = styled.h4`
 `
 
 export const VerticalContentContainer = styled.div`
-  border: solid 1px red;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;;
-  box-sizing: border-box
+  box-sizing: border-box;
 `
 
 export const HorizontalContentContainer = styled.div`
-  border: solid 1px red;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-sizing: border-box;
+`
+
+export const FlexBoxRow = styled.div`
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-sizing: border-box;
+`
+
+export const FlexBoxColumn = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -64,7 +81,6 @@ export const SeparationLine = styled.div`
 `
 
 export const Text = styled.span`
-  border: solid 1px red;
   font-family: NunitoSans;
   font-size: 1em;
   font-weight: normal;
@@ -77,7 +93,6 @@ export const Text = styled.span`
 `
 
 export const GridItemContainer = styled.div`
-
   display: grid;
   grid-template-columns: repeat(12, "1fr"});
   grid-template-rows: auto;
@@ -88,5 +103,4 @@ export const GridItemContainer = styled.div`
   align-items: center;
 
   padding: 10px;
-  border: 1px solid blue;
 `

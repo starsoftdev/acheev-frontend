@@ -9,7 +9,7 @@ import {
   ProfileTopLeftPanel,
   ProfileBottomLeftPanel,
   ProfileMainPanel
- } from './profileStyles'
+} from './styles'
 
 import User from '../../../domains/user'
 import UserSummary from '../../containers/userSummary/index.jsx'

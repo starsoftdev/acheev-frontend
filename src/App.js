@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import Home from './components/pages/home/home'
 import Subscribe from './components/pages/subscribe/subscribe'
 import MyClasses from './components/pages/myClasses/myClasses'
-import Profile from './components/pages/profile/profile'
+import Profile from './components/pages/profile/index.jsx'
 
 class App extends Component {
   render() {

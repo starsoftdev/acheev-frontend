@@ -12,11 +12,11 @@ import {
 
 } from './userProfileStyles'
 
-import ProfileStats from '../profileStats/profileStats'
+import ProfileStats from './profileStats/index.jsx'
 
 import {
   SeparationLine
-} from '../../utils'
+} from '../common/styles'
 
 export default class UserProfile extends Component {
 
