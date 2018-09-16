@@ -7,6 +7,9 @@ import { Icon } from 'semantic-ui-react'
 
 import { starsWithNumOfReviews } from '../../../consts/functions'
 
+import ReactChartkick, { LineChart } from 'react-chartkick'
+import Chart from 'chart.js'
+
 import {
   Page, Banner,
   BannerText, TopRow,
@@ -16,7 +19,9 @@ import {
   MoneyRowWorking, MoneyRowPriceDollars,
   MoneyRowPriceCents, MoneyRowPrice,
   MoneyDescriptor, MoneyRowSeparator,
-  MoneyDescriptorSubtext
+  MoneyDescriptorSubtext, BalanceBar,
+  BalancePrice, WithdrawButton,
+  StatsContainer, GraphContainer
 } from './DashboardStyle'
 
 import {
@@ -28,6 +33,8 @@ import {
 } from '../OrderCourse/OrderCourseStyle'
 
 const heroImg = require('../../../assets/hero-image.png')
+
+ReactChartkick.addAdapter(Chart)
 
 class Dashboard extends React.Component {
   constructor(props) {
@@ -134,7 +141,23 @@ class Dashboard extends React.Component {
                     </MoneyDescriptor>
                   </MoneyRowWorking>
                 </MoneyRow>
+                <BalanceBar>
+                  <BalancePrice>
+                    Total Balance: <span style={{ color: "#2da3f2" }}>$PROPS<span style={{ color: "rgba(45, 163, 242, 0.5)"}}>.pr</span></span>
+                  </BalancePrice>
+                  <WithdrawButton>
+                    Withdraw Balance
+                  </WithdrawButton>
+                </BalanceBar>
               </BalanceContainer>
+              <StatsContainer>
+                <Title>
+                    Order Statistics
+                </Title>
+                <div style={{ marginTop: "20px" }}>
+                  <LineChart data={[["2018-09-12 00:00:00 UTC", 5], ["2018-09-13 00:00:00 UTC", 6], ["2018-09-14 00:00:00 UTC", 2]]} height="300px" />
+                </div>
+              </StatsContainer>
             </BalanceAndOrderStatsColumn>
           </TopRow>
         </Page>

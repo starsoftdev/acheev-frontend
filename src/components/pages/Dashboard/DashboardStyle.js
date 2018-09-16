@@ -150,3 +150,59 @@ export const MoneyRowSeparator = styled.hr`
   margin-left: 0;
   margin-right: 0;
 `;
+
+export const BalanceBar = styled.div`
+  height: 90px;
+  border-radius: 5px;
+  background-color: #daf0ff;
+  width: 100%;
+  margin-left: -40px;
+  width: 768px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+`;
+
+export const BalancePrice = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+`;
+
+export const WithdrawButton = styled(Button)`
+  height: 50px;
+  width: 185px;
+  border-radius: 5px !important;
+  border: solid 1px rgba(20, 41, 61, 0.43) !important;
+  color: #107ebb !important;
+  background-color: #DBF0FE !important;
+`;
+
+export const StatsContainer = styled.div`
+  width: 770px;
+  height: 400px;
+  border-radius: 5px;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-top: 30px;
+  padding-left: 40px;
+  padding-right: 30px;
+`;
+
+export const GraphContainer = styled.div`
+  height: 200px;
+  width: 400px;
+`;
