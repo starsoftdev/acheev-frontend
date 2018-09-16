@@ -24,6 +24,11 @@ export const UnownedCourseTileWrapper = (props) => {
               <span className="home-popular-categories-grid-course-price">{props.price}</span>
             </div>
             <div className="home-popular-categories-grid-course-stats-bottom">
+              <img src={props.profileImg} className="home-popular-categories-grid-course-reviewer-img" />
+              <img src={props.profileImg1} className="home-popular-categories-grid-course-reviewer-img" />
+              <img src={props.profileImg2} className="home-popular-categories-grid-course-reviewer-img" />
+              <img src={props.profileImg3} className="home-popular-categories-grid-course-reviewer-img" />
+              <span className="student-text">+ {props.amountOfStudents} Students</span>
             </div>
           </div>
         </div>

@@ -64,6 +64,11 @@ class CourseOverview extends React.Component {
             author={"Author from props"}
             courseStars={4}
             price={"$45.00"}
+            profileImg={heroImg}
+            profileImg1={heroImg}
+            profileImg2={heroImg}
+            profileImg3={heroImg}
+            amountOfStudents={"10"}
           />
         </ScaledCourse> 
         <ScaledCourse>
@@ -73,6 +78,11 @@ class CourseOverview extends React.Component {
             author={"Author from props"}
             courseStars={3}
             price={"$45.00"}
+            profileImg={heroImg}
+            profileImg1={heroImg}
+            profileImg2={heroImg}
+            profileImg3={heroImg}
+            amountOfStudents={"100"}
           />
         </ScaledCourse> 
         <ScaledCourse>
@@ -82,6 +92,11 @@ class CourseOverview extends React.Component {
             author={"Author from props"}
             courseStars={5}
             price={"$45.00"}
+            profileImg={heroImg}
+            profileImg1={heroImg}
+            profileImg2={heroImg}
+            profileImg3={heroImg}
+            amountOfStudents={"210"}
           />
         </ScaledCourse>       
       </CoursesRow>      
@@ -100,6 +115,11 @@ class CourseOverview extends React.Component {
             author={"Author from props"}
             courseStars={4}
             price={"$45.00"}
+            profileImg={heroImg}
+            profileImg1={heroImg}
+            profileImg2={heroImg}
+            profileImg3={heroImg}
+            amountOfStudents={"1000000"}
           />
         </ScaledCourse> 
         <ScaledCourse>
@@ -109,6 +129,11 @@ class CourseOverview extends React.Component {
             author={"Author from props"}
             courseStars={4}
             price={"$45.00"}
+            profileImg={heroImg}
+            profileImg1={heroImg}
+            profileImg2={heroImg}
+            profileImg3={heroImg}
+            amountOfStudents={"10"}
           />
         </ScaledCourse> 
         <ScaledCourse>
@@ -118,6 +143,11 @@ class CourseOverview extends React.Component {
             author={"Author from props"}
             courseStars={4}
             price={"$45.00"}
+            profileImg={heroImg}
+            profileImg1={heroImg}
+            profileImg2={heroImg}
+            profileImg3={heroImg}
+            amountOfStudents={"0"}
           />
         </ScaledCourse>       
       </CoursesRow>      

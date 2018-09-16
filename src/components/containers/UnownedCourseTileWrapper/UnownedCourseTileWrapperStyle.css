@@ -43,6 +43,10 @@
   justify-content: space-between;
 }
 
+.home-popular-categories-grid-course-separator {
+  margin-bottom: 15px;
+}
+
 .star-rating {
   color: #BFC6CB;
   font-size: small;
@@ -57,4 +61,29 @@
 
 .title-and-author{
   height: 4.5em;
+}
+
+.home-popular-categories-grid-course-stats-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 18px;
+}
+
+.home-popular-categories-grid-course-reviewer-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 100px;
+  margin-right: 3px;
+}
+
+.student-text {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  color: rgba(20, 41, 61, 0.65);
+  margin-left: 8px;
 }
