@@ -1,7 +1,7 @@
 
 
 import React, { Component } from 'react'
-
+import { Rater } from '../../common/index.jsx'
 import {
   ServiceContentContainer,
   ServiceDetailContainer,
@@ -31,15 +31,14 @@ const Service = (props) => {
 
   return (
     <ServiceContentContainer>
-
       <ServiceImage src={image}/>
-
       <ServiceDetailContainer>
         <Title>{title}</Title>
         <div><Text>{name}</Text></div>
         <SeparationLine/>
         <ServiceStatsContainer>
           <ServiceRatingContainer>
+            <Rater readOnly={true} number={1} initialRating={1}/>
             <Text>{rating}</Text>
           </ServiceRatingContainer>
           <ServiceStartPriceContainer>

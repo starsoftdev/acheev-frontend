@@ -7,7 +7,6 @@ import { FlexBoxRow, FlexBoxColumn, media, column, Title,
 export const ReviewHeadLineBox = styled(FlexBoxRow)`
 
     align-items: center;
-
     ${media.extraSmall`
       justify-content: center;
     `}
@@ -16,28 +15,25 @@ export const ReviewHeadLineBox = styled(FlexBoxRow)`
     `}
 `
 export const ReviewTitle = styled.h4`
-    border: 1px solid blue;
     ${media.extraSmall`
       width: ${column(12)};
       text-align: center;
     `}
 
     ${media.medium`
-      width: ${column(6)};
+      width: ${column(4)};
       text-align: left;
     `}
 
 `
 export const RatingBox = styled(FlexBoxRow)`
-    border: 1px solid blue;
-    align-items: flex-start;
-
+    align-items: center;
     ${media.extraSmall`
       width: ${column(6)};
     `}
 
     ${media.medium`
-      width: ${column(3)};
+      width: ${column(4)};
     `}
 
 `
@@ -47,15 +43,14 @@ export const SearchBox = styled(FlexBoxRow)`
     width: ${column(6)};
   `}
   ${media.medium`
-    width: ${column(3)};
+    width: ${column(4)};
   `}
 `
 export const RatingDetailBox = styled(FlexBoxColumn)`
 
-
-
    background-color: rgba(248, 248, 251, 0.25);
    border: 1px solid rgba(53, 61, 85, 0.15);
+   padding: 1em;
 
    :first-child {
     border-right: 0px;
@@ -84,6 +79,7 @@ export const UserReviewBox  = styled(FlexBoxRow)`
   padding-bottom: 1.5em;
   justify-content: space-between;
   align-items: flex-start;
+  flex-wrap: nowrap;
 `
 export const UserReviewContentBox = styled(FlexBoxColumn)`
   justify-content: flex-start;

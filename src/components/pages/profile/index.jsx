@@ -1,9 +1,11 @@
 
-
+import React, { Component } from 'react';
 import Header from '../../containers/header/header'
 import Footer from '../../containers/footer/footer'
-import UserProfile from '../../containers/userProfile/userProfile'
-import React, { Component } from 'react';
+import UserProfile from '../../containers/userProfile/index.jsx'
+import UserSummary from '../../containers/userSummary/index.jsx'
+import UserDetail from '../../containers/userDetail/index.jsx'
+
 import {
   ProfilePanelContainer,
   ProfileTopLeftPanel,
@@ -12,8 +14,6 @@ import {
 } from './styles'
 
 import User from '../../../domains/user'
-import UserSummary from '../../containers/userSummary/index.jsx'
-import UserDetail from '../../containers/userDetail/index.jsx'
 
 export default class Profile extends Component {
 

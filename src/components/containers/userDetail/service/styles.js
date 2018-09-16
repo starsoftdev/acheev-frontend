@@ -36,11 +36,13 @@ export const ServiceStatsContainer = styled(HorizontalContentContainer)`
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 `
 
 export const ServiceRatingContainer = styled(HorizontalContentContainer)`
   width:auto;
-  justify-content: space-between;
+  justify-content: flex-start;
+  align-items: center;
 `
 
 export const ServiceStartPriceContainer = styled(HorizontalContentContainer)`

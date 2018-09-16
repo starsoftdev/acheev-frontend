@@ -9,11 +9,10 @@ import {
   UserProfileButtonContainer,
   UserProfileButtonContactMe,
   UserProfileButtonCustomOrder
+} from './styles'
 
-} from './userProfileStyles'
-
-import ProfileStats from './profileStats/index.jsx'
-
+import ProfileStats from './stats/index.jsx'
+import { Rater } from '../common/index.jsx'
 import {
   SeparationLine
 } from '../common/styles'
@@ -33,6 +32,7 @@ export default class UserProfile extends Component {
         <UserProfileName>{this.props.user.firstName} {this.props.user.lastName}</UserProfileName>
         <UserProfileSummary>{this.props.user.summary}</UserProfileSummary>
         <UserProfileReviewContainer/>
+        <Rater initialRating={this.props.user.rating.overAll} readOnly={true}/>
         <UserProfileButtonContainer>
           <UserProfileButtonContactMe>Contact Me</UserProfileButtonContactMe>
           <UserProfileButtonCustomOrder>Custom Order</UserProfileButtonCustomOrder>

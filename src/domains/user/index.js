@@ -262,6 +262,9 @@ export default class User {
 
     return {
       overAll: 4.0,
+      communication: 4.0,
+      serviceIntegrity: 4.0,
+      wouldRecommand: 4.0,
       quantity: 234
     }
   }

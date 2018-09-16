@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react'
-
 import {
   ReviewHeadLineBox,
   ReviewTitle,
@@ -10,6 +9,7 @@ import {
   UserReviewBox,
   UserReviewContentBox,
   UserReviewTitleBox,
+  UserReviewRatingBox,
   UserImage,
   LoadButton
  } from './styles'
@@ -22,6 +22,8 @@ import {
    Gap,
  } from '../../common/styles'
 
+ import { Rater } from '../../common/index.jsx'
+
 const ReviewHeader = (props) => {
 
   return (
@@ -30,6 +32,8 @@ const ReviewHeader = (props) => {
         Reviews
       </ReviewTitle>
       <RatingBox>
+        <Rater initialRating={props.rating.overAll} readOnly={true}/>
+        <Text align={'center'}>{props.rating.overAll}({props.rating.quantity})</Text>
       </RatingBox>
       <SearchBox>
       </SearchBox>
@@ -39,16 +43,24 @@ const ReviewHeader = (props) => {
 
 const RatingDetail = (props) => {
 
+
+  const commRating = props.rating.communication
+  const serviceRating = props.rating.serviceIntegrity
+  const recommandRating = props.rating.wouldRecommand
+
   return (
 
     <FlexBoxRow>
       <RatingDetailBox>
+        <Rater initialRating={commRating} readOnly={true}/>
         <Text align={'center'} >Seller Communication</Text>
       </RatingDetailBox>
       <RatingDetailBox>
+        <Rater initialRating={serviceRating} readOnly={true}/>
         <Text align={'center'} >Service as Described</Text>
       </RatingDetailBox>
       <RatingDetailBox>
+        <Rater initialRating={recommandRating} readOnly={true}/>
         <Text align={'center'} >Would Recommend</Text>
       </RatingDetailBox>
     </FlexBoxRow>
@@ -62,6 +74,7 @@ const UserReview = (props) => {
   const name = review.user.name
   const contents = review.contents
   const postDate =  review.postDate
+  const rating = review.rating
 
   return (
 
@@ -69,9 +82,8 @@ const UserReview = (props) => {
       <UserImage src={image}/>
       <UserReviewContentBox>
         <UserReviewTitleBox>
-          <div>
-            <Text weight={'bold'}>{name}</Text>
-          </div>
+          <Text weight={'bold'}>{name}</Text>
+          <Rater initialRating={rating.overAll} readOnly={true}/>
           <Text weight={'light'}>{postDate}</Text>
         </UserReviewTitleBox>
         <Paragraph>{contents}</Paragraph>
@@ -85,10 +97,11 @@ const UserReview = (props) => {
 
 const ReviewView =  (props) => {
   const name = props.name
+  const rating = props.rating
   return (
     <FlexBoxColumn>
-      <ReviewHeader/>
-      <RatingDetail/>
+      <ReviewHeader rating={rating}/>
+      <RatingDetail rating={rating}/>
       <FlexBoxColumn>
           {props.items.map(review=><UserReview review={review}/>)}
           <Gap/>
