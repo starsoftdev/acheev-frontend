@@ -101,3 +101,54 @@ export const PriceInputs = styled(Input)`
   border: solid 1px #f8f8fb;
   margin-top: 5px;
 `;
+
+export const PageNumberRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 100px;
+  align-items: center;
+`;
+
+export const PageBack = styled.div`
+  width: 40px;
+  height: 40px;
+  box-shadow: 4px 1px 8px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+  border-radius: 100px;
+  color: rgba(20, 41, 61, 0.65) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 50px;
+`;
+
+export const PageNumber = styled.div`
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+  color: rgba(20, 41, 61, 0.65) !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 10px;
+`;
+
+export const PageForward = styled.div`
+  width: 40px;
+  height: 40px;
+  box-shadow: 4px 1px 8px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+  border-radius: 100px;
+  color: #2f9ed8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 40px;
+`;

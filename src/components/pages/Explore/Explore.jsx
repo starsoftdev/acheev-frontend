@@ -6,7 +6,7 @@ import { SearchCourseTile } from '../../containers/SearchCourseTile/SearchCourse
 
 import { 
   Radio, Checkbox,
-  Dropdown
+  Dropdown, Icon
 } from 'semantic-ui-react'
 
 import {
@@ -15,7 +15,9 @@ import {
   FilterColumn, CourseColumn,
   SearchColumnTitle, SearchColumnRow,
   FilterTitle, FilterSeparator,
-  PriceInputs,
+  PriceInputs, PageNumberRow,
+  PageBack, PageNumber,
+  PageForward
 } from './ExploreStyle'
 
 const heroImg = require('../../../assets/hero-image.png')
@@ -24,6 +26,9 @@ class Explore extends React.Component {
   constructor(props) {
     super(props)
 
+    this.state = {
+      page: 1
+    }
   }
 
   renderCourseTiles = () => {
@@ -246,6 +251,23 @@ class Explore extends React.Component {
             <SearchColumnRow>
               {this.renderCourseTiles()}
             </SearchColumnRow>
+            <PageNumberRow>
+              <PageBack>
+                <Icon name="arrow left" style={{ margin: "auto" }} onClick={() => this.setState({ page: this.state.page - 1 })} />
+              </PageBack>
+              <PageNumber><span style={ this.state.page === 1 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >1</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 2 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >2</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 3 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >3</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 4 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >4</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 5 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >5</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 6 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >6</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 7 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >7</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 8 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >8</span></PageNumber>
+              <PageNumber><span style={ this.state.page === 9 ? { margin: "auto", color: "#2f9ed8" } : { margin: "auto" }} >9</span></PageNumber>
+            <PageForward>
+              <Icon name="arrow right" style={{ margin: "auto" }} onClick={() => this.setState({ page: this.state.page + 1 })} />
+            </PageForward>
+            </PageNumberRow>
           </CourseColumn>
         </Page>
         <Footer />
