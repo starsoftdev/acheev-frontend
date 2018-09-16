@@ -19,8 +19,11 @@ export default class Profile extends Component {
 
   constructor(props) {
     super(props)
+
+    const id = this.props.match.params.id
+
     this.state = {
-        user: new User()
+        user: new User(id)
     }
   }
 

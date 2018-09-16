@@ -270,9 +270,10 @@ export default class User {
 
     return [
       {
-      id: '1',
+      id: '2',
       user: {
-        id: '1',
+        id: '2',
+        name: 'Gary Ruiz',
         avatar: servicePicture
       },
       rating: {
@@ -281,15 +282,16 @@ export default class User {
         serviceIntegrity: 4.0,
         wouldRecommand: 4.0
       },
-      contents: 'sample 1',
-      postDate: servicePicture,
-      page: '1'
+      contents: 'sample 2',
+      postDate: '2 days ago',
+      page: '2'
     },
 
     {
-    id: '2',
+    id: '3',
     user: {
-      id: '2',
+      id: '3',
+      name: 'Gary Ruiz',
       avatar: servicePicture
     },
     rating: {
@@ -298,8 +300,8 @@ export default class User {
       serviceIntegrity: 4.0,
       wouldRecommand: 4.0,
     },
-    contents: 'sample 2',
-    postDate: '<timestamp>',
+    contents: 'sample 3',
+    postDate: '3 days ago',
     page: '1'
   }
   ]

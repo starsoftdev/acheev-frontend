@@ -24,13 +24,35 @@ export const media = Object.keys(sizes).reduce((acc, label) => {
 
 
 export const Title = styled.h4`
-  font-family: NunitoSans;
+  font-family: 'Nunito Sans', sans-serif;
   font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
   font-weight: bold;
   font-style: normal;
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
+`
+
+export const Paragraph = styled.p`
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+`
+
+export const Text = styled.span`
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: ${props=> props.fontSize? props.fontSize: '1em' };
+  font-weight: ${props=>props.weight? props.weight: 'normal' };
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align:${props=>props.align? props.align: 'left' };
+  color: ${props=> props.light ? "rgba(20, 41, 61, 0.65)": "default"};
+  box-sizing: border-box;
 `
 
 export const VerticalContentContainer = styled.div`
@@ -74,22 +96,15 @@ export const FlexBoxColumn = styled.div`
 
 export const SeparationLine = styled.div`
   width: 100%;
-  height: 2px;
+  height: 1px;
   opacity: 0.15;
   border: solid 1px #14293d;
   box-sizing: border-box;
 `
 
-export const Text = styled.span`
-  font-family: NunitoSans;
-  font-size: 1em;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
-  text-align:left;
-  color: ${props=> props.light ? "rgba(20, 41, 61, 0.65)": "default"};
-  box-sizing: border-box;
+export const Gap = styled.div`
+  width: 100%;
+  height: 2em;
 `
 
 export const GridItemContainer = styled.div`
@@ -104,3 +119,9 @@ export const GridItemContainer = styled.div`
 
   padding: 10px;
 `
+export const Button = styled.button`
+  font-family: 'Nunito Sans', sans-serif;
+  text-align: center;
+  font-size: 1.25em;
+`
+export const debugBorder = "1px solid red"

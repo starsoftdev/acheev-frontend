@@ -5,7 +5,7 @@ import { VerticalContentContainer, HorizontalContentContainer, media, column} fr
 export const ServiceContentContainer = styled(VerticalContentContainer)`
   justify-content: flex-start;
   border-radius: 2em;
-  border: solid 1px #353d55;  
+  border: solid 1px rgba(53,61,85,0.15);
   max-width: 22em;
   ${media.extraSmall`
     width: ${column(12)};
