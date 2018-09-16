@@ -26,6 +26,7 @@ export const Page = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding-bottom: 200px;
 `;
 
 export const TopRow = styled.div`
@@ -205,4 +206,90 @@ export const StatsContainer = styled.div`
 export const GraphContainer = styled.div`
   height: 200px;
   width: 400px;
+`;
+
+export const TitleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const ViewAll = styled.span`
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: right;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #2da3f2;
+`;
+
+export const OrderJobRow = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding-left: 135px;
+  padding-right: 135px;
+  justify-content: space-between;
+  margin-top: 40px; 
+`;
+
+export const OrderJobContainer = styled.div`
+  width: 570px;
+  height: 452px;
+  border-radius: 5px;
+  box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
+  background-color: #ffffff;
+  border: solid 1px #eaeaea;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+`;
+
+export const GrayRowContainer = styled.div`
+  margin-top: 30px;
+`;
+
+export const GrayRow = styled.div`
+  width: 490px;
+  height: 58px;
+  border-radius: 5px;
+  background-color: #f8f8fb;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 25px;
+  padding-right: 25px;
+  align-items: center;
+`;
+
+export const GrayRowTitle = styled.span`
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #14293d;
+`;
+
+export const GrayRowRight = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const GrayRowRightText = styled.span`
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #737373;
+  margin-right: 15px;
 `;

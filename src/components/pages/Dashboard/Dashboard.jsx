@@ -21,7 +21,11 @@ import {
   MoneyDescriptor, MoneyRowSeparator,
   MoneyDescriptorSubtext, BalanceBar,
   BalancePrice, WithdrawButton,
-  StatsContainer, GraphContainer
+  StatsContainer, TitleContainer,
+  ViewAll, OrderJobRow,
+  OrderJobContainer, GrayRow,
+  GrayRowContainer, GrayRowTitle,
+  GrayRowRight, GrayRowRightText
 } from './DashboardStyle'
 
 import {
@@ -151,15 +155,126 @@ class Dashboard extends React.Component {
                 </BalanceBar>
               </BalanceContainer>
               <StatsContainer>
-                <Title>
+                <TitleContainer>
+                  <Title>
                     Order Statistics
-                </Title>
+                  </Title>
+                  <ViewAll>
+                    View All
+                  </ViewAll>
+                </TitleContainer>
                 <div style={{ marginTop: "20px" }}>
                   <LineChart data={[["2018-09-12 00:00:00 UTC", 5], ["2018-09-13 00:00:00 UTC", 6], ["2018-09-14 00:00:00 UTC", 2]]} height="300px" />
                 </div>
               </StatsContainer>
             </BalanceAndOrderStatsColumn>
           </TopRow>
+          <OrderJobRow>
+            <OrderJobContainer>
+              <TitleContainer>
+                <Title>
+                  My Orders
+                </Title>
+                <ViewAll>
+                  View All
+                </ViewAll>
+              </TitleContainer>
+              <GrayRowContainer>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+              </GrayRowContainer>
+            </OrderJobContainer>
+            <OrderJobContainer>
+              <TitleContainer>
+                <Title>
+                  My Jobs
+                </Title>
+                <ViewAll>
+                  View All
+                </ViewAll>
+              </TitleContainer>
+              <GrayRowContainer>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+                <GrayRow>
+                  <GrayRowTitle>From Props</GrayRowTitle>
+                  <GrayRowRight>
+                    <GrayRowRightText>Status from props</GrayRowRightText>
+                    <GrayRowRightText>$from props</GrayRowRightText>
+                    <Icon name="arrow right" style={{ color: "#737373", fontSize: "14px" }}/>
+                  </GrayRowRight>
+                </GrayRow>
+              </GrayRowContainer>
+            </OrderJobContainer>
+          </OrderJobRow>
         </Page>
         <Footer />
       </div>
