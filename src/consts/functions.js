@@ -86,7 +86,7 @@ export const starsWithNumOfReviews = (rating, reviews) => {
           <span className="fa fa-star checked fa-lg"></span>
           <span className="fa fa-star checked fa-lg"></span>
           </div>
-        <span className="star-rating">5.0 ({reviews} reviews)</span>
+        <span className="star-rating" style={{ marginTop: "5px" }}>5.0 ({reviews} reviews)</span>
       </div>
     )
   }
@@ -100,7 +100,7 @@ export const starsWithNumOfReviews = (rating, reviews) => {
           <span className="fa fa-star checked fa-lg"></span>
           <span className="fa fa-star fa-lg"></span>
         </div>
-        <span className="star-rating">4.0 ({reviews} reviews)</span>
+        <span className="star-rating" style={{ marginTop: "5px" }}>4.0 ({reviews} reviews)</span>
       </div>
     )
   }
@@ -114,7 +114,7 @@ export const starsWithNumOfReviews = (rating, reviews) => {
           <span className="fa fa-star fa-lg"></span>
           <span className="fa fa-star fa-lg"></span>
         </div>
-        <span className="star-rating">3.0 ({reviews} reviews)</span>
+        <span className="star-rating" style={{ marginTop: "5px" }}>3.0 ({reviews} reviews)</span>
       </div>
     )
   }
@@ -128,7 +128,7 @@ export const starsWithNumOfReviews = (rating, reviews) => {
           <span className="fa fa-star fa-lg"></span>
           <span className="fa fa-star fa-lg"></span>
         </div>
-        <span className="star-rating">2.0 ({reviews} reviews)</span>
+        <span className="star-rating" style={{ marginTop: "5px" }}>2.0 ({reviews} reviews)</span>
       </div>
     )
   }
@@ -142,7 +142,7 @@ export const starsWithNumOfReviews = (rating, reviews) => {
           <span className="fa fa-star fa-lg"></span>
           <span className="fa fa-star fa-lg"></span>
         </div>
-        <span className="star-rating">1.0 ({reviews} reviews)</span>
+        <span className="star-rating" style={{ marginTop: "5px" }}>1.0 ({reviews} reviews)</span>
       </div>
     )
   }
@@ -156,7 +156,7 @@ export const starsWithNumOfReviews = (rating, reviews) => {
           <span className="fa fa-star"></span>
           <span className="fa fa-star"></span>
         </div>
-        <span className="star-rating">0 ({reviews} reviews)</span>
+        <span className="star-rating" style={{ marginTop: "5px" }}>0 ({reviews} reviews)</span>
       </div>      
     )
   }

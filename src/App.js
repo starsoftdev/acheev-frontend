@@ -8,6 +8,7 @@ import DetailedCourse from './components/pages/DetailedCourse/DetailedCourse'
 import OrderCourse from './components/pages/OrderCourse/OrderCourse';
 import NewOffer from './components/pages/NewOffer/NewOffer';
 import NewCourse from './components/pages/NewCourse/NewCourse';
+import Dashboard from './components/pages/Dashboard/Dashboard';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Route exact path="/course/:id/full" component={DetailedCourse} />
           <Route exact path="/course/:id/order" component={OrderCourse} />
           <Route exact path="/profile/:id/my-classes" component={MyClasses} />
+          <Route exact path="/profile/:id/dashboard" component={Dashboard} />          
         </Switch>
       </Router>
     );
