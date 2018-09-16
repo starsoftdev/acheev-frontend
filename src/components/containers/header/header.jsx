@@ -8,7 +8,6 @@ import {
 
  import LogIn from '../../modals/login'
  import SignUp from '../../modals/signup'
- import './header.css'
 
  import {
     HeaderHolder, HeaderLeft,

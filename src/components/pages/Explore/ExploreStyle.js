@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Input } from 'semantic-ui-react'
 
 export const TopBanner = styled.div`
   width: 100%;
@@ -81,4 +82,22 @@ export const FilterTitle = styled.span`
   letter-spacing: normal;
   color: #14293d;
   width: 290px;
+`;
+
+export const FilterSeparator = styled.div`
+  width: 270px;
+  height: 1px;
+  opacity: 0.15;
+  border: solid 1px #14293d;
+  margin-top: 30px;
+  margin-bottom: 30px;
+`;
+
+export const PriceInputs = styled(Input)`
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #f8f8fb;
+  border: solid 1px #f8f8fb;
+  margin-top: 5px;
 `;
