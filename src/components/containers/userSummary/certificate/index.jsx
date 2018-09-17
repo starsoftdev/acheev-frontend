@@ -1,23 +1,23 @@
 
 import React, { Component } from 'react'
-import { ContentContainer, ColumnItemContentContainer, Title, Text } from '../common/styles'
+import { FlexBoxColumn,Title, Text, Gap } from '../../common/styles'
 
 const Certificate = (props) => {
   return (
-    <ColumnItemContentContainer style={{justifyContent:'flex-start',alignItems:'flex-start'}}>
-      <Title fontSize={"14px"}>{props.title}</Title>
-      <Text>{props.institute} {props.date}</Text>
-    </ColumnItemContentContainer>
+    <FlexBoxColumn>
+      <Text weight={'bold'} fontSize={'0.8em'}>{props.title}</Text>
+      <Text fontSize={'0.8em'} weight={'light'} light>{props.institute} {props.date}</Text>
+    </FlexBoxColumn>
  )
 }
 
 const CertificateView =  (props) => {
 
   return (
-    <ContentContainer>
+    <FlexBoxColumn>
       <Title>Certification</Title>
       {props.items.map(cert=><Certificate title={cert.title} date={cert.date} institute={cert.institute}/>)}
-    </ContentContainer>
+    </FlexBoxColumn>
   )
 
 }

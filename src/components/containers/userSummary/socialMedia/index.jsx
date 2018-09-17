@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ContentContainer, Title, CircularButton } from '../common/styles'
+import { FlexBoxColumn, FlexBoxRow, Title, CircularButton } from '../../common/styles'
 
 
 const SocialMedia = (props) => {
@@ -12,12 +12,12 @@ const SocialMedia = (props) => {
 const SocialMediaView =  (props) => {
 
   return (
-    <ContentContainer>
+    <FlexBoxColumn>
       <Title>Social Presence</Title>
-      <ContentContainer style={{flexDirection:'row', justifyContent:'flex-start',alignItems:'center'}}>
+      <FlexBoxRow justifyContent={'flex-start'}>
         {props.items.map(socialMedia=><SocialMedia name={socialMedia}/>)}
-      </ContentContainer>
-    </ContentContainer>
+      </FlexBoxRow>
+    </FlexBoxColumn>
   )
 
 }

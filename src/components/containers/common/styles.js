@@ -79,8 +79,8 @@ export const FlexBoxRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  justify-content: ${props => props.justifyContent? props.justifyContent: 'flex-start'};
+  align-items: ${props => props.alignItems? props.alignItems: 'flex-start'};
   box-sizing: border-box;
 `
 
@@ -88,9 +88,9 @@ export const FlexBoxColumn = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: ${props => props.justifyContent? props.justifyContent: 'flex-start'};
+  align-items: ${props => props.alignItems? props.alignItems: 'flex-start'};
   box-sizing: border-box;
 `
 
@@ -104,7 +104,7 @@ export const SeparationLine = styled.div`
 
 export const Gap = styled.div`
   width: 100%;
-  height: 2em;
+  height: ${props=>props.height? props.height: '1em'};
 `
 
 export const GridItemContainer = styled.div`
@@ -124,4 +124,29 @@ export const Button = styled.button`
   text-align: center;
   font-size: 1.25em;
 `
+
+export const CircularButton = styled.div`
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: black;
+`
+
+export const RoundContainer = styled.div`
+  height: 34px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 17px;
+  border: solid 1px grey;
+
+  margin-right: 10px;
+  margin-bottom: 10px;
+`
+
 export const debugBorder = "1px solid red"

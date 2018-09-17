@@ -1,23 +1,23 @@
 
 import React, { Component } from 'react'
-import { ContentContainer, ColumnItemContentContainer, Title, Text } from '../common/styles'
+import { FlexBoxRow, FlexBoxColumn, Title, Text } from '../../common/styles'
 
 const Project = (props) => {
   return (
-    <ColumnItemContentContainer style={{justifyContent:'flex-start',alignItems:'flex-start'}}>
-      <Title fontSize={"14px"}>{props.client}</Title>
-      <Text>{props.role}</Text>
-    </ColumnItemContentContainer>
+    <FlexBoxColumn>
+      <Text fontSize={"0.8em"} weight={'bold'}>{props.client}</Text>
+      <Text fontSize={"0.8em"} weight={'light'} light>{props.role}</Text>
+    </FlexBoxColumn>
  )
 }
 
 const ProjectView =  (props) => {
 
   return (
-    <ContentContainer>
+    <FlexBoxRow>
       <Title>Notable Clients & Projects</Title>
       {props.items.map(project=><Project client={project.client} role={project.role}/>)}
-    </ContentContainer>
+    </FlexBoxRow>
   )
 
 }

@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { ContentContainer, Title, CircularButton } from '../common/styles'
+import { FlexBoxRow, FlexBoxColumn, Title, CircularButton } from '../../common/styles'
 
 
 const Organization = (props) => {
@@ -15,12 +15,12 @@ const Organization = (props) => {
 const OrganizationView =  (props) => {
 
   return (
-    <ContentContainer>
+    <FlexBoxColumn>
       <Title>Professional Presence</Title>
-      <ContentContainer style={{flexDirection:'row', justifyContent:'flex-start',alignItems:'center'}}>
+      <FlexBoxRow alignItems={'center'}>
         {props.items.map(organization=><Organization name={organization}/>)}
-      </ContentContainer>
-    </ContentContainer>
+      </FlexBoxRow>
+    </FlexBoxColumn>
   )
 
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { ContentContainer, Title, Text } from '../common/styles'
+import { FlexBoxColumn, Title, Text } from '../../common/styles'
 
 
 class Language extends Component {
@@ -25,10 +25,10 @@ export default class LanguageView extends Component {
   render(){
 
     return (
-      <ContentContainer>
+      <FlexBoxColumn>
         <Title>Languages</Title>
         {this.props.items.map(lan=>(<Language name={lan.name} level={lan.level}/>))}
-      </ContentContainer>
+      </FlexBoxColumn>
     )
   }
 }

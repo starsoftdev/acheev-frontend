@@ -10,7 +10,7 @@ import OrganizationView from './organization/index.jsx'
 import SocialMediaView from './socialMedia/index.jsx'
 import ProjectView from './project/index.jsx'
 import CertificateView from './certificate/index.jsx'
-
+import { Gap } from '../common/styles'
 export default class UserSummary extends Component {
 
 
@@ -27,17 +27,29 @@ export default class UserSummary extends Component {
     return (
       <UserSummaryContentsContainer>
         <Description item={description}/>
+        <Gap/>
         <SeparationLine/>
+        <Gap/>
         <LanguageView items={languages}/>
+        <Gap/>
         <SeparationLine/>
+        <Gap/>
         <SkillView items={skills}/>
+        <Gap/>
         <SeparationLine/>
+        <Gap/>
         <OrganizationView items={organizations}/>
+        <Gap/>
         <SeparationLine/>
+        <Gap/>
         <SocialMediaView items={socialMedias}/>
+        <Gap/>
         <SeparationLine/>
+        <Gap/>
         <ProjectView items={projects}/>
+        <Gap/>
         <SeparationLine/>
+        <Gap/>
         <CertificateView items={certificates}/>
       </UserSummaryContentsContainer>
 

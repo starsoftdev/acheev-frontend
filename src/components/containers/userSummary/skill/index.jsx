@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { ContentContainer, Title, Text, RoundContainer } from '../common/styles'
+import { FlexBoxColumn, FlexBoxRow, Title, Text, RoundContainer } from '../../common/styles'
 
 const Skill = (props) => {
   return (
@@ -14,12 +14,12 @@ const Skill = (props) => {
 const SkillView =  (props) => {
 
   return (
-    <ContentContainer>
+    <FlexBoxColumn>
       <Title>Skills</Title>
-      <ContentContainer style={{flexDirection:'row', justifyContent:'flex-start',alignItems:'center'}}>
+      <FlexBoxRow style={{flexDirection:'row', justifyContent:'flex-start',alignItems:'center'}}>
         {props.items.map(skill=><Skill name={skill}/>)}
-      </ContentContainer>
-    </ContentContainer>
+      </FlexBoxRow>
+    </FlexBoxColumn>
   )
 
 }

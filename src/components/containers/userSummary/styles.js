@@ -1,7 +1,9 @@
-import styled from 'styled-components';
 
-export const UserSummaryContentsContainer = styled.div`
-  height: 1465px;
+
+import styled from 'styled-components';
+import { FlexBoxColumn } from '../common/styles'
+
+export const UserSummaryContentsContainer = styled(FlexBoxColumn)`
   border-radius: 5px;
   padding: 20px;
   box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);

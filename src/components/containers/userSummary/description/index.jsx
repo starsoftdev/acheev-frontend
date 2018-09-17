@@ -1,15 +1,15 @@
 
 import React, { Component } from 'react'
-import { ContentContainer, Title, Text } from '../common/styles'
+import { FlexBoxColumn, Title, Text } from '../../common/styles'
 export default class UserDescription extends Component {
 
   render(){
 
     return (
-      <ContentContainer>
+      <FlexBoxColumn>
         <Title>Description</Title>
-        <Text light>{this.props.item}</Text>
-      </ContentContainer>
+        <Text fontSize={'0.8em'} weight={'light'} light>{this.props.item}</Text>
+      </FlexBoxColumn>
     )
   }
 }
