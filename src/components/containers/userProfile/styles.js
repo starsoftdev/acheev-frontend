@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 export const UserProfileContainer = styled.div`
     width: 100%;
-    height: 621px;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);

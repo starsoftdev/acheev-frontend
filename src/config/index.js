@@ -5,10 +5,9 @@ const endPointsBase = 'http://localhost:8000'
 module.exports = {
 
   endPoints: {
-
     base: endPointsBase,
-    logIn: `${endPointsBase}/login`
-
+    logIn: `${endPointsBase}/login`,
+    profile: `${endPointsBase}/profile?email=[email]`
   },
 
   facebook:{

@@ -21,4 +21,26 @@ export default class Account {
         body: JSON.stringify(data),
     })
   }
+
+  static getProfile = (userId) => {
+
+    const url = Config.endPoints.profile.replace('[email]',userId)
+
+    const accountPromise = fetch(`${url}&account`, {
+        method: 'get',
+        headers: {
+            "Content-Type": "application/json; charset=utf-8",
+        }
+    })
+
+    const promiseArray = [accountPromise]
+
+    return Promise.all(promiseArray).then(responses=>{
+
+      const jsonArray = responses.map(response=>response.json())
+      return Promise.all(jsonArray)
+
+    })
+
+  }
 }

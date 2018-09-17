@@ -2,15 +2,24 @@
 
 import picture from '../../assets/member-default.jpg'
 import servicePicture from '../../assets/service-sample.jpeg'
+import Account from '../../services/account'
 
 export default class User {
 
   constructor(userId){
 
-    this._userId = userId
-
+    this._init(userId)
   }
 
+  _init(userId){
+
+    Account.getProfile(userId).then(data=>{
+
+     console.log(data)
+
+   }).catch(err=>console.log(err))
+
+  }
 
   get profilePictureUrl(){
 

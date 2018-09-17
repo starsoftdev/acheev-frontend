@@ -34,6 +34,8 @@ export const PortfolioItem =  styled(VerticalContentContainer)`
 `
 export const PortfolioImage = styled.img`
   width: 100%;
+  max-width:150px;
+  max-height:150px;
   src:${props=>props.src? props.src: 'none'}
 `
 

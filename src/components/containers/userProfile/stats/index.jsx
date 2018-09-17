@@ -18,7 +18,6 @@ class ProfileStatsLine extends Component {
 
   render() {
     return (
-
       <ProfileStatsLineContainer>
         <div>
           <ProfileStatsIcon src={this.props.icon}></ProfileStatsIcon>
@@ -26,7 +25,6 @@ class ProfileStatsLine extends Component {
         </div>
         <ProfileStatsValue>{this.props.value}</ProfileStatsValue>
       </ProfileStatsLineContainer>
-
     )
   }
 
