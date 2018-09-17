@@ -51,24 +51,10 @@ export default class User {
   get stats() {
 
     return {
-      overAll: 4.0,
-      communication: 4.0,
-      serviceIntegrity: 4.0,
-      wouldRecommand: 4.0,
-      quantity: 234
+      avgResponseTime: '1 hour',
+      recentDelivery: 'About 11 hours',
+      memberSince: '2018'
     }
-
-  }
-
-  get averageResponseTime() {
-
-    return { number:1, unit: 'hour'}
-
-  }
-
-  get recentDelivery() {
-
-    return { number: 11, unit: 'hours'}
 
   }
 

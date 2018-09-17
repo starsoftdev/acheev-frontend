@@ -39,13 +39,16 @@ export default class ProfileStats extends Component {
   }
 
   render() {
-
+    const memberSince = this.props.stats.memberSince
+    const avgResponseTime = this.props.stats.avgResponseTime
+    const recentDelivery = this.props.stats.recentDelivery
+    const city = this.props.address.city
     return (
         <ProfileStatsContainer>
-          <ProfileStatsLine icon={LocationIcon} text={'From'} value={'Texas'}/>
-          <ProfileStatsLine icon={ProfileIcon} text={'Member Since'} value={2018}/>
-          <ProfileStatsLine icon={TimeIcon} text={'Avg. Response Time'} value={'1 hour'}/>
-          <ProfileStatsLine icon={DeliveryIcon} text={'Recent Delivery'} value={'About 11 hours'}/>
+          <ProfileStatsLine icon={LocationIcon} text={'From'} value={city}/>
+          <ProfileStatsLine icon={ProfileIcon} text={'Member Since'} value={memberSince}/>
+          <ProfileStatsLine icon={TimeIcon} text={'Avg. Response Time'} value={avgResponseTime}/>
+          <ProfileStatsLine icon={DeliveryIcon} text={'Recent Delivery'} value={recentDelivery}/>
         </ProfileStatsContainer>
     )
 

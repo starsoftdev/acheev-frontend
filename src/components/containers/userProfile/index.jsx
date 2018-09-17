@@ -26,6 +26,9 @@ export default class UserProfile extends Component {
 
   render() {
 
+    const stats = this.props.user.stats
+    const address = this.props.user.address
+
     return (
       <UserProfileContainer>
         <UserProfilePicture src={this.props.user.profilePictureUrl}/>
@@ -38,7 +41,7 @@ export default class UserProfile extends Component {
           <UserProfileButtonCustomOrder>Custom Order</UserProfileButtonCustomOrder>
         </UserProfileButtonContainer>
         <SeparationLine/>
-        <ProfileStats/>
+        <ProfileStats stats={stats} address={address}/>
       </UserProfileContainer>
     )
   }
