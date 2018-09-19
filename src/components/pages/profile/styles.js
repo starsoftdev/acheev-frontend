@@ -1,12 +1,13 @@
 import { React } from 'react';
 import styled from 'styled-components';
-import { media } from '../../containers/common/styles'
+import { media } from '../../containers/common/mixins'
 
 export const ProfilePanelContainer= styled.div`
   display: grid;
   background-color: #eaeaea;
   justify-items: center;
   align-items: start;
+  justify-content: center;
   grid-template-rows: auto;
 
   ${media.extraSmall`
@@ -17,6 +18,7 @@ export const ProfilePanelContainer= styled.div`
       "topLeft"
       "bottomLeft"
       "main";
+    padding: 0em;
   `};
 
   ${media.small`
@@ -27,6 +29,7 @@ export const ProfilePanelContainer= styled.div`
       "topLeft"
       "bottomLeft"
       "main";
+    padding: 1em;
   `};
 
   ${media.medium`
@@ -37,9 +40,7 @@ export const ProfilePanelContainer= styled.div`
       "topLeft"
       "bottomLeft"
       "main"
-
-    padding: 1em;
-
+    margin: 2em;
   `};
 
   ${media.large`
@@ -51,7 +52,7 @@ export const ProfilePanelContainer= styled.div`
       "bottomLeft main";
   `};
 
-    padding: 3em;
+    padding: 4em;
 
 `
 
@@ -59,30 +60,43 @@ const Panel = styled.div`
   border: solid 1px #eaeaea;
   border-radius: 0.3em;
   box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
-  box-sizing: border-box;
+
+  ${media.extraSmall`
+    justify-self: center;
+  `};
+
 `
 
 export const ProfileTopLeftPanel = styled(Panel)`
   width: 100%;
   max-width: 30em;
   grid-area: topLeft;
+
+  ${media.large`
+    justify-self: right;
+  `};
+
 `
 
 export const ProfileBottomLeftPanel = styled(Panel)`
   width: 100%;
   max-width: 30em;
   grid-area: bottomLeft;
+
+  ${media.large`
+    justify-self: right;
+  `};
 `
 
 export const ProfileMainPanel = styled(Panel)`
     width: 100%;
     grid-area: main;
 
-    ${media.extraSmall`
+    ${media.small`
       max-width: 30em;
     `};
 
-    ${media.medium`
+    ${media.large`
       max-width: 60em;
       justify-self: left;
     `};

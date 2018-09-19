@@ -1,12 +1,26 @@
 
 import styled from 'styled-components';
-import { VerticalContentContainer, HorizontalContentContainer, media, column} from '../../common/styles.js'
+import { FlexBoxRow, FlexBoxColumn } from '../../common/styles.js'
+import { media, column } from '../../common/mixins.js'
 
-export const ServiceContentContainer = styled(VerticalContentContainer)`
+export const ServiceCardRow = styled(FlexBoxRow)`
+
+  ${media.extraSmall`
+      justify-content: center;
+  `}
+
+  ${media.medium`
+      justify-content: flex-start;
+  `}
+
+`
+
+export const ServiceCard = styled(FlexBoxColumn)`
   justify-content: flex-start;
   border-radius: 2em;
   border: solid 1px rgba(53,61,85,0.15);
   max-width: 22em;
+
   ${media.extraSmall`
     width: ${column(12)};
   `}
@@ -26,26 +40,26 @@ export const ServiceImage = styled.img`
   src:${props=>props.src? props.src: 'none'}
 `
 
-export const ServiceDetailContainer = styled(VerticalContentContainer)`
+export const ServiceDetail= styled(FlexBoxColumn)`
   padding: 1em;
   flex:1;
   justify-content: space-around;
 `
 
-export const ServiceStatsContainer = styled(HorizontalContentContainer)`
+export const ServiceStats = styled(FlexBoxRow)`
   flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 `
 
-export const ServiceRatingContainer = styled(HorizontalContentContainer)`
+export const ServiceRating = styled(FlexBoxRow)`
   width:auto;
   justify-content: flex-start;
   align-items: center;
 `
 
-export const ServiceStartPriceContainer = styled(HorizontalContentContainer)`
+export const ServiceStartPrice= styled(FlexBoxRow)`
   width: auto;
   justify-content: space-between;
 `

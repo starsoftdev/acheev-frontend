@@ -1,54 +1,29 @@
 
 import styled from 'styled-components';
+import { FlexBoxColumn, FlexBoxRow, Title, Text, Button} from '../../common/styles'
+import { padding } from '../../common/mixins'
 
-export const ProfileStatsContainer = styled.div`
-  width: 100%;
-  border: solid 1px red;
-  display: flex;
-  padding: 20px;
-  flex-direction: column;
+export const ProfileStatsContainer = styled(FlexBoxColumn)`
+  padding: 1em;
   justify-content: center;
   align-items: center;
 `
 
-export const ProfileStatsLineContainer =  styled.div`
-  width: 100%;
-  border: solid 1px red;
-  display: flex;
-  flex-direction: row;
+export const ProfileStatsLineContainer =  styled(FlexBoxRow)`
   justify-content: space-between;
   align-items: center;
+  ${padding('0.1em','vertical')}
+
 `
 export const ProfileStatsIcon = styled.img`
-  border: solid 1px red;
-  width: 15px;
-  height: 15px;
+  width: 1em;
+  height: 1em;
 `
-export const ProfileStatsText = styled.span`
-
-  border: solid 1px red;
+export const ProfileStatsText = styled(Text)`
   opacity: 0.5;
-  font-family: NunitoSans;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
   text-align: left;
-  color: #14293d;
 `
 
-export const ProfileStatsValue = styled.span`
-
-  border: solid 1px red;
-  font-family: NunitoSans;
-  font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
+export const ProfileStatsValue = styled(Text)`
   text-align: right;
-  color: #14293d;
 `

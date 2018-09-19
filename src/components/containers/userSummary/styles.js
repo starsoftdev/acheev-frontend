@@ -9,8 +9,5 @@ export const UserSummaryContentsContainer = styled(FlexBoxColumn)`
   box-shadow: 7px 3px 17px 0 rgba(0, 0, 0, 0.04);
   background-color: #ffffff;
   border: solid 1px #eaeaea;
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
 `

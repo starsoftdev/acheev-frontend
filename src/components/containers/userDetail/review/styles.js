@@ -1,8 +1,9 @@
 
 import styled from 'styled-components';
-import { FlexBoxRow, FlexBoxColumn, media, column, Title,
-  Text, debugBorder, Button} from '../../common/styles.js'
+import { FlexBoxRow, FlexBoxColumn, Title,
+  Text, Button} from '../../common/styles.js'
 
+import { media, column } from '../../common/mixins'
 
 export const ReviewHeadLineBox = styled(FlexBoxRow)`
 
@@ -101,14 +102,26 @@ export const UserImage = styled.img`
   border-radius: 50%;
   ${media.extraSmall`
     width: ${column(2)};
-    width: 30px;
-    height: 30px;
+    width: 2em;
+    height: 2em;
+  `}
+
+  ${media.small`
+    width: ${column(2)};
+    width: 2.5em;
+    height: 2.5em;
   `}
 
   ${media.medium`
     width: ${column(2)};
-    width: 70px;
-    height: 70px;
+    width: 3em;
+    height: 3em;
+  `}
+
+  ${media.large`
+    width: ${column(2)};
+    width: 4em;
+    height: 4em;
   `}
 `
 

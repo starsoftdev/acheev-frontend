@@ -11,8 +11,8 @@ import {
 
 import {
   Title,
-  HorizontalContentContainer,
-  VerticalContentContainer
+  FlexBoxRow,
+  FlexBoxColumn
 } from '../../common/styles'
 
 const Portfolio = (props) => {
@@ -34,14 +34,14 @@ const PortfolioView =  (props) => {
   const name = props.name
 
   return (
-    <VerticalContentContainer>
+    <FlexBoxColumn>
       <Title>{name} Portfolio</Title>
       <PortfolioItemContainer>
         {props.items.map(portfolio=>
           <Portfolio key={portfolio.id} name={name} value={portfolio}/>)
         }
       </PortfolioItemContainer>
-    </VerticalContentContainer>
+    </FlexBoxColumn>
   )
 
 }

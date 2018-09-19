@@ -3,20 +3,21 @@
 import React, { Component } from 'react'
 import { Rater } from '../../common/index.jsx'
 import {
-  ServiceContentContainer,
-  ServiceDetailContainer,
-  ServiceStatsContainer,
-  ServiceRatingContainer,
-  ServiceStartPriceContainer,
+  ServiceCard,
+  ServiceDetail,
+  ServiceStats,
+  ServiceRating,
+  ServiceStartPrice,
   ServiceImage,
+  ServiceCardRow
  } from './styles'
 
 import {
   SeparationLine,
   Title,
   Text,
-  HorizontalContentContainer,
-  VerticalContentContainer
+  FlexBoxRow,
+  FlexBoxColumn
 } from '../../common/styles'
 
 const Service = (props) => {
@@ -30,24 +31,24 @@ const Service = (props) => {
 
 
   return (
-    <ServiceContentContainer>
+    <ServiceCard>
       <ServiceImage src={image}/>
-      <ServiceDetailContainer>
+      <ServiceDetail>
         <Title>{title}</Title>
         <div><Text>{name}</Text></div>
         <SeparationLine/>
-        <ServiceStatsContainer>
-          <ServiceRatingContainer>
+        <ServiceStats>
+          <ServiceRating>
             <Rater readOnly={true} number={1} initialRating={1}/>
             <Text>{rating}</Text>
-          </ServiceRatingContainer>
-          <ServiceStartPriceContainer>
+          </ServiceRating>
+          <ServiceStartPrice>
             <Text>STARTING AT</Text>
             <Text>{currency}{price}</Text>
-          </ServiceStartPriceContainer>
-        </ServiceStatsContainer>
-      </ServiceDetailContainer>
-    </ServiceContentContainer>
+          </ServiceStartPrice>
+        </ServiceStats>
+      </ServiceDetail>
+    </ServiceCard>
  )
 }
 
@@ -56,14 +57,14 @@ const ServiceView =  (props) => {
   const name = props.name
 
   return (
-    <VerticalContentContainer>
+    <FlexBoxColumn>
       <Title>{name} Services</Title>
-      <HorizontalContentContainer>
+      <ServiceCardRow>
         {props.items.map(
           service=><Service key={service.id} name={name} service={service}
           />)}
-      </HorizontalContentContainer>
-    </VerticalContentContainer>
+      </ServiceCardRow>
+    </FlexBoxColumn>
   )
 
 }

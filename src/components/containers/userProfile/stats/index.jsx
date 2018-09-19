@@ -8,6 +8,8 @@ import {
     ProfileStatsValue
 } from './styles'
 
+import { Gap } from '../../common/styles'
+
 import LocationIcon from '../../../../assets/location-icon.svg'
 import ProfileIcon from '../../../../assets/profile-icon.svg'
 import TimeIcon from '../../../../assets/time-icon.svg'

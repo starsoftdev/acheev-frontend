@@ -1,97 +1,31 @@
 
-import styled, { css }from 'styled-components';
+import styled from 'styled-components';
 
-const sizes = {
-  extraLarge: 1200,
-  large: 992,
-  medium: 768,
-  small: 576,
-  extraSmall:0,
-}
-
-export const column = (span) => {
-  return span / 12 * 100 + "%"
-}
-
-export const media = Object.keys(sizes).reduce((acc, label) => {
-  acc[label] = (...args) => css`
-    @media (min-width: ${sizes[label] / 16}em) {
-      ${css(...args)}
-    }
-  `
-  return acc
-}, {})
-
+import { circleStyle, fontStyle, flexStyle, flexRow, flexColumn,
+   flexCenter, padding, margin, media } from './mixins'
 
 export const Title = styled.h4`
-  font-family: 'Nunito Sans', sans-serif;
+  ${fontStyle}
   font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
 `
 
 export const Paragraph = styled.p`
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
+  ${fontStyle}
+  font-size: ${props=> props.fontSize? props.fontSize : '1em'};
 `
 
 export const Text = styled.span`
-  font-family: 'Nunito Sans', sans-serif;
-  font-size: ${props=> props.fontSize? props.fontSize: '1em' };
-  font-weight: ${props=>props.weight? props.weight: 'normal' };
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align:${props=>props.align? props.align: 'left' };
-  color: ${props=> props.light ? "rgba(20, 41, 61, 0.65)": "default"};
-  box-sizing: border-box;
-`
-
-export const VerticalContentContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;;
-  box-sizing: border-box;
-`
-
-export const HorizontalContentContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  box-sizing: border-box;
+  ${fontStyle}
+  font-size: ${props=> props.fontSize? props.fontSize : '0.9em'};
 `
 
 export const FlexBoxRow = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: ${props => props.justifyContent? props.justifyContent: 'flex-start'};
-  align-items: ${props => props.alignItems? props.alignItems: 'flex-start'};
-  box-sizing: border-box;
+  ${flexRow}
 `
 
 export const FlexBoxColumn = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: ${props => props.justifyContent? props.justifyContent: 'flex-start'};
-  align-items: ${props => props.alignItems? props.alignItems: 'flex-start'};
-  box-sizing: border-box;
+  ${flexColumn}
 `
 
 export const SeparationLine = styled.div`
@@ -120,33 +54,28 @@ export const GridItemContainer = styled.div`
   padding: 10px;
 `
 export const Button = styled.button`
-  font-family: 'Nunito Sans', sans-serif;
+  ${fontStyle}
+  font-size: ${props=> props.fontSize? props.fontSize : '1em'};
   text-align: center;
-  font-size: 1.25em;
 `
 
-export const CircularButton = styled.div`
+export const CircularButton = styled.button`
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
+  ${circleStyle}
+  ${margin('0.1em','horizontal')}
   background-color: black;
 `
 
 export const RoundContainer = styled.div`
   height: 34px;
-  padding-left: 10px;
-  padding-right: 10px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  ${padding('1em','horizontal')}
+  margin-right: 0.5em;
+  ${margin('0.5em', 'vertical')}
+  ${flexCenter}
 
-  border-radius: 17px;
-  border: solid 1px grey;
+  border-radius: 1em;
+  border: solid 1px rgba(20,41,61, 0.25);
 
-  margin-right: 10px;
-  margin-bottom: 10px;
 `
-
-export const debugBorder = "1px solid red"
