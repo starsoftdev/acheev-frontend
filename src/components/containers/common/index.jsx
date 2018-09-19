@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 import Rating from 'react-rating'
 
+
+
 export class Rater extends Component {
 
   constructor(props){

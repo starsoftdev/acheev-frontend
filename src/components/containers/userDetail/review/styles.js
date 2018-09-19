@@ -52,26 +52,48 @@ export const RatingDetailBox = styled(FlexBoxColumn)`
    background-color: rgba(248, 248, 251, 0.25);
    border: 1px solid rgba(53, 61, 85, 0.15);
    padding: 1em;
+   align-items: center;
+
 
    :first-child {
-    border-right: 0px;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    ${media.extraSmall`
 
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+    `}
+
+    ${media.medium`
+      border-top-right-radius: 0px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    `}
    }
+
    :last-child {
-     border-left: 0px;
-     border-top-right-radius: 10px;
-     border-bottom-right-radius: 10px;
+     ${media.extraSmall`
+       border-bottom-right-radius: 10px;
+       border-bottom-left-radius: 10px;
+     `}
 
+     ${media.medium`
+       border-bottom-left-radius: 0px;
+       border-top-right-radius: 10px;
+       border-bottom-right-radius: 10px;
+     `}
    }
-   ${media.extraSmall`
+
+  ${media.extraSmall`
+     justify-content: center;
      width: ${column(12)};
+
+
    `}
 
-   ${media.medium`
+  ${media.medium`
+     justify-content: space-evenly;
      width: ${column(4)};
-   `}
+  `}
 `
 
 export const UserReviewBox  = styled(FlexBoxRow)`

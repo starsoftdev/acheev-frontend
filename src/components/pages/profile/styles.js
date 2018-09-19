@@ -92,7 +92,7 @@ export const ProfileMainPanel = styled(Panel)`
     width: 100%;
     grid-area: main;
 
-    ${media.small`
+    ${media.extraSmall`
       max-width: 30em;
     `};
 

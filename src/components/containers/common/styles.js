@@ -8,16 +8,52 @@ export const Title = styled.h4`
   ${fontStyle}
   font-size: ${props=> props.fontSize? props.fontSize : '1.2em'};
   font-weight: bold;
+
+  ${media.extraSmall`
+    font-size: 110%;
+  `}
+
+  ${media.small`
+    font-size: 120%;
+  `}
+
+  ${media.medium`
+    font-size: 130%;
+  `}
 `
 
 export const Paragraph = styled.p`
   ${fontStyle}
   font-size: ${props=> props.fontSize? props.fontSize : '1em'};
+
+  ${media.extraSmall`
+    font-size: 100%;
+  `}
+
+  ${media.small`
+    font-size: 100%;
+  `}
+
+  ${media.medium`
+    font-size: 110%;
+  `}
 `
 
 export const Text = styled.span`
   ${fontStyle}
   font-size: ${props=> props.fontSize? props.fontSize : '0.9em'};
+
+  ${media.extraSmall`
+    font-size: 90%;
+  `}
+
+  ${media.small`
+    font-size: 100%;
+  `}
+
+  ${media.medium`
+    font-size: 110%;
+  `}
 `
 
 export const FlexBoxRow = styled.div`

@@ -10,7 +10,7 @@ export const ServiceCardRow = styled(FlexBoxRow)`
   `}
 
   ${media.medium`
-      justify-content: flex-start;
+      justify-content: space-evenly;
   `}
 
 `
@@ -26,7 +26,7 @@ export const ServiceCard = styled(FlexBoxColumn)`
   `}
 
   ${media.medium`
-    width: ${column(12)};
+    width: ${column(6)};
   `}
 
   ${media.large`
